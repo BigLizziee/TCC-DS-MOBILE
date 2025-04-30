@@ -7,6 +7,8 @@
   --primary-color-light:#e9f7f7;
   --secondary-color:#fb923c;
   --secundary-color-dark: #c5671a;
+  --primary-dark: #000000;
+  --primary-dark-invisible: #00000000;
 }
 
 /* Estrutura inicial da pagina */
@@ -18,7 +20,7 @@ body {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: var(--primary-color-light);
     position: relative;
     font-family: 'Poppins';
 }
@@ -34,8 +36,8 @@ body {
     width: 35%;
     height: 1200px;
     position: absolute;
-    color: #fff;
-    box-shadow: 0 0 8px 4px #0056b3;
+    color: var(--primary-color-light);
+    box-shadow: 0 0 8px 4px var(--primary-color);
 }
 
 .quadro-lateral h1{
@@ -112,10 +114,10 @@ main {
   }
   
   input {
-    border-top: #00000000;
-    border-left: #00000000;
-    border-right: #00000000;
-    border-bottom: 2px solid #000000;
+    border-top: var(--primary-dark-invisible);
+    border-left: var(--primary-dark-invisible);
+    border-right: var(--primary-dark-invisible);
+    border-bottom: 2px solid var(--primary-dark);
     padding: 10px;
     font-size: 1rem;
     margin-bottom: 20px;
@@ -149,7 +151,7 @@ main {
     height: 40px;
     border-radius: 20px;
     cursor: pointer;
-    color: black;
+    color: var(--primary-dark);
     background-color: transparent;
     font-weight: bold;
     transition: background-color 0.5s, color 0.5s;
@@ -165,14 +167,14 @@ main {
 
 /* Texto de orientação colocado na parte superior central do quadro */
 .text-info{
-    background-color: #00000000;
+    background-color: var(--primary-dark-invisible);
     width: 550px;
     height: 500px;
     border-radius: 20%;
     position: absolute;
     top: 10%;
     right: 65px;
-    color: #fff;
+    color: var(--primary-color-light);
     box-shadow: var(--primary-color);
 }
 
@@ -182,14 +184,14 @@ main {
 }
 
 .text-info p{
-    color: #2a91ff;
+    color: var(--primary-color-dark);
     font-size: 20px;
     padding: 15px;
 }
 
 .pag-title h1{
   background-color: #0057b300;
-  color: rgb(0, 0, 0);
+  color: var(--primary-dark);
   padding: 10px 10px;
   display: flex;
   justify-content: space-between;

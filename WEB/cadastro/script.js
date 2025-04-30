@@ -5,7 +5,7 @@ const form = document.querySelector('#cadastro form')
 form.addEventListener('submit', e => {
     e.preventDefault()
     const dados = {
-        nome_cli: form.nome_cli.value,
+        nome: form.nome.value,
         email: form.email.value,
         senha: form.senha.value,
     }
@@ -17,9 +17,9 @@ form.addEventListener('submit', e => {
         .then(resp => resp.status)
         .then(resp => {
             if (resp == 201)
-                window.location.reload();
-            else
                 alert('Cadastro feito com sucesso!');
+            else
+                alert('Erro ao cadastrar!');
                 window.location.reload();
         })
 })
