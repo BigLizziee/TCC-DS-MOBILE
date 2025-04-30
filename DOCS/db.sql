@@ -1,4 +1,3 @@
-
 DROP database DigitalD;
 CREATE DATABASE DigitalD;
 USE DigitalD;

@@ -52,7 +52,7 @@ O projeto vem com uma ideia de um diagnostico digital, onde o usuário irá colo
 | 19/03/2025     | Inicio do desenvolvimento da pagina de login  |
 | 22/03/2025     | Model e View da pagina Login pronta  |
 | 23/03/2025     | Atualizando MV das paletas de cores, pagina de Cadastro, Login e Home  |
-
+| 30/04/2025     | De volta ao projeto, com mudanças, etc  |
 
 ## ByPedroDuarte
 
