@@ -1,21 +1,25 @@
-const $ = (elemento) => document.querySelector(elemento);
+const uri = 'http://localhost:3000';
 
-$("#entrar").addEventListener("click", (ev) => {
-  ev.preventDefault();
-
-  const string = localStorage.getItem("usuario");
-  const usuarioCadastrado = JSON.parse(string);
-
-  const { email, senha } = usuarioCadastrado;
-
-  const dadosCorretos =
-  email === $("#email").value && senha === $("#senha").value;
-  console.log(dadosCorretos);
-
-  if (!dadosCorretos) {
-    alert("Dados inválidos!");
-    return;
-  }
-
-  window.location.href = "./index.html";
-});
+function logar(){
+const form = document.querySelector('#formlogin')
+form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    const dados = {
+        email: form.email.value,
+        senha: form.senha.value,
+    }
+    fetch(uri + '/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dados)
+    })
+        .then(resp => resp.status)
+        .then(resp => {
+            if (resp == 201)
+                alert('Email ou senha incorretos!');
+            else
+                alert('Login feito com sucesso!');
+                window.location.href = '../chatbot/index.html';
+        })
+})
+}
