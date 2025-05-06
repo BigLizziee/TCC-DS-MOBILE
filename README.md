@@ -106,6 +106,7 @@ npx nodemon
 | 01/05/2025     | Começo dos estudos sobre IA e implementação do ChatBot  |
 | 02/05/2025     | Aprimorando o ChatBot e pagina de Login  |
 | 03/05/2025     | Primeiro esboço do DCU (Diagramas de Casos de Uso)  |
+| 06/05/2025     | Inicio do desenvolvimento da prototipagem (Figma)  |
 
 ## Wireframes
 
