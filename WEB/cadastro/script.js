@@ -9,7 +9,7 @@ form.addEventListener('submit', e => {
         email: form.email.value,
         senha: form.senha.value,
     }
-    fetch(uri + '/cli', {
+    fetch(uri + '/cadastro', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(dados)

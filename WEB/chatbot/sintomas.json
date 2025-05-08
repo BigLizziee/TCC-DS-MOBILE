@@ -1,0 +1,43 @@
+[
+    {
+      "sintomas": ["dor de cabeça", "tontura", "sensibilidade à luz"],
+      "causa": "Possível enxaqueca.",
+      "cuidados": "Evite luz forte, descanse em um ambiente silencioso e tome analgésico se necessário."
+    },
+    {
+      "sintomas": ["febre", "dor no corpo", "calafrios", "tosse"],
+      "causa": "Possível gripe ou infecção viral.",
+      "cuidados": "Hidrate-se bem, repouse e monitore a febre. Procure um médico se houver piora."
+    },
+    {
+      "sintomas": ["dor de garganta", "dificuldade para engolir", "rouquidão"],
+      "causa": "Possível faringite.",
+      "cuidados": "Evite bebidas geladas, gargareje com água morna e consulte um médico se persistir."
+    },
+    {
+      "sintomas": ["náusea", "vômito", "dor abdominal", "diarreia"],
+      "causa": "Possível intoxicação alimentar.",
+      "cuidados": "Beba bastante líquido, evite alimentos sólidos por algumas horas e busque ajuda médica se houver desidratação."
+    },
+    {
+      "sintomas": ["falta de ar", "dor no peito", "palpitação"],
+      "causa": "Possível problema cardíaco ou respiratório.",
+      "cuidados": "Procure atendimento médico imediato."
+    },
+    {
+        "sintomas": ["febre alta", "dor de cabeça", "dor atrás dos olhos", "dores musculares", "manchas vermelhas", "sangramentos"],
+        "causa": "Possível infecção por Dengue.",
+        "cuidados": "Mantenha repouso, beba bastante líquido e procure atendimento médico, especialmente se surgirem sinais como sangramentos ou vômitos persistentes. Evite automedicação."
+    },
+    {
+        "sintomas": ["letargia", "recusa alimentar", "convulsão", "hipotermia", "febre", "dificuldade respiratória", "tiragem subcostal", "batimentos nasais", "palidez", "fontanela abaulada", "secreção purulenta", "vômito intenso"],
+        "causa": "Possível infecção ou condição grave em recém-nascido.",
+        "cuidados": "Procure atendimento médico imediatamente. Situações como recusa alimentar, respiração acelerada, febre ou sonolência excessiva devem ser tratadas como emergências pediátricas. Evite qualquer tentativa de tratamento caseiro ou automedicação."
+    },
+    {
+        "sintomas": ["febre", "calafrios", "tosse", "falta de ar", "dores musculares", "perda de paladar", "perda de olfato", "vômito", "diarreia", "dor no peito", "lábios azulados", "confusão"],
+        "causa": "Possível infecção por COVID-19.",
+        "cuidados": "Fique em isolamento, mantenha-se hidratado, descanse e monitore seus sintomas. Procure atendimento médico imediatamente se houver dificuldade de respirar, dor no peito, confusão mental ou coloração azulada nos lábios ou rosto. Evite o uso de qualquer medicamento sem orientação médica."
+    }          
+  ]
+  

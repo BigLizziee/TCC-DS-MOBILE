@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="../img/titlelogo.png"/>
-    <link rel="stylesheet" href="style.css">
-    <title>Diagnostico Digital</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Chatbot de Diagnóstico</title>
+  <script src="https://unpkg.com/compromise"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-    <header>Pedro Lindo</header>
+  <div class="container">
+    <h1>🤖 Chatbot de Diagnóstico Inteligente</h1>
+
+    <div id="chat"></div>
+
+    <div class="controls">
+      <input id="userInput" type="text" placeholder="Digite seus sintomas...">
+      <button onclick="sendMessage()" class="button send-btn">Enviar</button>
+      <button onclick="gerarPDF()" class="button pdf-btn">PDF</button>
+    </div>
+  </div>
 </body>
+<script src="script.js"></script>
 </html>

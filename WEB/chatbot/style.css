@@ -1,0 +1,89 @@
+body {
+    background-color: #f3f4f6;
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+  }
+
+  #chat {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: #f9fafb;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  .send-btn {
+    background-color: #2563eb;
+  }
+
+  .send-btn:hover {
+    background-color: #1d4ed8;
+  }
+
+  .pdf-btn {
+    background-color: #059669;
+  }
+
+  .pdf-btn:hover {
+    background-color: #047857;
+  }
+
+  .bot-response {
+    background-color: white;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .controls {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .divider {
+    border-top: 1px solid #ccc;
+    margin: 0.5rem 0;
+  }
+
+  .text-blue {
+    color: #1e3a8a;
+  }
+
+  .text-green {
+    color: #047857;
+  }

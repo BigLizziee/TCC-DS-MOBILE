@@ -1,211 +1,140 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-/* Paleta de cores */
-:root{
-  --primary-color: #0056b3;
-  --primary-color-dark:#007bff;
-  --primary-color-light:#e9f7f7;
-  --secondary-color:#fb923c;
-  --secundary-color-dark: #c5671a;
-}
-
-/* Estrutura inicial da pagina */
-body {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+* {
   margin: 0;
   padding: 0;
-  background-color: var(--primary-color-light);
-  position: relative;
-  font-family: 'Poppins';
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+body {
 
-
-/* Quadro na lateral esquerda da pagina com uma imagem */
-.quadro-lateral{
-  background-image: url(https://www.turkestrauss.com/wp-content/uploads/2022/09/AdobeStock_359409294-scaled-e1666327033212-600x765.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-color: #000000bb;
-  width: 35%;
-  height: 1200px;
-  position: absolute;
-  color: var(--primary-color-light);
-  box-shadow: 0 0 8px 4px #042344;
-}
-
-.quadro-lateral h1{
-  font-size: 25px;
-  color: var(--primary-color);
-}
-
-.quadro-lateral p{
-  font-size: 18px;
-  padding: 20px;
-  margin-top: 1%;
-}
-
-
-/* Botão no canto inferior esquerdo do quadro */
-.button-back {
-  width: 160px;
-  height: 50px;
-  border: none; 
-  border-radius: 20px;
-  cursor: pointer;
-  background-color: #fb923c;
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--primary-color-light); 
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-}
-
-
-.button-back:hover{
-  background-color: #c5671a;
-  transition: background-color 0.6s;
-}
-
-
-/* Form de cadastro do usuario */
-main {
-  width: 130%;
-  height: 80vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  gap: 20px
-}
-
-#input-cadastro {
-  background-color: rgba(255, 255, 255, 0);
-  margin-top: 2%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 400px;
-  padding: 20px 30px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-form {
-  margin-top: 30px;
-  margin-bottom: 40px;
-}
-
-label, input {
-  display: block;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffffff;
   width: 100%;
-  text-align: left;
+  overflow: hidden;
 }
-
-label {
-  font-weight: bold;
-  font-size: .8rem;
+.ring {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-input {
-  border-top: #00000000;
-  border-left: #00000000;
-  border-right: #00000000;
-  border-bottom: 2px solid #000000;
-  padding: 10px;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0);
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #000000;
+  transition: 0.5s;
 }
-
-input:focus {
-  border-bottom: 2px solid #08558B;
+.ring i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
 }
-
-textarea:focus, input:focus{
+.ring i:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 20s linear infinite;
+}
+.ring i:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 39%;
+  animation: animate2 10s linear infinite;
+}
+.ring:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.login {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.login h2 {
+  font-size: 2em;
+  color: #000000;
+}
+.login .inputBx {
+  position: relative;
+  width: 100%;
+}
+.login .inputBx input {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #000000;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #000000;
+  box-shadow: none;
   outline: none;
 }
-
-a {
-  font-size: 15px;
-  text-decoration: none;
-  color: #000000;
-}
-
-a:hover {
-  color: #0044ff;
-  transition: .3s;
-}
-
-input[type="submit"],
-input[type="reset"] {
-  display: inline-block; 
-  width: 48%; 
-  text-align: center;
-  text-transform: uppercase;
-  border: 1px solid gray;
-  height: 40px;
-  border-radius: 20px;
+.login .inputBx button[type="submit"] {
+  width: 100%;
+  background: #0078ff;
+  background: linear-gradient(5deg,#007bff, #e9f7f7);
+  border: none;
   cursor: pointer;
-  color: black;
-  background-color: transparent;
-  font-weight: bold;
-  transition: background-color 0.5s, color 0.5s;
-  margin: 0; 
-  padding: 0; 
-  vertical-align: middle; 
 }
-    input[type="submit"]:hover,
-    input[type="reset"]:hover {
-      background-color: #c5671a;
-      transition: .5s;
-    }
-
-/* Texto de orientação colocado na parte superior central do quadro */
-.text-info{
-  background-color: #00000000;
-  width: 550px;
-  height: 500px;
-  border-radius: 20%;
-  position: absolute;
-  top: 10%;
-  right: 65px;
-  color: #fff;
-  box-shadow: #0056b3;
+.login .inputBx input::placeholder {
+  color: rgba(0, 0, 0, 0.75);
+}
+.login .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-.text-info h1{
-  font-size: 35px;
-  color: #ffffff;
+
+header{
+  background-image: linear-gradient(
+      to right,
+      hsla(211, 100%, 35%, 0.412),
+      #007bff63
+  ),
+  url(../img/header.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.text-info h2{
-  color:#8a0000;
-  font-size: 25px;
+.nav_container{
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.text-info p{
-  color: #000000;
-  font-size: 20px;
-  padding: 15px;
+.nav_logo{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffff;
 }
 
-.pag-title h1{
-background-color: #0057b300;
-color: rgb(0, 0, 0);
-padding: 10px 10px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin: 0;
-position: absolute;
-transform: translate(320%,20%);
-}
-
-.pag-title img{
-  width: 40px;
+.nav_logo span{
+  color: #fb923c;
 }

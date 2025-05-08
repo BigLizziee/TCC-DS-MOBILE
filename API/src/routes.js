@@ -1,10 +1,9 @@
 const express = require('express');
 const rota = express.Router();
 
-const cli = require('./controllers/dd');
-const login = require('./controllers/login');
+const paciente = require('./controllers/paciente.js'); 
 
-rota.post('/cli', cli.create);
-rota.post('/login', login.create);
+rota.post('/cadastro', paciente.create); // Rota para cadastro
+rota.post('/login', paciente.login); // Rota para login
 
 module.exports = rota;

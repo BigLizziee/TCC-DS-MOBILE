@@ -13,3 +13,19 @@ model Paciente{
   email String @db.VarChar(100) @unique
   senha String @db.VarChar(50) @unique
 }
+
+model Enfermeira{
+  id Int @id @default(autoincrement())
+  nome String
+  area String
+  email String
+  senha String
+}
+
+model Medico{
+  id Int @id @default(autoincrement())
+  nome String
+  crm String @db.VarChar(100) @unique
+  email String @db.VarChar(100) @unique
+  senha String @db.VarChar(100) @unique
+}
