@@ -60,7 +60,7 @@ async function gerarPDF() {
   let y = 10;
 
   pdf.setFontSize(16);
-  pdf.text("Relatório do Chatbot de Diagnóstico", 10, y);
+  pdf.text("Relatório Diagnostico Digital", 10, y);
   y += 10;
 
   pdf.setFontSize(12);
@@ -79,5 +79,5 @@ async function gerarPDF() {
     y += linhasBot.length * 7;
   });
 
-  pdf.save("diagnostico_chatbot.pdf");
+  pdf.save("diagnotico.pdf");
 }
