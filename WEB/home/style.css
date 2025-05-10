@@ -33,14 +33,14 @@
 }
 
 .btn{
-    padding: .75rem 2rem;
+    padding: 10px 20px;
     outline: none;
     border: none;
     font-size: 1rem;
     white-space: nowrap;
     color: var(--white);
     background-color: var(--secondary-color);
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
 }
 

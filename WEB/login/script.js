@@ -1,24 +1,14 @@
-const uri = 'http://localhost:3000'; // Certifique-se de que o endpoint está correto
+const uri = 'http://localhost:3000'; 
 
 function login() {
     const form = document.querySelector('#formLogin');
-    if (!form) {
-        console.error('Formulário com ID "formLogin" não encontrado.');
-        return;
-    }
-
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const dados = {
-            email: form.email.value.trim(), // Remove espaços extras
-            senha: form.senha.value.trim(),
+            email: form.email.value,
+            senha: form.senha.value,
         };
-
-        if (!dados.email || !dados.senha) {
-            alert('Por favor, preencha todos os campos.');
-            return;
-        }
 
         try {
             const response = await fetch(`${uri}/login`, {
@@ -37,7 +27,7 @@ function login() {
             }
         } catch (err) {
             console.error('Erro ao fazer login:', err);
-            alert('Erro ao conectar ao servidor. Verifique sua conexão.');
+            alert('Erro ao fazer login.');
         }
     });
 }

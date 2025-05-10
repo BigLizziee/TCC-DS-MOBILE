@@ -4,40 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="../img/titlelogo.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+    <title>Diagnóstico Digital - Login</title>
 </head>
-<body>
-    <header>
-        <nav class="section_container nav_container">
-            <div class="nav_logo">Diagnóstico<span>Digital</span></div>
-        </nav>
-    </header>
-<center>
-    <br><br><br><br><br><br><br><br>
-    <form id="Login">
-    <div class="ring">
-        <i style="--clr:#e9f7f7;"></i>
-        <i style="--clr:#007bff;"></i>
-        <i style="--clr:#fb923c;"></i>
-        <div class="login">
-            <h2>Login</h2>
-            <div class="inputBx">
-                <input type="text" name="email" placeholder="Email">
-            </div>
-            <div class="inputBx">
-                <input type="password" name="senha" placeholder="Senha">
-            </div>
-            <div class="inputBx">
-                <button type="submit">Entrar</button>
-            </div>
-        </form>
-            <div class="links">
-                <a href="/WEB/cadastro/index.html">Não possui cadastro?</a>
-            </div>
-        </div>
+<header class="main-header">
+    <div class="header-content">
+      <h2 class="logo">Diagnóstico Digital</h2>
+      <nav class="nav-buttons">
+        <a href="../home/index.html"><button>Início</button></a>
+        <a href="../cadastro/index.html"><button>Cadastre-se</button></a>
+      </nav>
     </div>
-</center> -->
-    <!--ring div ends here
-</body>
+  </header>
+<body>
+    <div class="ring">
+      <i style="--clr:#e9f7f7;"></i>
+      <i style="--clr:#007bff;"></i>
+      <i style="--clr:#fb923c;"></i>
+    </div>
+  
+    <div class="container" id="container">
+      <form id="formLogin">
+        <h1>Login</h1>
+        <input type="email" placeholder="Email" name="email" required />
+        <input type="password" placeholder="Senha" name="senha" required />
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
