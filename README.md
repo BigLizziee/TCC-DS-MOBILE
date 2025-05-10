@@ -115,7 +115,8 @@ npx prisma migrate dev --name init
 | 03/05/2025     | Primeiro esboço do DCU (Diagramas de Casos de Uso)  |
 | 06/05/2025     | Inicio do desenvolvimento da prototipagem (Figma)  |
 | 07/05/2025     | Aplicando a ORM Prisma e configurando pagina de Login  |
-| 10/05/2025     | Pagina de login funcional  |
+| 09/05/2025     | Pagina de login funcional  |
+| 10/05/2025     | Alterações no ChatBot  |
 
 ## Wireframes
 
