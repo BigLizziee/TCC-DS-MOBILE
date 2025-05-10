@@ -38,26 +38,33 @@ git clone <https://url>
 cd <nomedoarquivo>
 ```
 
-- Agora dentro do arquivo clonado pelo Git Bash, digite esse codigo para abri-lo no VsCode
+- Agora dentro do arquivo clonado pelo Git Bash, digite esse comando para abri-lo no VsCode
 
 ```bash
 code .
 ```
 
-- Com o arquivo aberto no VsCode, abra o CMD (CRTL+"), e coloque os seguinte codigos na ordem que aparecem logo abaixo
+- Com o arquivo aberto no VsCode, abra o CMD (CRTL+"), e coloque os seguinte comandos na ordem que aparecem logo abaixo
 
 ```bash
 cd api
+npm i prisma -g
 npm init -y
-npm i express cors mysql
-npm install --save-dev nodemon
-npx nodemon
+npm i express cors dotenv
+npx prisma init --datasource-provider mysql
 ```
-## Requisitos funcionais 
-- [RF001] O sistema deve permitir o CRUD de pacientes (Usuarios).
-- [RF002] O sistema deve permitir que o ChatBot se comunique e responda o usuario.
-- [RF003] O sistema deve permitir o armazenamento de novos dados.
-![Wireframe DCU](./WEB/img/DCU.PNG)
+
+- Apos colocar os comandos em ordem no CMD crie um pasta chamada .env (caso os comandos dados ja tenham criado não será necessario)
+
+```bash
+DATABASE_URL="mysql://root@localhost:3306/ddigital?schema=public&timezone=UTC"
+```
+
+- Faremos a migração do banco de dados para o MySQL através do comando a seguir no terminal
+
+```bash
+npx prisma migrate dev --name init
+```
 
 ## Tecnologias Utilizadas para o Desenvolvimento
 
@@ -115,6 +122,7 @@ npx nodemon
 ![Wireframe Home](./WEB/img/Wireframe01.PNG)
 ![Wireframe Cadastro](./WEB/img/Wireframe02.PNG)
 ![Wireframe Login](./WEB/img/Wireframe03.PNG)
+![Wireframe ChatBot](./WEB/img/Wireframe04.PNG)
 
 ## ByPedroDuarte
 
