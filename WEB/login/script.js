@@ -21,7 +21,7 @@ function login() {
 
             if (response.ok) {
                 alert('Login bem-sucedido!');
-                window.location.href = '../chatbot/index.html'; // Redireciona para a página inicial
+                window.location.href = '../test/index.html'; // Redireciona para a página inicial
             } else {
                 alert(data.message || 'Email ou senha inválidos.');
             }
