@@ -139,7 +139,8 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 | 07/05/2025     | Aplicando a ORM Prisma e configurando pagina de Login  |
 | 09/05/2025     | Pagina de login funcional  |
 | 10/05/2025     | Alterações no ChatBot  |
-| 12/05/2025     | Desenvolvendo diagrama de classe 1.0 e MERxDER  |
+| 12/05/2025     | Desenvolvendo DC (Diagrama de Classe) e MERxDER  |
+| 13/05/2025     | Grafico Gant   |
 
 ## ByPedroDuarte
 
