@@ -107,6 +107,13 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 ![DC1.0](./WEB/img/DCDD.jpg)
 ![MERxDER1.0](./WEB/img/MERxDER.jpg)
 
+### Requisitos funcionais
+- [RF001] O sistema deve permitir o CRUD de pacientes.
+- [RF002] O sistema deve permitir o CRUD de enfermeiro(a).
+- [RF003] O sistema deve permitir o CRUD de médico(a).
+- [RF003.1] O sistema deve associar o paciente a um enfermeiro(a) ou médico(a).
+- [RF003.2] O sistema deve permitir apenas a inclusão de um pciente por enfermeiro e médico.
+
 ## Wireframes
 
 ![Wireframe Home](./WEB/img/Wireframe01.PNG)
