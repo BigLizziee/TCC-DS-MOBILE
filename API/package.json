@@ -14,10 +14,10 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Pedro Duarte e Mellyssa Silveira",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.1.10"
   },
-  "description": ""
+  "description": "Site com o intuito educacional, com objetivo de desenvolver um sistema de consultas via conversas com profissionais da saúde, tento todo um atendimento, parecido com um sistema desenvolvido pelo SESI com o mesmo intuito"
 }

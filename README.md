@@ -100,6 +100,21 @@ npx prisma migrate dev --name init
 * [Canvas](https://wellifabio.github.io/canvas/)
 * [Cronograma](https://wellifabio.github.io/gantt/)
 
+Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](https://github.com/PedroDNRusso/TCC-DS/tree/main/DOCS).
+
+## Diagrama e MERxDER
+
+![DC1.0](./WEB/img/DCDD.jpg)
+![MERxDER1.0](./WEB/img/MERxDER.jpg)
+
+## Wireframes
+
+![Wireframe Home](./WEB/img/Wireframe01.PNG)
+![Wireframe Cadastro](./WEB/img/Wireframe02.PNG)
+![Wireframe Login](./WEB/img/Wireframe03.PNG)
+![Wireframe ChatBot](./WEB/img/Wireframe04.PNG)
+
+
 ## Progresso de Desenvolvimento
 
 | Data  | Alterações |
@@ -117,13 +132,7 @@ npx prisma migrate dev --name init
 | 07/05/2025     | Aplicando a ORM Prisma e configurando pagina de Login  |
 | 09/05/2025     | Pagina de login funcional  |
 | 10/05/2025     | Alterações no ChatBot  |
-
-## Wireframes
-
-![Wireframe Home](./WEB/img/Wireframe01.PNG)
-![Wireframe Cadastro](./WEB/img/Wireframe02.PNG)
-![Wireframe Login](./WEB/img/Wireframe03.PNG)
-![Wireframe ChatBot](./WEB/img/Wireframe04.PNG)
+| 12/05/2025     | Desenvolvendo diagrama de classe 1.0 e MERxDER  |
 
 ## ByPedroDuarte
 
