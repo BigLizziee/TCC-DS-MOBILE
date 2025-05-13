@@ -137,7 +137,7 @@ main {
   }
   
   a:hover {
-    color: #09ff00;
+    color: var(--primary-color);
     transition: .3s;
   }
 
