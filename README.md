@@ -111,6 +111,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 - [x] Escolher a metodologia **SCRUM, KANBAN, XP, outras**
 - [x] Definir **Papéis e responsabilidades**
 - [x] Apresentar a proposta inicial
+* [Slide](https://github.com/PedroDNRusso/TCC-DS/tree/main/DOCS)
 
 ## Requisitos - Sprint 2
 - Metodologia: SCRUM
@@ -128,6 +129,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
     - [x] Ilustrar cada **requisito funciional** com [DCU (Diagrama de casos de Uso)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula02)
 - [x] Modelar o banco de dados MER x DER
 - [x] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
+* [Slide](https://github.com/PedroDNRusso/TCC-DS/tree/main/DOCS)
 
 ### Requisitos funcionais
 - [RF001] O sistema deve permitir o CRUD de pacientes.
