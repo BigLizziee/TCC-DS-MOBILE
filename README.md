@@ -113,6 +113,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 - [RF003] O sistema deve permitir o CRUD de médico(a).
 - [RF004] O sistema deve associar o paciente a um enfermeiro(a) ou médico(a).
 - [RF004.1] O sistema deve permitir apenas a inclusão de um paciente por enfermeiro e médico.
+- [RF004.2] O sistema deve permitir apenas a inclusão de um paciente por enfermeiro e médico.
 
 ## Wireframes
 
