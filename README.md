@@ -167,7 +167,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 | 10/05/2025     | Alterações no ChatBot  |
 | 12/05/2025     | Desenvolvendo DC (Diagrama de Classe) e MERxDER  |
 | 13/05/2025     | Grafico Gant   |
-| 14/05/2025     |    |
+| 14/05/2025     | Desenvolvimento do DCU e aplicação de tarefas em Gant   |
 
 ## ByPedroDuarte
 
