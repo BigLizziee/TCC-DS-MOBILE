@@ -116,7 +116,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 - [ ] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
 - [x] Criar um repositório no **github** e adicionar os integrantes do grupo como colaboradores.
     - [x] Enviar o link do repositório neste **[FORMS](https://docs.google.com/forms/d/e/1FAIpQLSdQFCwZJLTHT7JLSeKzwsJa9NJqV4QQ1FKrmGqT6vaZVynukw/viewform?usp=dialog)**
-- [ ] **Protótipo** funcional inicial (Com Figma - Mobile e Web))
+- [ ] **Protótipo** funcional inicial (Com Figma - Mobile e Web)    
     - [x] Web
     - [ ] Mobile
 - [x] Elencar os **[requisitos funcionais como neste exemplo](./requisitos.md)**. 
