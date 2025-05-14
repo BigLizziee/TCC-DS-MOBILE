@@ -107,7 +107,12 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 ![DC1.0](./WEB/img/DCDD.jpg)
 ![MERxDER1.0](./WEB/img/MERxDER.jpg)
 
-## Requisitos - Sprint 1
+## Requisitos Sprint 1
+- [x] Escolher a metodologia **SCRUM, KANBAN, XP, outras**
+- [x] Definir **Papéis e responsabilidades**
+- [x] Apresentar a proposta inicial
+
+## Requisitos - Sprint 2
 - Metodologia: SCRUM
 - Tema inicial: Diagnostico Rápido (Saúde relação entre paciente e médico)
 - Alunos: Melissa|PO|, Lizzie|Full Stack|, Pedro|Scrum Master|, Rodrigo|Back End - QA|
