@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DD - Diagnostico Digital </title>
-    <link rel="shortcut icon" type="image/png" href="../img/titlelogo.png"/>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnostico Digital - Cadastro</title>
+  <link rel="shortcut icon" type="image/png" href="../img/titlelogo.png"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<div class="pag-title">
-    <h1><img src="../img/ddheader-removebg-preview.png">DD - Diagnostico Digital</h1>
-</div>
-    <div class="quadro-lateral">
-        <div class="text-info">
-            <center><h1>Faça seu cadastro</h1></center>
-            <p>Receba alguns beneficios ao seu cadastrar!<br>
-            <br> - Ganhe consultas ilimitadas <br>
-            <br> - Ganhe a função de salvar seu diagnostico em PDF<br>
-            <br>Com o cadastro do nosso site, você ganha além dos beneficios citados acima muito mais com o nosso serviço e ajuda 24hrs de um diagnostico online   
-        </p>
-        <a href="../home/index.html"><button class="button-back">VOLTAR</button></a>
-        </div>   
-    </div>
-    <section id="cadastro">
-    <main>
-    <div id="input-cadastro">
-        <form action="">
-            <h2>Coloque as informações e termine seu cadastro!</h2>
-            <label for="email">NOME</label>
-             <input type="text" name="nome" id="nome" placeholder="Insira seu Nome..." required>
-            <label for="email">E-MAIL</label>
-             <input type="email" name="email" id="email" placeholder="Insira seu Email..." required>
-            <label for="password">SENHA</label>
-             <input type="password" name="senha" id="senha" placeholder="Insira sua senha..." required>
-             <input type="reset" value="LIMPAR"><input onclick="cadastrar()" type="submit" value="CADASTRAR">
-             <a href="../login/index.html"><p>Caso tenha uma conta, faça seu login!</p></a>
+<body>
+<section id="cadastro">
+<main>
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action="" class="sign-in-form">
+          <h2 class="title">Cadastre-se</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="nome" autocomplete="Nome" placeholder="Nome" required="yes">
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" autocomplete="Email" placeholder="Email" id="email" required="yes">
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="senha" autocomplete="Senha" placeholder="Senha" id="senha" required="yes">
+            <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+          </div>
+          <input onclick="cadastrar()" type="submit" value="Cadastrar" class="btn solid">
         </form>
+      </div>
     </div>
+  </div>
 </main>
 </section>
-<script src="script.js"></script>
-</html>
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>Você já tem um conta?</h3>
+          <p>Caso ja tenha uma conta entre agora e comece sua consulta</p>
+          <a href="../login/index.html"><button class="btn transparent">Entrar</button></a>
+        </div>
+      </div>
+</div>
+  <script src="script.js"></script>
 </body>
