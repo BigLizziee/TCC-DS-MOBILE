@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Bem-vindo</title>
+  <meta charset="UTF-8" />
+  <title>Perfil</title>
 </head>
 <body>
-  <h1>Bem-vindo, <span id="userNome"></span>!</h1>
+  <h2>Perfil do Usuário</h2>
+  <p><strong>Nome:</strong> <span id="nome"></span></p>
+  <p><strong>Email:</strong> <span id="email"></span></p>
+  <p><strong>Senha:</strong> <span id="senha"></span></p>
 
   <script>
-    const nome = localStorage.getItem('nome');
-    document.getElementById('userNome').textContent = nome;
+    const usuario = JSON.parse(sessionStorage.getItem("usuario"));
+
+    if (!usuario) {
+      window.location.href = "../login/index.html";
+    } else {
+      document.getElementById("nome").textContent = usuario.nome;
+      document.getElementById("email").textContent = usuario.email;
+      document.getElementById("senha").textContent = usuario.senha;
+    }
   </script>
 </body>
 </html>

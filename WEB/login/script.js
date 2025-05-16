@@ -21,6 +21,7 @@ function login() {
 
             if (response.ok) {
                 alert('Login bem-sucedido!');
+                sessionStorage.setItem("usuario", JSON.stringify(dados));
                 window.location.href = '../test/index.html'; // Redireciona para a página inicial
             } else {
                 alert(data.message || 'Email ou senha inválidos.');
