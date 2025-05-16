@@ -54,10 +54,24 @@ a:hover {
   align-items: center;
 }
 
-.logo {
-  font-size: 50px;
-  font-weight: bold;
-  margin: 0;
+.nav_logo span{
+    color: var(--secondary-color);
+    transition: 0.5s;
+}
+
+.nav_logo span:hover{
+    color: var(--primary-color-light);
+}
+
+.nav_logo {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--primary-color-light);
+    transition: 1.5s;
+}
+
+.nav_logo:hover{
+    color: var(--secondary-color);
 }
 
 .nav-buttons button {
