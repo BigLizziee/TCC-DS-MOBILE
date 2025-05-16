@@ -166,22 +166,43 @@ form.sign-in-form {
 .panel h3 {
   font-weight: 600;
   line-height: 1;
-  font-size: 2.0rem;
+  font-size: 35px;
+  margin-top: 85px;
 }
 
 .panel p {
-  font-size: 0.95rem;
+  font-size: 25px;
   padding: 1.0rem 0;
+}
+
+.nav_logo span{
+    color: var(--secondary-color);
+    transition: 0.5s;
+}
+
+.nav_logo span:hover{
+    color: var(--primary-color-light);
+}
+
+.nav_logo {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--primary-color-light);
+    transition: 1.5s;
+}
+
+.nav_logo:hover{
+    color: var(--secondary-color);
 }
 
 .btn.transparent {
   margin: 0;
   background: var(--secondary-color);
   color: var(--primary-color-light);
-  width: 130px;
-  height: 41px;
+  width: 150px;
+  height: 49px;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 15px;
   transition: 0.5s;
 }
 
