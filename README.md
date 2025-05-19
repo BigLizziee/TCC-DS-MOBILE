@@ -145,6 +145,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 ![Wireframe Home](./WEB/img/Wireframe01.PNG)
 ![Wireframe Cadastro](./WEB/img/Wireframe02.PNG)
 ![Wireframe Login](./WEB/img/Wireframe03.PNG)
+![Wireframe UI (User Interface)](./WEB/img/Wireframe05.PNG)
 ![Wireframe ChatBot](./WEB/img/Wireframe04.PNG)
 
 
