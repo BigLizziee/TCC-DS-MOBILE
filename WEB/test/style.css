@@ -53,6 +53,7 @@ a {
 
 .containerLeft i{
     color: var(--white);
+    cursor: pointer;
 }
 
 .containerLeft i:hover {
