@@ -170,6 +170,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 | 14/05/2025     | Desenvolvimento do DCU e aplicação de tarefas em Gant   |
 | 15/05/2025     | Cadastro Front-End testes   |
 | 16/05/2025     | Testando aplicações em UI   |
+| 18/05/2025     | Desenvolvimento de UI (User Interface)   |
 
 ## ByPedroDuarte
 
