@@ -10,10 +10,26 @@
     <title>Diagnóstico Digital - Login</title>
 </head>
 <body>
-  <h2>Bem-vindo(a), <span id="nome"></span>!</h2>
-  <p><strong>Email:</strong> <span id="email"></span></p>
-
-  <button onclick="logout()">Sair</button>
+  <main class="container">
+    <div class="containerLeft">
+      <div class="icon-bar">
+        <a onclick="logout()"><i class="ri-logout-box-line"></i></a>
+        <a href="../carrinho/index.html"><i class="ri-settings-5-fill"></i></a>
+      </div>
+      <h1>Explore nossos serviços</h1>
+      <ul>
+        <li><a href="../chatbot/index.html">ChatBot</a></li>
+        <li><a href="../login/index.html">...</a></li>
+        <li><a href="../test/index.html">...</a></li>
+      </ul>
+    </div>
+    <div class="containerRight">
+      <h2>Bem-vindo(a), <span id="nome"></span>!</h2>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <div id="cardsContainer">
+      </div>
+    </div>
+  </main>
 
 </body>
 <script src="script.js"></script>
