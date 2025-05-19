@@ -188,6 +188,32 @@ a {
     background-color: #e60000;
   }
 
+  
+.noticia {
+      background: white;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .noticia h2 {
+      margin: 0 0 8px 0;
+      font-size: 20px;
+      color: #2980b9;
+    }
+    .noticia p {
+      color: #555;
+    }
+    .noticia a {
+      display: inline-block;
+      margin-top: 8px;
+      color: #27ae60;
+      text-decoration: none;
+    }
+    .noticia a:hover {
+      text-decoration: underline;
+    }
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
