@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <title>Perfil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../img/titlelogo.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Diagnóstico Digital - Login</title>
 </head>
 <body>
-  <h2>Perfil do Usuário</h2>
-  <p><strong>Nome:</strong> <span id="nome"></span></p>
+  <h2>Bem-vindo(a), <span id="nome"></span>!</h2>
   <p><strong>Email:</strong> <span id="email"></span></p>
-  <p><strong>Senha:</strong> <span id="senha"></span></p>
 
-  <script>
-    const usuario = JSON.parse(sessionStorage.getItem("usuario"));
+  <button onclick="logout()">Sair</button>
 
-    if (!usuario) {
-      window.location.href = "../login/index.html";
-    } else {
-      document.getElementById("nome").textContent = usuario.nome;
-      document.getElementById("email").textContent = usuario.email;
-      document.getElementById("senha").textContent = usuario.senha;
-    }
-  </script>
 </body>
+<script src="script.js"></script>
 </html>

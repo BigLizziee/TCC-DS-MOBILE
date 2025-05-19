@@ -163,7 +163,7 @@ form {
 }
 
 .input-field {
-  width: 85%;
+  width: 400px;
   height: 55px;
   background-color: var(--icons);
   margin: 10px 0;

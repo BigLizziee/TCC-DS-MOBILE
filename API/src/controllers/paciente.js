@@ -17,18 +17,20 @@ const create = async (req, res) => {
 };
 
 const login = async (req, res) => {
-    const { email, senha } = req.body;
+    const { email, senha } = req.body; 
     console.log('Tentativa de login:', req.body);
-
     try {
         const paciente = await prisma.paciente.findUnique({
             where: { email },
         });
-
         if (paciente) {
             if (paciente.senha === senha) {
                 console.log('Login bem-sucedido:', paciente);
-                res.status(200).json({ message: 'Login bem-sucedido' });
+                res.status(200).json({
+                    nome: paciente.nome,
+                    email: paciente.email,
+                    message: 'Login bem-sucedido'
+                });
             } else {
                 console.log('Senha incorreta');
                 res.status(401).json({ message: 'Senha incorreta' });
@@ -39,9 +41,10 @@ const login = async (req, res) => {
         }
     } catch (err) {
         console.error('Erro no login:', err);
-        res.status(400).json(err);
+        res.status(500).json({ message: 'Erro interno no servidor' });
     }
 };
+
 
 module.exports = {
     create,

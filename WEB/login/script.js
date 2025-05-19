@@ -24,8 +24,14 @@ function login() {
 
             if (response.ok) {
                 alert('Login bem-sucedido!');
-                sessionStorage.setItem("usuario", JSON.stringify(dados));
-                window.location.href = '../test/index.html'; // Redireciona para a página inicial
+
+                // Salva nome e email corretos vindos da API
+                sessionStorage.setItem("usuario", JSON.stringify({
+                    nome: data.nome,
+                    email: data.email
+                }));
+
+                window.location.href = '../test/index.html'; // Redireciona para o perfil
             } else {
                 alert(data.message || 'Email ou senha inválidos.');
             }
@@ -35,6 +41,8 @@ function login() {
         }
     });
 }
+
+
 
 togglePassword.addEventListener("click", function (e) {
   const type =
