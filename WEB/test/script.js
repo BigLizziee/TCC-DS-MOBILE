@@ -13,7 +13,7 @@ const usuario = JSON.parse(sessionStorage.getItem("usuario"));
 
 async function carregarNoticias() {
       const apiKey = 'pub_879174d91ceb134498bd35c625d2ef144856f';  // Coloque sua chave aqui
-      const url = `https://newsdata.io/api/1/news?apikey=pub_879174d91ceb134498bd35c625d2ef144856f&country=br&category=health`;
+      const url = `https://newsdata.io/api/1/news?apikey=pub_879174d91ceb134498bd35c625d2ef144856f&country=br&category=health `;
 
       try {
         const response = await fetch(url);
