@@ -1,5 +1,8 @@
 const uri = 'http://localhost:3000'; 
 
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#senha");
+
 function login() {
     const form = document.querySelector('#formLogin');
     form.addEventListener('submit', async (e) => {
@@ -32,5 +35,12 @@ function login() {
         }
     });
 }
+
+togglePassword.addEventListener("click", function (e) {
+  const type =
+    password.getAttribute("type") === "password" ? "text" : "password";
+  password.setAttribute("type", type);
+  this.classList.toggle("fa-eye-slash");
+});
 
 document.addEventListener('DOMContentLoaded', login);
