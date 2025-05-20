@@ -45,8 +45,35 @@ const login = async (req, res) => {
     }
 };
 
+const update = async (req, res) => {
+    const { id, nome, email, senha } = req.body;
+    console.log('Requisição de atualização:', req.body);
+
+    try {
+        const pacienteExistente = await prisma.paciente.findUnique({ where: { id: Number(id) } });
+
+        if (!pacienteExistente) {
+            console.log('Paciente não encontrado para atualização');
+            return res.status(404).json({ message: 'Paciente não encontrado' });
+        }
+
+        const pacienteAtualizado = await prisma.paciente.update({
+            where: { id: Number(id) },
+            data: { nome, email, senha },
+        });
+
+        console.log('Paciente atualizado com sucesso:', pacienteAtualizado);
+        res.status(200).json(pacienteAtualizado);
+    } catch (err) {
+        console.error('Erro ao atualizar paciente:', err);
+        res.status(500).json({ message: 'Erro ao atualizar paciente' });
+    }
+};
+
+
 
 module.exports = {
     create,
     login,
+    update
 };
