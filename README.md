@@ -79,6 +79,7 @@ npx prisma migrate dev --name init
 | [NodeJS](https://nodejs.org/pt)    | Interpretar codigos em JavaScript (Vanilla) |
 | [XAMPP](https://www.apachefriends.org/pt_br/index.html)    | Software que gera um servidor web local (Banco de Dados) |
 | [Git](https://git-scm.com/downloads)    | Ferramenta colaborativa de versionamento |
+| [Figma](https://www.figma.com/pt-br/)    | Ferramenta de design de UI e UX |
 
 ## Github dos Desenvolvedores
 
