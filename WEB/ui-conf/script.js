@@ -1,11 +1,10 @@
 const usuario = JSON.parse(sessionStorage.getItem("usuario"));
 
 if (!usuario) {
-  window.location.href = "/WEB/login/index.html";
+  window.location.href = "../login/index.html";
 } else {
   document.getElementById("nome").value = usuario.nome;
   document.getElementById("email").value = usuario.email;
-  document.getElementById("senha").value = usuario.senha;
 }
 
 document.getElementById("formConfiguracoes").addEventListener("submit", async function (e) {
@@ -25,6 +24,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
     });
 
     const result = await response.json();
+    console.log(response);
 
     if (response.ok) {
       alert("Informações atualizadas com sucesso!");
@@ -36,4 +36,13 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
     console.error(err);
     alert("Erro ao conectar ao servidor.");
   }
+});
+
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#senha");
+togglePassword.addEventListener("click", function (e) {
+  const type =
+    password.getAttribute("type") === "password" ? "text" : "password";
+  password.setAttribute("type", type);
+  this.classList.toggle("fa-eye-slash");
 });
