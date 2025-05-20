@@ -31,7 +31,7 @@ function login() {
                     email: data.email
                 }));
 
-                window.location.href = '../test/index.html'; // Redireciona para o perfil
+                window.location.href = '../ui/index.html'; // Redireciona para o perfil
             } else {
                 alert(data.message || 'Email ou senha inválidos.');
             }
