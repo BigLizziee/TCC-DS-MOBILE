@@ -1,89 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #0056b3;
+    --primary-color-dark: #007bff;
+    --primary-color-light: #e9f7f7;
+    --secondary-color: #fb923c;
+    --secundary-color-dark: #c5671a;
+    --text-dark: #333333;
+    --text-ligth: #a3a3a3;
+    --primary-dark: #000000;
+    --primary-dark-light: #918989bb;
+    --white: #ffffff;
+    --icons: #dfdfdf;
+    --max-width: 1200px;
+}
+
 body {
     background-color: #f3f4f6;
-    font-family: Arial, sans-serif;
+    font-family: Poppins, sans-serif;
     padding: 2rem;
-  }
+    padding-top: 120px; /* Ajuste a altura conforme a altura do cabeçalho */
+    margin: 0;
+}
 
-  .container {
-    max-width: 720px;
+.container {
+    max-width: 920px;
     margin: 0 auto;
+    margin-top: 50px;
     background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
+}
 
-  h1 {
+.main-header {
+    background: linear-gradient(250deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    padding: 20px 40px;
+    color: var(--secondary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 4px 9px var(--primary-color);
+    width: 100%;  /* Garantir que o cabeçalho ocupe toda a largura */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;  /* Ajuste o padding conforme necessário */
+    box-sizing: border-box;  /* Para garantir que o padding não afete a largura */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;  /* Garantir que o conteúdo ocupe toda a largura disponível */
+}
+
+.nav_logo span {
+    color: var(--secondary-color);
+    transition: 0.5s;
+}
+
+.nav_logo span:hover {
+    color: var(--primary-color-light);
+}
+
+.nav_logo {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--primary-color-light);
+    transition: 1.5s;
+}
+
+.nav_logo:hover {
+    color: var(--secondary-color);
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.nav-buttons button {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav-buttons button:hover {
+    background: var(--secundary-color-dark);
+}
+
+h1 {
     font-size: 1.75rem;
     color: #1e3a8a;
     margin-bottom: 1rem;
-  }
+}
 
-  #chat {
-    height: 400px;
+#chat {
+    height: 450px;
     overflow-y: auto;
     border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
     background-color: #f9fafb;
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     font-size: 0.9rem;
-  }
+    margin-top: 50px; /* Adiciona um espaço abaixo do cabeçalho */
+}
 
-  input[type="text"] {
+input[type="text"] {
     flex: 1;
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 0.5rem;
-  }
+}
 
-  .button {
+.button {
     padding: 0.5rem 1rem;
     border: none;
     color: white;
     font-weight: bold;
     border-radius: 0.5rem;
     cursor: pointer;
-  }
+}
 
-  .send-btn {
+.send-btn {
     background-color: #2563eb;
-  }
+}
 
-  .send-btn:hover {
+.send-btn:hover {
     background-color: #1d4ed8;
-  }
+}
 
-  .pdf-btn {
+.pdf-btn {
     background-color: #059669;
-  }
+}
 
-  .pdf-btn:hover {
+.pdf-btn:hover {
     background-color: #047857;
-  }
+}
 
-  .bot-response {
+.bot-response {
     background-color: white;
     padding: 0.75rem;
     border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
     margin-top: 0.25rem;
-  }
+}
 
-  .controls {
+.controls {
     display: flex;
     gap: 0.5rem;
-  }
+}
 
-  .divider {
+.divider {
     border-top: 1px solid #ccc;
     margin: 0.5rem 0;
-  }
+}
 
-  .text-blue {
+.text-blue {
     color: #1e3a8a;
-  }
+}
 
-  .text-green {
+.text-green {
     color: #047857;
-  }
+}

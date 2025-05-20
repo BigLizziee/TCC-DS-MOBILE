@@ -13,7 +13,7 @@ function sendMessage() {
 
   if (!mensagem || baseSintomas.length === 0) return;
 
-  chat.innerHTML += `<div><strong>Você:</strong> ${mensagem}</div>`;
+  chat.innerHTML += `<div><strong>${usuario.nome}:</strong> ${mensagem}</div>`;
 
   const resposta = analisarSintomas(mensagem);
   chat.innerHTML += `<div style="background:#fff; padding:10px; margin:5px 0; border-radius:8px;"><strong>Bot:</strong> ${resposta}</div>`;
@@ -81,3 +81,16 @@ async function gerarPDF() {
 
   pdf.save("diagnotico.pdf");
 }
+
+const usuario = JSON.parse(sessionStorage.getItem("usuario"));
+
+    if (!usuario) {
+      window.location.href = "../login/index.html";
+    } else {
+      document.getElementById("nome").textContent = usuario.nome;
+      document.getElementById("email").textContent = usuario.email;
+    }
+    function logout() {
+      sessionStorage.removeItem("usuario");
+      window.location.href = "../login/index.html";
+    }
