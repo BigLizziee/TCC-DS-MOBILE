@@ -79,7 +79,7 @@ async function gerarPDF() {
     y += linhasBot.length * 7;
   });
 
-  pdf.save("diagnotico.pdf");
+  pdf.save("seudiagnostico.pdf");
 }
 
 const usuario = JSON.parse(sessionStorage.getItem("usuario"));
