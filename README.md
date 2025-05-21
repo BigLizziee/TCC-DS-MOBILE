@@ -73,13 +73,13 @@ npx prisma migrate dev --name init
 | [HTML](https://html.spec.whatwg.org/multipage/) | Modelo     |
 | [CSS](https://www.w3.org/Style/CSS/Overview.en.html)    | Visão |
 | [JavaScript (Vanilla)](https://262.ecma-international.org/)  | Controle |
+| [Figma](https://www.figma.com/pt-br/)    | Ferramenta de design de UI e UX |
 | [ORM Prisma](https://262.ecma-international.org/)  | Ferramenta de source que auxilia banco de dados |
 | [Vscode](https://code.visualstudio.com/)    | IDE (Ambiente integrado de desenvolvimento) |
 | [Insomnia](https://insomnia.rest/download)   | Testar, criar e simular APIs |
 | [NodeJS](https://nodejs.org/pt)    | Interpretar codigos em JavaScript (Vanilla) |
 | [XAMPP](https://www.apachefriends.org/pt_br/index.html)    | Software que gera um servidor web local (Banco de Dados) |
 | [Git](https://git-scm.com/downloads)    | Ferramenta colaborativa de versionamento |
-| [Figma](https://www.figma.com/pt-br/)    | Ferramenta de design de UI e UX |
 
 ## Github dos Desenvolvedores
 
