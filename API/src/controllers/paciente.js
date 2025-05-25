@@ -1,13 +1,35 @@
 const prisma = require('../connect');
 
+async function gerarIDUnico() {
+    let idValido = false;
+    let novoId;
+
+    while (!idValido) {
+        novoId = Math.floor(1000 + Math.random() * 9000); // Número entre 1000 e 9999
+
+        const existe = await prisma.paciente.findUnique({
+            where: { id: novoId },
+        });
+
+        if (!existe) {
+            idValido = true;
+        }
+    }
+
+    return novoId;
+}
+
 const create = async (req, res) => {
     const { nome, email, senha } = req.body;
     console.log('Dados recebidos:', req.body);
 
     try {
+        const id = await gerarIDUnico(); // Gera o ID único
+
         const paciente = await prisma.paciente.create({
-            data: { nome, email, senha },
+            data: { id, nome, email, senha },
         });
+
         console.log('Usuário criado:', paciente);
         res.status(201).json(paciente);
     } catch (err) {
@@ -27,8 +49,10 @@ const login = async (req, res) => {
             if (paciente.senha === senha) {
                 console.log('Login bem-sucedido:', paciente);
                 res.status(200).json({
+                    id: paciente.id,
                     nome: paciente.nome,
                     email: paciente.email,
+                    senha: paciente.senha, // Incluindo a senha para futuras requisições
                     message: 'Login bem-sucedido'
                 });
             } else {

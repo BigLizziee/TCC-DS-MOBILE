@@ -1,10 +1,13 @@
 const usuario = JSON.parse(sessionStorage.getItem("usuario"));
+console.log(usuario);
 
 if (!usuario) {
   window.location.href = "../login/index.html";
 } else {
+  document.getElementById("id").value = usuario.id;
   document.getElementById("nome").value = usuario.nome;
   document.getElementById("email").value = usuario.email;
+  document.getElementById("senha").value = usuario.senha;
 }
 
 document.getElementById("formConfiguracoes").addEventListener("submit", async function (e) {
