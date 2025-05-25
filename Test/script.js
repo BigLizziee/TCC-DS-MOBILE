@@ -1,35 +1,28 @@
-const uri = 'http://localhost:3000';
-const togglePassword = document.querySelector("#togglePassword");
-const password = document.querySelector("#senha");
+const express = require('express');
+const http = require('http');
+const { Server } = require('socket.io');
 
-togglePassword.addEventListener("click", function (e) {
-  const type =
-    password.getAttribute("type") === "password" ? "text" : "password";
-  password.setAttribute("type", type);
-  this.classList.toggle("fa-eye-slash");
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server, {
+  cors: {
+    origin: "*"
+  }
 });
 
-function cadastrar(){
-const form = document.querySelector('#cadastro form')
-form.addEventListener('submit', e => {
-    e.preventDefault()
-    const dados = {
-        nome: form.nome.value,
-        email: form.email.value,
-        senha: form.senha.value,
-    }
-    fetch('http://localhost:3000/cadastro', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(dados)
-    })
-        .then(resp => resp.status)
-        .then(resp => {
-            if (resp == 201)
-                alert('Cadastro feito com sucesso!');
-            else
-                alert('Erro ao cadastrar!');
-                window.location.reload();
-        })
-})
-}
+io.on('connection', (socket) => {
+  console.log('Um usuário conectado:', socket.id);
+
+  socket.on('send_message', (data) => {
+    console.log(data);
+    io.emit('receive_message', data);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('Usuário desconectado:', socket.id);
+  });
+});
+
+server.listen(3000, () => {
+  console.log('Servidor rodando na porta 3000');
+});

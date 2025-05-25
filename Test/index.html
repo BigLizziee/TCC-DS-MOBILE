@@ -1,84 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <title>Notícias Médicas</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: #f4f7f8;
-    }
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-    }
-    .noticia {
-      background: white;
-      padding: 15px 20px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .noticia h2 {
-      margin: 0 0 8px 0;
-      font-size: 20px;
-      color: #2980b9;
-    }
-    .noticia p {
-      color: #555;
-    }
-    .noticia a {
-      display: inline-block;
-      margin-top: 8px;
-      color: #27ae60;
-      text-decoration: none;
-    }
-    .noticia a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Chat Simples</title>
+  <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
 </head>
 <body>
-  <h1>Notícias Médicas Recentes</h1>
-  <div id="listaNoticias">Carregando notícias...</div>
+  <h2>Chat</h2>
+  <div id="messages" style="height: 300px; overflow-y: scroll; border: 1px solid #000;"></div>
+  <input type="text" id="messageInput" placeholder="Digite sua mensagem">
+  <button onclick="sendMessage()">Enviar</button>
 
   <script>
-    async function carregarNoticias() {
-      const apiKey = 'pub_879174d91ceb134498bd35c625d2ef144856f';  // Coloque sua chave aqui
-      const url = `https://newsdata.io/api/1/news?apikey=pub_879174d91ceb134498bd35c625d2ef144856f&country=br&category=health `;
+    const socket = io('http://localhost:3000');
 
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
+    const messagesDiv = document.getElementById('messages');
 
-        const container = document.getElementById('listaNoticias');
-        container.innerHTML = '';
+    socket.on('receive_message', (data) => {
+      const msg = document.createElement('div');
+      msg.textContent = data;
+      messagesDiv.appendChild(msg);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    });
 
-        if (data.results && data.results.length > 0) {
-          data.results.forEach(noticia => {
-            const div = document.createElement('div');
-            div.className = 'noticia';
-
-            div.innerHTML = `
-              <h2>${noticia.title}</h2>
-              <p>${noticia.description ? noticia.description : ''}</p>
-              <a href="${noticia.link}" target="_blank" rel="noopener">Leia mais</a>
-            `;
-            container.appendChild(div);
-          });
-        } else {
-          container.textContent = 'Nenhuma notícia encontrada.';
-        }
-      } catch (error) {
-        document.getElementById('listaNoticias').textContent = 'Erro ao carregar notícias.';
-        console.error('Erro ao buscar notícias:', error);
-      }
+    function sendMessage() {
+      const input = document.getElementById('messageInput');
+      const message = input.value;
+      socket.emit('send_message', message);
+      input.value = '';
     }
-
-    carregarNoticias();
   </script>
 </body>
 </html>
