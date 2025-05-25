@@ -1,50 +1,53 @@
 const usuario = JSON.parse(sessionStorage.getItem("usuario"));
 
-    if (!usuario) {
-      window.location.href = "../login/index.html";
-    } else {
-      
-      document.getElementById("nome").textContent = usuario.nome;
-      document.getElementById("id").textContent = usuario.id;
-      document.getElementById("email").textContent = usuario.email;
-      document.getElementById("senha").textContent = usuario.senha;
-    }
-    function logout() {
-      sessionStorage.removeItem("usuario");
-      window.location.href = "../login/index.html";
-    }
-
-async function carregarNoticias() {
-  const apiKey = 'pub_879174d91ceb134498bd35c625d2ef144856f';  
-  const url = `https://newsdata.io/api/1/latest?apikey=pub_879174d91ceb134498bd35c625d2ef144856f&country=br&language=pt&category=health&timezone=America/Sao_Paulo`;
-
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-
-    const container = document.getElementById('listaNoticias');
-    container.innerHTML = '';
-
-    if (data.results && data.results.length > 0) {
-      data.results.forEach(noticia => {
-        const div = document.createElement('div');
-        div.className = 'noticia';
-
-        div.innerHTML = `
-          <h2>${noticia.title}</h2>
-          <p>${noticia.description || ''}</p>
-          <a href="${noticia.link}" target="_blank" rel="noopener">Leia mais</a>
-        `;
-        container.appendChild(div);
-      });
-    } else {
-      container.textContent = 'Nenhuma notícia encontrada.';
-    }
-  } catch (error) {
-    document.getElementById('listaNoticias').textContent = 'Erro ao carregar notícias.';
-    console.error('Erro ao buscar notícias:', error);
-  }
+if (!usuario) {
+  window.location.href = "../login/index.html";
+} else {
+  document.getElementById("nome").textContent = usuario.nome;
+  document.getElementById("id").textContent = usuario.id;
+  document.getElementById("email").textContent = usuario.email;
+  document.getElementById("senha").textContent = usuario.senha;
 }
 
-carregarNoticias(); // <== não esqueça de chamar a função
+function logout() {
+  sessionStorage.removeItem("usuario");
+  window.location.href = "../login/index.html";
+}
+
+        const apiKey = '772e6de7321f4f0bbeec40d77b0e723a'; // 🔑 Insira sua chave da NewsAPI aqui
+        const url = `https://newsapi.org/v2/everything?q=health OR medicine OR hospital OR disease&language=pt&sortBy=publishedAt&apiKey=${apiKey}`;
+
+        async function carregarNoticias() {
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                const container = document.getElementById('newsContainer');
+                container.innerHTML = '';
+
+                if (data.articles.length === 0) {
+                    container.innerHTML = '<p>Nenhuma notícia encontrada.</p>';
+                    return;
+                }
+
+                data.articles.forEach(article => {
+                    const card = document.createElement('div');
+                    card.className = 'news-card';
+
+                    card.innerHTML = `
+                        <img src="${article.urlToImage || 'https://via.placeholder.com/400x200?text=Sem+Imagem'}" alt="Imagem da notícia">
+                        <h3>${article.title}</h3>
+                        <p>${article.description || 'Sem descrição disponível.'}</p>
+                        <a href="${article.url}" target="_blank">Leia mais</a>
+                    `;
+
+                    container.appendChild(card);
+                });
+
+            } catch (error) {
+                console.error('Erro ao carregar notícias:', error);
+                document.getElementById('newsContainer').innerHTML = '<p>Erro ao carregar notícias.</p>';
+            }
+        }
+
+        carregarNoticias();
