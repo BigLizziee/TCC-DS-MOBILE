@@ -175,5 +175,6 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 | 18/05/2025     | Desenvolvimento de UI (User Interface)   |
 | 20/05/2025     | Desenvolvimento de UI (User Interface) com configurações   |
 | 25/05/2025     | Desenvolvimento de UI (User Interface) com configurações funcional   |
+| 27/05/2025     | Desenvolvimento de UI (User Interface) e modificação da interface   |
 
 ## ByPedroDuarte
