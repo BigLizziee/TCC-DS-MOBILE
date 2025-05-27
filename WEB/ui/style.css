@@ -223,6 +223,87 @@ a {
             font-weight: bold;
 }
 
+.service_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.service_header_content p{
+    max-width: 600px;
+    color: var(--text-ligth);
+}
+
+.service_btn{
+    padding: .75rem 1rem;
+    outline: none;
+    font-size: 1rem;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    border-radius: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service_btn:hover{
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.service_grid{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service_card{
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.service_card span{
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 10px 20px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    background-color: var(--primary-color-light);
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+.service_card h4{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.service_card p{
+    margin-bottom: 1rem;
+    color: var(--text-ligth);
+}
+
+.service_card a{
+    color: var(--primary-color);
+}
+
+.service_card a:hover{
+    color: var(--primary-color-dark);
+}
+
+.service_card:hover span{
+    color: var(--primary-color-light);
+    background-color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
