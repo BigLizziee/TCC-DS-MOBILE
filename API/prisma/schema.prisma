@@ -15,7 +15,7 @@ model Paciente{
 }
 
 model Enfermeira{
-  id Int @id @default(autoincrement())
+  ecip Int @id 
   nome String
   area String
   email String
