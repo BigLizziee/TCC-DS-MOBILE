@@ -178,4 +178,4 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 | 27/05/2025     | Desenvolvimento de UI (User Interface) e modificação da interface   |
 | 28/05/2025     | Desenvolvimento API de enfermeiro e atualizando Home, ui-chat em desenvolvimento  |
 
-## ByPedroDuarte
+## ByPedroDuarte&MellyssaSilveira
