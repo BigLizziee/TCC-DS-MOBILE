@@ -38,6 +38,11 @@ const create = async (req, res) => {
     }
 };
 
+const read = async (req, res) => {
+    const pacientes = await prisma.paciente.findMany();
+    res.json(pacientes);
+}
+
 const login = async (req, res) => {
     const { email, senha } = req.body; 
     console.log('Tentativa de login:', req.body);
@@ -104,5 +109,6 @@ const update = async (req, res) => {
 module.exports = {
     create,
     login,
+    read,
     update
 };

@@ -18,8 +18,8 @@ model Enfermeira{
   ecip Int @id 
   nome String
   area String
-  email String
-  senha String
+  email String @db.VarChar(100) @unique
+  senha String @db.VarChar(100) @unique
 }
 
 model Medico{

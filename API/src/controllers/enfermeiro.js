@@ -1,37 +1,42 @@
 const prisma = require('../connect');
 
 const create = async (req, res) => {
-    const { nome, area, email, senha, ecip } = req.body;
+    const { nome, ecip, area, email, senha } = req.body;
     console.log('Dados recebidos:', req.body);
 
     try {
-        const enfermeiro = await prisma.enfermeiro.create({
-            data: { nome, area, email, senha, ecip },
+        const enfermeiro = await prisma.enfermeira.create({
+            data: { nome, ecip, area, email, senha },
         });
-        console.log('Usuário criado:', enfermeiro);
+        console.log('Enfermeiro criado:', enfermeiro);
         res.status(201).json(enfermeiro);
     } catch (err) {
-        console.error('Erro ao criar usuário:', err);
+        console.error('Erro ao criar enfermeiro:', err);
         res.status(400).json(err);
     }
 };
+
+const read = async (req, res) => {
+    const enfermeiros = await prisma.enfermeira.findMany();
+    res.json(enfermeiros);
+}
 
 const login = async (req, res) => {
     const { email, senha } = req.body; 
     console.log('Tentativa de login:', req.body);
     try {
-        const enfermeiro = await prisma.enfermeiro.findUnique({
+        const enfermeiro = await prisma.enfermeira.findUnique({
             where: { email },
         });
         if (enfermeiro) {
             if (enfermeiro.senha === senha) {
                 console.log('Login bem-sucedido:', enfermeiro);
                 res.status(200).json({
-                    id: enfermeiro.id,
+                    ecip: enfermeiro.ecip,
+                    area: enfermeiro.area,
                     nome: enfermeiro.nome,
                     email: enfermeiro.email,
-                    senha: enfermeiro.senha,
-                    ecip: enfermeiro.ecip, // Incluindo a senha para futuras requisições
+                    senha: enfermeiro.senha, // Incluindo a senha para futuras requisições
                     message: 'Login bem-sucedido'
                 });
             } else {
@@ -39,7 +44,7 @@ const login = async (req, res) => {
                 res.status(401).json({ message: 'Senha incorreta' });
             }
         } else {
-            console.log('Usuário não encontrado');
+            console.log('Enfermeiro não encontrado');
             res.status(401).json({ message: 'Usuário não encontrado' });
         }
     } catch (err) {
@@ -49,28 +54,28 @@ const login = async (req, res) => {
 };
 
 const update = async (req, res) => {
-    const { id, nome, email, senha } = req.body;
+    const { ecip, area, nome, email, senha } = req.body;
     console.log('Requisição de atualização:', req.body);
 
     // Validação do ID
-    if (!id || isNaN(Number(id))) {
+    if (!ecip || isNaN(Number(ecip))) {
         return res.status(400).json({ message: 'ID inválido ou ausente' });
     }
 
     try {
-        const enfermeiroExistente = await prisma.enfermeiro.findUnique({ where: { id: Number(id) } });
+        const enfermeiroExistente = await prisma.enfermeira.findUnique({ where: { ecip: Number(ecip) } });
 
         if (!enfermeiroExistente) {
-            console.log('enfermeiro não encontrado para atualização');
-            return res.status(404).json({ message: 'enfermeiro não encontrado' });
+            console.log('Enfermeiro não encontrado para atualização');
+            return res.status(404).json({ message: 'Enfermeiro não encontrado' });
         }
 
-        const enfermeiroAtualizado = await prisma.enfermeiro.update({
-            where: { id: Number(id) },
+        const enfermeiroAtualizado = await prisma.enfermeira.update({
+            where: { ecip: Number(ecip) },
             data: { nome, area, email, senha },
         });
 
-        console.log('enfermeiro atualizado com sucesso:', enfermeiroAtualizado);
+        console.log('Enfermeiro atualizado com sucesso:', enfermeiroAtualizado);
         res.status(200).json(enfermeiroAtualizado);
     } catch (err) {
         console.error('Erro ao atualizar enfermeiro:', err);
@@ -83,5 +88,6 @@ const update = async (req, res) => {
 module.exports = {
     create,
     login,
+    read,
     update
 };

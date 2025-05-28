@@ -5,13 +5,15 @@ const paciente = require('./controllers/paciente.js');
 const enfermeiro = require('./controllers/enfermeiro.js'); 
 
 //Rotas de paciente
+rota.get('/pacientes', paciente.read); // Rota para ler todos os pacientes
 rota.post('/cadastro', paciente.create); // Rota para cadastro
 rota.post('/login', paciente.login); // Rota para login
-rota.put('/update', paciente.update); // Rota para login
+rota.put('/update', paciente.update); // Rota para update
 
 // Rota de enfermeiro
-rota.post('/cadastro', enfermeiro.create); // Rota para cadastro
-rota.post('/login', enfermeiro.login); // Rota para login
-rota.put('/update', enfermeiro.update); // Rota para login
+rota.get('/enfermeiros', enfermeiro.read); // Rota para ler todos os enfermiros
+rota.post('/registroenf', enfermeiro.create); // Rota para cadastro
+rota.post('/loginenf', enfermeiro.login); // Rota para login
+rota.put('/updateenf', enfermeiro.update); // Rota para update
 
 module.exports = rota;
