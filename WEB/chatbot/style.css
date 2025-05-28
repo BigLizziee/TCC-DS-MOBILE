@@ -30,7 +30,7 @@ body {
     background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px #0057b39f;
 }
 
 .main-header {
