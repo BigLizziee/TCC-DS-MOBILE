@@ -1,0 +1,317 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1748365843088
+  modified: 1748365843088
+collection:
+  - name: DD
+    meta:
+      id: fld_c56dfeccf15e4a6badbe3bfd0768a3aa
+      created: 1748435777522
+      modified: 1748438125188
+      sortKey: -1748435777522
+    children:
+      - name: Paciente
+        meta:
+          id: fld_129301de88d44332bf9c2ab28d660dd4
+          created: 1748435783732
+          modified: 1748435797282
+          sortKey: -1748435797256
+        children:
+          - url: http://localhost:3000/pacientes
+            name: New Request
+            meta:
+              id: req_f65ce76d55584a199190b88d7e2815d8
+              created: 1748435767467
+              modified: 1748438115954
+              isPrivate: false
+              sortKey: -1748435804992
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/update
+            name: New Request
+            meta:
+              id: req_a02982aa3d45470caff8b2c6d859d3b0
+              created: 1748435806830
+              modified: 1748451940072
+              isPrivate: false
+              sortKey: -1748435804973.25
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 2815,
+                	"nome": "Mellyssa Silveira de Medeiros",
+                	"email": "mel@gmail.com",
+                	"senha": "mel123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/cadastro
+            name: New Request
+            meta:
+              id: req_f6626a84108f4806925170cd85e4e398
+              created: 1748435807168
+              modified: 1748451938681
+              isPrivate: false
+              sortKey: -1748435804979.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Mellyssa Silveira",
+                	"email": "mel@gmail.com",
+                	"senha": "mel123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/delete/2815
+            name: New Request
+            meta:
+              id: req_d86459534b284712a50c0be5def9bbd0
+              created: 1748451916961
+              modified: 1748456841253
+              isPrivate: false
+              sortKey: -1748435804967
+            method: DELETE
+            body:
+              mimeType: application/json
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Enfermeiro
+        meta:
+          id: fld_d41bb531d0604db38a475bff52cf08ca
+          created: 1748435789296
+          modified: 1748435872779
+          sortKey: -1748435797356
+        children:
+          - url: http://localhost:3000/updateenf
+            name: New Request
+            meta:
+              id: req_3a5ae52a75f1498eaa1f6cc8e75f393f
+              created: 1748435817583
+              modified: 1748451943156
+              isPrivate: false
+              sortKey: -1748435824832.5
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"ecip": 123321123,
+                	"nome": "Pedro Duarte Naddeu Russo",
+                	"area": "Triagem",
+                	"email": "pedronaddeu@gmail.com",
+                	"senha": "pedro231"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/registroenf
+            name: New Request
+            meta:
+              id: req_1724cba5c1e44a4e87f6e221210861c5
+              created: 1748435824660
+              modified: 1748451944871
+              isPrivate: false
+              sortKey: -1748443872977.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Pedro Duarte",
+                	"ecip": 123321123,
+                	"area": "Pediatria",
+                	"email": "pedronaddeu@gmail.com",
+                	"senha": "pedro123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/deleteenf/123321123
+            name: New Request
+            meta:
+              id: req_32537c12de4f4a60b4ceb87ce8189fd5
+              created: 1748435825005
+              modified: 1748456808682
+              isPrivate: false
+              sortKey: -1748435824732.5
+            method: DELETE
+            body:
+              mimeType: application/json
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - name: New Request
+            meta:
+              id: req_3861f372d9bb49dbb339c83c5636fcc9
+              created: 1748451920950
+              modified: 1748451920950
+              isPrivate: false
+              sortKey: -1748451920950
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Medico
+        meta:
+          id: fld_ca00ffcb168449fe9f4662b43f59d5d6
+          created: 1748435793570
+          modified: 1748435799385
+          sortKey: -1748435797456
+        children:
+          - name: New Request
+            meta:
+              id: req_6f32ec28e3544af782344b9669959225
+              created: 1748435817137
+              modified: 1748435845895
+              isPrivate: false
+              sortKey: -1748435836970
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - name: New Request
+            meta:
+              id: req_f927dece12754477abdd5eead2517650
+              created: 1748435817375
+              modified: 1748435836985
+              isPrivate: false
+              sortKey: -1748435836920
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - name: New Request
+            meta:
+              id: req_3f722cdf686642d798068e207d4b5edc
+              created: 1748435829925
+              modified: 1748435841490
+              isPrivate: false
+              sortKey: -1748435837020
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1748435749623
+    modified: 1748435749623
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1748435749494
+    modified: 1748435749494
+    isPrivate: false

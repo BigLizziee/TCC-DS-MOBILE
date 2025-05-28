@@ -74,6 +74,32 @@ const login = async (req, res) => {
     }
 };
 
+const deletar = async (req, res) => {
+    const { id } = req.body;
+    console.log('Requisição de exclusão:', req.body);
+
+    // Validação do ID
+    if (!id || isNaN(Number(id))) {
+        return res.status(400).json({ message: 'ID inválido ou ausente' });
+    }
+
+    try {
+        const pacienteExistente = await prisma.paciente.findUnique({ where: { id: Number(id) } });
+
+        if (!pacienteExistente) {
+            console.log('Paciente não encontrado para exclusão');
+            return res.status(404).json({ message: 'Paciente não encontrado' });
+        }
+
+        await prisma.paciente.delete({ where: { id: Number(id) } });
+        console.log('Paciente excluído com sucesso');
+        res.status(200).json({ message: 'Paciente excluído com sucesso' });
+    } catch (err) {
+        console.error('Erro ao excluir paciente:', err);
+        res.status(500).json({ message: 'Erro ao excluir paciente' });
+    }
+}
+
 const update = async (req, res) => {
     const { id, nome, email, senha } = req.body;
     console.log('Requisição de atualização:', req.body);
@@ -110,5 +136,6 @@ module.exports = {
     create,
     login,
     read,
+    deletar,
     update
 };
