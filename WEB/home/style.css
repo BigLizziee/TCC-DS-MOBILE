@@ -242,6 +242,9 @@ header{
 
 .service_card a{
     color: var(--primary-color);
+    justify-content: center;
+    display: flex;
+    margin: 2px;
 }
 
 .service_card a:hover{
