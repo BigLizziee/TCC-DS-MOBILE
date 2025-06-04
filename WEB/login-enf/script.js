@@ -26,7 +26,7 @@ function login() {
                 alert('Login bem-sucedido!');
 
                 // Salva nome e email corretos vindos da API
-                sessionStorage.setItem("usuario", JSON.stringify({
+                sessionStorage.setItem("enfermeiro", JSON.stringify({
                     ecip: data.ecip, // Certifique-se de que o ID está sendo retornado pela API
                     nome: data.nome,
                     area: data.area,
@@ -34,7 +34,7 @@ function login() {
                     senha: data.senha // Armazena a senha para futuras requisições
                 }));
 
-                window.location.href = '../chatbot/index.html'; // Redireciona para o perfil
+                window.location.href = '../ui-enf/index.html'; // Redireciona para o perfil
             } else {
                 alert(data.message || 'e-CIP ou senha inválidos.');
             }

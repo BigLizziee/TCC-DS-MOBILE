@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DD </title>
+    <link rel="shortcut icon" type="image/png" href="../img/titlelogo.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>DD - Seja Bem Vindo!</title>
 </head>
 <body>
-    
+  <main class="container">
+    <div class="containerLeft">
+      <div class="icon-bar">
+        <a onclick="logout()"><i class="ri-logout-box-line"></i></a>
+        <a href="../ui-conf/index.html"><i class="ri-settings-5-fill"></i></a>
+      </div>
+      <h1>Explore nossos serviços</h1>
+      <ul>
+        <li><a href="../chatbot/index.html">ChatBot</a></li>
+        <li><a href="../login/index.html">...</a></li>
+        <li><a href="../test/index.html">...</a></li>
+      </ul>
+    </div>
+    <div class="containerRight">
+      <h2>Bem-vindo(a), <span id="email"></span>!</h2>
+      <h1>Seu Hub de Enfermeiro</h1>
+      <section class="section_container service_container">
+    <div class="service_grid">
+        <div class="service_card">
+            <span><i class="ri-chat-1-line"></i></span>
+            <h4>Comece sua conversa agora!</h4>
+            <p>Inicie sua conversa com um profissional da saúde agoara!</p>
+            <br>
+            <a href="../login/index.html">Converse com um profissional</a>
+        </div>
+        <div class="service_card">
+                <span><i class="ri-bilibili-line"></i></span>
+                <h4>Converse com nosso bot!</h4>
+                <p>Caso esteja sentindo sintomas simples, pergunte a ele o diagnostico!</p>
+                <br>
+                <br>
+                <a href="../chatbot/index.html">Converse agora com o Bot</a>
+        </div>
+        <div class="service_card">
+                <span><i class="ri-bilibili-line"></i></span>
+                <h4>Converse com nosso bot!</h4>
+                <p>Caso esteja sentindo sintomas simples, pergunte a ele o diagnostico!</p>
+                <br>
+                <br>
+                <a href="../chatbot/index.html">Converse agora com o Bot</a>
+        </div>
+        </section>
+      <div class="news-container" id="newsContainer"></div>
+    </div>
+  </main>
 </body>
+<script src="script.js"></script>
 </html>
