@@ -103,10 +103,11 @@ npx prisma migrate dev --name init
 
 Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](https://github.com/PedroDNRusso/TCC-DS/tree/main/DOCS).
 
-## Diagrama e MERxDER
+## Diagramas e MERxDER
 
 ![DC1.0](./WEB/img/DCDD.jpg)
 ![MERxDER1.0](./WEB/img/MERxDER.jpg)
+Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](https://github.com/PedroDNRusso/TCC-DS/tree/main/DOCS).
 
 ## Requisitos Sprint 1
 - [x] Escolher a metodologia **SCRUM, KANBAN, XP, outras**
@@ -131,6 +132,16 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 - [x] Modelar o banco de dados MER x DER
 - [x] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
 * [Slide](https://github.com/PedroDNRusso/TCC-DS/blob/main/DOCS/Diagnostico.pdf)
+
+## Requisitos - Sprint 3
+- [x] Iniciar a codificação/desenvolvimento **Banco de dados**
+- [x] Iniciar a codificação/desenvolvimento **Back-end**
+- [x] UML [DC (Diagrama de Classes)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula03) **Back-End**
+- [x] Iniciar a codificação/desenvolvimento **Front-end**
+- [ ] UML [DA (Diagrama de Atividades)](../../02-pbe2/aula10/README.md) **Front-End**
+- [ ] Iniciar a codificação/desenvolvimento **Mobile**
+- [x] Análise de Viabilidade com Matriz SWOT
+- [x] Triângulo da qualidade do Projeto (Escopo, Prazo e Custo)
 
 ### Requisitos funcionais
 - [RF001] O sistema deve permitir o CRUD de pacientes.
@@ -177,5 +188,6 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 | 25/05/2025     | Desenvolvimento de UI (User Interface) com configurações funcional   |
 | 27/05/2025     | Desenvolvimento de UI (User Interface) e modificação da interface   |
 | 28/05/2025     | Desenvolvimento API de enfermeiro e atualizando Home, ui-chat em desenvolvimento  |
+| 04/06/2025     | Desenvolvimento de SWOT(FOFA) e Triangulo de Ferro   |
 
 ## ByPedroDuarte&MellyssaSilveira
