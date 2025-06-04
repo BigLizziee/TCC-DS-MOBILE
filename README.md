@@ -116,9 +116,9 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 * [Slide](https://github.com/PedroDNRusso/TCC-DS/blob/main/DOCS/Metodologia.pdf)
 
 ## Requisitos - Sprint 2
-- Metodologia: SCRUM
-- Tema inicial: Diagnostico Rápido (Saúde relação entre paciente e médico)
-- Alunos: Melissa|PO|, Lizzie|Full Stack|, Pedro|Scrum Master|, Rodrigo|Back End - QA|
+- Metodologia: KanBan
+- Tema inicial: Diagnostico Digital (Saúde relação entre paciente e médico)
+- Alunos: Melissa|Full Stack|, Lizzie|Mobile|, Pedro|Full Stack|, Rodrigo|Mobile|
 - [Repositório github](https://github.com/PedroDNRusso/TCC-DS.git)
 - [x] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
 - [x] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
@@ -153,11 +153,11 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 ![Wireframe DCU](./WEB/img/DCUDD.jpg)
 
 ## Wireframes
-![Wireframe Home](./WEB/img/Wireframe01.PNG)
-![Wireframe Cadastro](./WEB/img/Wireframe02.PNG)
-![Wireframe Login](./WEB/img/Wireframe03.PNG)
-![Wireframe UI (User Interface)](./WEB/img/Wireframe05.PNG)
-![Wireframe oChatBot](./WEB/img/Wireframe04.PNG)
+![Wireframe Home](/DOCS/wireframes/Wireframe01.PNG)
+![Wireframe Cadastro](./DOCS/wireframes/Wireframe02.PNG)
+![Wireframe Login](./DOCS/wireframes/Wireframe03.PNG)
+![Wireframe UI (User Interface)](./DOCS/wireframes/Wireframe04.PNG)
+![Wireframe oChatBot](./DOCS/wireframes/Wireframe05.PNG)
 
 
 ## Progresso de Desenvolvimento
