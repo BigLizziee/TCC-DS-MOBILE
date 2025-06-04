@@ -9,12 +9,12 @@ function login() {
         e.preventDefault();
 
         const dados = {
-            email: form.email.value,
+            ecip: form.ecip.value,
             senha: form.senha.value,
         };
 
         try {
-            const response = await fetch(`${uri}/login`, {
+            const response = await fetch(`${uri}/loginenf`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(dados),
@@ -27,15 +27,16 @@ function login() {
 
                 // Salva nome e email corretos vindos da API
                 sessionStorage.setItem("usuario", JSON.stringify({
-                    id: data.id, // Certifique-se de que o ID está sendo retornado pela API
+                    ecip: data.ecip, // Certifique-se de que o ID está sendo retornado pela API
                     nome: data.nome,
+                    area: data.area,
                     email: data.email,
                     senha: data.senha // Armazena a senha para futuras requisições
                 }));
 
-                window.location.href = '../ui/index.html'; // Redireciona para o perfil
+                window.location.href = '../chatbot/index.html'; // Redireciona para o perfil
             } else {
-                alert(data.message || 'Email ou senha inválidos.');
+                alert(data.message || 'e-CIP ou senha inválidos.');
             }
         } catch (err) {
             console.error('Erro ao fazer login:', err);

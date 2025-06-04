@@ -30,7 +30,7 @@
         <h1>Login de Enfermeiro</h1>
       <div class="input-field">
         <i class="fas fa-envelope"></i>
-        <input type="email" placeholder="Email" name="email" required />
+        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "11" name="ecip" autocomplete="ecip" placeholder="e-CIP" required="yes">
       </div>
       <div class="input-field">
         <i class="fas fa-lock"></i>

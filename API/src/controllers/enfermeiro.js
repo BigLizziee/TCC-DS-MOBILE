@@ -22,11 +22,11 @@ const read = async (req, res) => {
 }
 
 const login = async (req, res) => {
-    const { email, senha } = req.body; 
+    const { ecip, senha } = req.body; 
     console.log('Tentativa de login:', req.body);
     try {
         const enfermeiro = await prisma.enfermeira.findUnique({
-            where: { email },
+            where: { ecip },
         });
         if (enfermeiro) {
             if (enfermeiro.senha === senha) {
@@ -40,8 +40,8 @@ const login = async (req, res) => {
                     message: 'Login bem-sucedido'
                 });
             } else {
-                console.log('Senha incorreta');
-                res.status(401).json({ message: 'Senha incorreta' });
+                console.log('e-CIP ou senha incorretas');
+                res.status(401).json({ message: 'e-CIP ou senha incorretas' });
             }
         } else {
             console.log('Enfermeiro não encontrado');
