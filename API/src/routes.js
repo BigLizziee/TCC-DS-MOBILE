@@ -12,7 +12,7 @@ rota.put('/update', paciente.update); // Rota para atualizar paciente
 
 // Rota de enfermeiro
 rota.get('/enfermeiros', enfermeiro.read); // Rota para ler todos os enfermiros
-rota.post('/registroenf', enfermeiro.create); // Rota para cadastro
+rota.post('/cadastroenf', enfermeiro.create); // Rota para cadastro
 rota.post('/loginenf', enfermeiro.login); // Rota para login
 rota.put('/updateenf', enfermeiro.update); // Rota para update
 

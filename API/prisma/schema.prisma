@@ -15,7 +15,7 @@ model Paciente{
 }
 
 model Enfermeira{
-  ecip Int @id 
+  ecip String @id 
   nome String
   area String
   email String @db.VarChar(100) @unique

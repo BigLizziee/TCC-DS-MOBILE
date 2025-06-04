@@ -15,6 +15,7 @@
     <div class="forms-container">
       <div class="signin-signup">
         <form action="" class="sign-in-form">
+          <a href="../home/index.html"><i class="far fa-hospital"></i></a>
           <h2 class="title">Cadastre-se</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
@@ -22,7 +23,7 @@
           </div>
           <div class="input-field">
             <i class="fas fa-id-card-alt"></i>
-            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "11" name="ecip" autocomplete="ecip" placeholder="e-CIP" required="yes">
+            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "11" name="ecip" autocomplete="ecip" placeholder="e-CIP" required="yes">
           </div>
           <div class="input-field">
             <i class="far fa-clipboard"></i>
@@ -37,7 +38,7 @@
             <input type="password" name="senha" autocomplete="Senha" placeholder="Senha" id="senha" required="yes">
             <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
           </div>
-          <input onclick="cadastrar()" type="submit" value="Cadastrar" class="btn solid">
+          <input type="submit" value="Cadastrar" class="btn solid">
         </form>
       </div>
     </div>
