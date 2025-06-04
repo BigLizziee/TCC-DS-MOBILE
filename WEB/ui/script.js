@@ -11,7 +11,7 @@ if (!usuario) {
 
 function logout() {
   sessionStorage.removeItem("usuario");
-  window.location.href = "../login/index.html";
+  window.location.href = "../home/index.html";
 }
 
         const apiKey = '772e6de7321f4f0bbeec40d77b0e723a'; // 🔑 Insira sua chave da NewsAPI aqui
