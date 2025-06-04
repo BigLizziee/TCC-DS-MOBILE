@@ -9,13 +9,11 @@ rota.get('/pacientes', paciente.read); // Rota para ler todos os pacientes
 rota.post('/cadastro', paciente.create); // Rota para cadastro de paciente
 rota.post('/login', paciente.login); // Rota para login
 rota.put('/update', paciente.update); // Rota para atualizar paciente
-rota.delete('/delete:/id', paciente.deletar); // Rota para deletar paciente
 
 // Rota de enfermeiro
 rota.get('/enfermeiros', enfermeiro.read); // Rota para ler todos os enfermiros
 rota.post('/registroenf', enfermeiro.create); // Rota para cadastro
 rota.post('/loginenf', enfermeiro.login); // Rota para login
 rota.put('/updateenf', enfermeiro.update); // Rota para update
-rota.delete('/deleteenf:/id', enfermeiro.deletar); // Rota para deletar paciente
 
 module.exports = rota;
