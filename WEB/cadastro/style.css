@@ -33,7 +33,7 @@
   width: 1900px;
   height: 2750px;
   border-radius: 50%;
-    background: linear-gradient(250deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(250deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   top: -10%;
   right: 48%;
   transform: translateY(-50%);

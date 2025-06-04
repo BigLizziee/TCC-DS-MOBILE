@@ -143,7 +143,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 - [x] Análise de Viabilidade com Matriz SWOT
 - [x] Triângulo da qualidade do Projeto (Escopo, Prazo e Custo)
 
-### Requisitos funcionais
+## Requisitos funcionais
 - [RF001] O sistema deve permitir o CRUD de pacientes.
 - [RF002] O sistema deve permitir o CRUD de enfermeiro(a).
 - [RF003] O sistema deve permitir o CRUD de médico(a).
@@ -153,7 +153,6 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 ![Wireframe DCU](./WEB/img/DCUDD.jpg)
 
 ## Wireframes
-
 ![Wireframe Home](./WEB/img/Wireframe01.PNG)
 ![Wireframe Cadastro](./WEB/img/Wireframe02.PNG)
 ![Wireframe Login](./WEB/img/Wireframe03.PNG)
