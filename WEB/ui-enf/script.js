@@ -1,5 +1,7 @@
 const enfermeiro = JSON.parse(sessionStorage.getItem("enfermeiro"));
 
+console.log(enfermeiro);
+
 if (!enfermeiro) {
   window.location.href = "../login-enf/index.html";
 } else {

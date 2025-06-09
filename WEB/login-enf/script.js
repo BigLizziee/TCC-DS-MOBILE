@@ -27,7 +27,7 @@ function login() {
 
                 // Salva nome e email corretos vindos da API
                 sessionStorage.setItem("enfermeiro", JSON.stringify({
-                    ecip: data.ecip, // Certifique-se de que o ID está sendo retornado pela API
+                    id: data.ecip, // Certifique-se de que o ID está sendo retornado pela API
                     nome: data.nome,
                     area: data.area,
                     email: data.email,
