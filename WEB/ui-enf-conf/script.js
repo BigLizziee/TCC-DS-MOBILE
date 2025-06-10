@@ -25,7 +25,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id: enfermeiro.ecip, nome, email, senha, area }),
+      body: JSON.stringify({ id: enfermeiro.id, nome, email, senha, area }),
     });
 
     const result = await response.json();
@@ -33,7 +33,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
 
     if (response.ok) {
       alert("Informações atualizadas com sucesso!");
-      sessionStorage.setItem("enfermeiro", JSON.stringify({ id: enfermeiro.ecip, nome, email, senha, area }));
+      sessionStorage.setItem("enfermeiro", JSON.stringify({ id: enfermeiro.id, nome, email, senha, area }));
     } else {
       alert("Erro ao atualizar: " + result.message);
     }
