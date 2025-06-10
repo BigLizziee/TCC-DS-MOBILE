@@ -28,8 +28,8 @@ function login() {
                 // Salva nome e email corretos vindos da API
                 sessionStorage.setItem("enfermeiro", JSON.stringify({
                     id: data.id, // Certifique-se de que o ID está sendo retornado pela API
-                    nome: data.nome,
                     area: data.area,
+                    nome: data.nome,
                     email: data.email,
                     senha: data.senha // Armazena a senha para futuras requisições
                 }));
