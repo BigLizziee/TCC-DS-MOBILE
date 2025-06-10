@@ -63,7 +63,7 @@ const update = async (req, res) => {
     }
 
     try {
-        const enfermeiroExistente = await prisma.enfermeira.findUnique({ where: { ecip: Number(ecip) } });
+        const enfermeiroExistente = await prisma.enfermeira.findUnique({ where: { id: Number(ecip) } });
 
         if (!enfermeiroExistente) {
             console.log('Enfermeiro não encontrado para atualização');
@@ -71,7 +71,7 @@ const update = async (req, res) => {
         }
 
         const enfermeiroAtualizado = await prisma.enfermeira.update({
-            where: { ecip: Number(ecip) },
+            where: { id: Number(ecip) },
             data: { nome, area, email, senha },
         });
 
