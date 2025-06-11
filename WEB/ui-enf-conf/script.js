@@ -4,7 +4,8 @@ console.log(enfermeiro);
 if (!enfermeiro) {
   window.location.href = "../login-enf/index.html";
 } else {
-  document.getElementById("ecip").value = enfermeiro.id;
+  document.getElementById("ecip").value = enfermeiro.ecip;
+  document.getElementById("id").value = enfermeiro.id;
   document.getElementById("nome").value = enfermeiro.nome;
   document.getElementById("senha").value = enfermeiro.senha;
   document.getElementById("area").value = enfermeiro.area;
@@ -13,9 +14,10 @@ if (!enfermeiro) {
 
 document.getElementById("formConfiguracoes").addEventListener("submit", async function (e) {
   e.preventDefault();
-
+  
   const nome = document.getElementById("nome").value;
   const area = document.getElementById("area").value;
+  const ecip = document.getElementById("ecip").value;
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
 
@@ -25,7 +27,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id: enfermeiro.id, nome, email, senha, area }),
+      body: JSON.stringify({ id: enfermeiro.id, ecip, nome, email, senha, area }),
     });
 
     const result = await response.json();
@@ -33,7 +35,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
 
     if (response.ok) {
       alert("Informações atualizadas com sucesso!");
-      sessionStorage.setItem("enfermeiro", JSON.stringify({ id: enfermeiro.id, nome, email, senha, area }));
+      sessionStorage.setItem("enfermeiro", JSON.stringify({ id: enfermeiro.id, ecip, nome, email, senha, area }));
     } else {
       alert("Erro ao atualizar: " + result.message);
     }

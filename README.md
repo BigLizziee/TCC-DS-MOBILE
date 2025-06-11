@@ -189,5 +189,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 | 28/05/2025     | Desenvolvimento API de enfermeiro e atualizando Home, ui-chat em desenvolvimento  |
 | 04/06/2025     | Desenvolvimento de SWOT(FOFA) e Triangulo de Ferro, Login de enfermeiro funcional   |
 | 09/06/2025     | Manutenção em UI de enfermeiro    |
+| 10/06/2025     | Desenvolvimento de UI de enfermeiro (configurações)     |
+| 11/06/2025     | Desenvolvimento de UI de enfermeiro (configurações) funcional     |
 
 ## ByPedroDuarte&MellyssaSilveira

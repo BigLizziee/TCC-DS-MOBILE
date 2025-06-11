@@ -12,15 +12,17 @@ CREATE TABLE `Paciente` (
 
 -- CreateTable
 CREATE TABLE `Enfermeira` (
-    `ecip` INTEGER NOT NULL,
+    `id` INTEGER NOT NULL,
+    `ecip` VARCHAR(100) NOT NULL,
     `nome` VARCHAR(191) NOT NULL,
     `area` VARCHAR(191) NOT NULL,
     `email` VARCHAR(100) NOT NULL,
     `senha` VARCHAR(100) NOT NULL,
 
+    UNIQUE INDEX `Enfermeira_ecip_key`(`ecip`),
     UNIQUE INDEX `Enfermeira_email_key`(`email`),
     UNIQUE INDEX `Enfermeira_senha_key`(`senha`),
-    PRIMARY KEY (`ecip`)
+    PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
