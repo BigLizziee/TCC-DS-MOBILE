@@ -66,6 +66,12 @@ DATABASE_URL="mysql://root@localhost:3306/ddigital?schema=public&timezone=UTC"
 npx prisma migrate dev --name init
 ```
 
+- Caso seja de interesse, coloque seu email para conectar o Git ao GitHub
+
+```bash
+git config --global user.email "seu-email@exemplo.com"
+```
+
 ## Tecnologias Utilizadas para o Desenvolvimento
 
 | Linguagens e Ferramentas  | Funcionalidade |
