@@ -1,12 +1,33 @@
 const prisma = require('../connect');
 
+async function gerarIDUnico() {
+    let idValido = false;
+    let novoId;
+
+    while (!idValido) {
+        novoId = Math.floor(1000 + Math.random() * 10000); // Número entre 1000 e 9999
+
+        const existe = await prisma.paciente.findUnique({
+            where: { id: novoId },
+        });
+
+        if (!existe) {
+            idValido = true;
+        }
+    }
+
+    return novoId;
+}
+
 const create = async (req, res) => {
     const { nome, ecip, area, email, senha } = req.body;
     console.log('Dados recebidos:', req.body);
 
     try {
+        const id = await gerarIDUnico();
+
         const enfermeiro = await prisma.enfermeira.create({
-            data: { nome, ecip, area, email, senha },
+            data: { id, nome, ecip, area, email, senha },
         });
         console.log('Enfermeiro criado:', enfermeiro);
         res.status(201).json(enfermeiro);
@@ -32,6 +53,7 @@ const login = async (req, res) => {
             if (enfermeiro.senha === senha) {
                 console.log('Login bem-sucedido:', enfermeiro);
                 res.status(200).json({
+                    id: enfermeiro.id,
                     ecip: enfermeiro.ecip,
                     area: enfermeiro.area,
                     nome: enfermeiro.nome,
@@ -54,16 +76,16 @@ const login = async (req, res) => {
 };
 
 const update = async (req, res) => {
-    const { ecip, area, nome, email, senha } = req.body;
+    const { id, ecip, area, nome, email, senha } = req.body;
     console.log('Requisição de atualização:', req.body);
 
     // Validação do ID
-    if (!ecip || isNaN(Number(ecip))) {
+    if (!id || isNaN(Number(id))) {
         return res.status(400).json({ message: 'ID inválido ou ausente' });
     }
 
     try {
-        const enfermeiroExistente = await prisma.enfermeira.findUnique({ where: { id: Number(ecip) } });
+        const enfermeiroExistente = await prisma.enfermeira.findUnique({ where: { id: Number(id) } });
 
         if (!enfermeiroExistente) {
             console.log('Enfermeiro não encontrado para atualização');
@@ -71,8 +93,8 @@ const update = async (req, res) => {
         }
 
         const enfermeiroAtualizado = await prisma.enfermeira.update({
-            where: { id: Number(ecip) },
-            data: { nome, area, email, senha },
+            where: { id: Number(id) },
+            data: { ecip, nome, area, email, senha },
         });
 
         console.log('Enfermeiro atualizado com sucesso:', enfermeiroAtualizado);
