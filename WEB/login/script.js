@@ -30,7 +30,11 @@ function login() {
                     id: data.id, // Certifique-se de que o ID está sendo retornado pela API
                     nome: data.nome,
                     email: data.email,
-                    senha: data.senha // Armazena a senha para futuras requisições
+                    senha: data.senha,
+                    cpf: data.cpf,
+                    telefone: data.telefone, 
+                    data_nascimento: data.data_nascimento, 
+                    endereco: data.endereco, // Armazena a senha para futuras requisições
                 }));
 
                 window.location.href = '../ui/index.html'; // Redireciona para o perfil

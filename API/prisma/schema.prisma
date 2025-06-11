@@ -12,6 +12,10 @@ model Paciente{
   nome String
   email String @db.VarChar(100) @unique
   senha String @db.VarChar(50) @unique
+  cpf String? @db.VarChar(11) @unique
+  telefone String? @db.VarChar(15)
+  data_nascimento DateTime? @db.Date
+  endereco String? @db.VarChar(200)
 }
 
 model Enfermeira{

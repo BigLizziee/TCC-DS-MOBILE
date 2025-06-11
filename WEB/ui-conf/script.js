@@ -8,6 +8,10 @@ if (!usuario) {
   document.getElementById("nome").value = usuario.nome;
   document.getElementById("email").value = usuario.email;
   document.getElementById("senha").value = usuario.senha;
+  document.getElementById("cpf").value = usuario.cpf;
+  document.getElementById("datanasc").value = usuario.data_nascimento;
+  document.getElementById("telefone").value = usuario.telefone;
+  document.getElementById("endereco").value = usuario.endereco;
 }
 
 document.getElementById("formConfiguracoes").addEventListener("submit", async function (e) {
@@ -23,7 +27,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id: usuario.id, nome, email, senha }),
+      body: JSON.stringify({ id: usuario.id, nome, email, senha, cpf, data_nascimento, endereco, telefone }),
     });
 
     const result = await response.json();
@@ -31,7 +35,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
 
     if (response.ok) {
       alert("Informações atualizadas com sucesso!");
-      sessionStorage.setItem("usuario", JSON.stringify({ id: usuario.id, nome, email, senha }));
+      sessionStorage.setItem("usuario", JSON.stringify({ id: usuario.id, nome, email, senha, cpf, data_nascimento, endereco, telefone }));
     } else {
       alert("Erro ao atualizar: " + result.message);
     }

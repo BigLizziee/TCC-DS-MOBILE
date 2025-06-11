@@ -20,14 +20,14 @@ async function gerarIDUnico() {
 }
 
 const create = async (req, res) => {
-    const { nome, email, senha } = req.body;
+    const { nome, email, senha, cpf, data_nascimento, endereco, telefone } = req.body;
     console.log('Dados recebidos:', req.body);
 
     try {
         const id = await gerarIDUnico(); // Gera o ID único
 
         const paciente = await prisma.paciente.create({
-            data: { id, nome, email, senha },
+            data: { id, nome, email, senha, cpf, data_nascimento, endereco, telefone },
         });
 
         console.log('Usuário criado:', paciente);
@@ -58,6 +58,10 @@ const login = async (req, res) => {
                     nome: paciente.nome,
                     email: paciente.email,
                     senha: paciente.senha, // Incluindo a senha para futuras requisições
+                    cpf: paciente.cpf, 
+                    telefone: paciente.telefone, 
+                    data_nascimento: paciente.data_nascimento, 
+                    endereco: paciente.endereco,
                     message: 'Login bem-sucedido'
                 });
             } else {
@@ -93,7 +97,7 @@ const update = async (req, res) => {
 
         const pacienteAtualizado = await prisma.paciente.update({
             where: { id: Number(id) },
-            data: { nome, email, senha },
+            data: { nome, email, senha, cpf, data_nascimento, endereco, telefone },
         });
 
         console.log('Paciente atualizado com sucesso:', pacienteAtualizado);
