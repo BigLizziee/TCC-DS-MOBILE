@@ -6,6 +6,7 @@ if (!enfermeiro) {
   document.getElementById("nome").textContent = enfermeiro.nome;
   document.getElementById("ecip").textContent = enfermeiro.ecip;
   document.getElementById("id").textContent = enfermeiro.id;
+  document.getElementById("area").textContent = enfermeiro.area;
 }
 
 function logout() {
