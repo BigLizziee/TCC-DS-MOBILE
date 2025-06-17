@@ -26,7 +26,7 @@
     <div class="containerRight">
       <div class="user-info">
             <div class="user-icon">
-              <span><i class="ri-user-line"></i></span>
+              <span><i class="ri-nurse-fill"></i></span>
             </div>
           <div class="user-details">
             <h2>Bem-vindo, <span id="nome"></span>!</h2>
@@ -34,7 +34,7 @@
             <p>Nº de Cadastro: <span id="id"></span></p>
           </div>
         </div>
-      <h1>Seu Hub de Paciente</h1>
+      <h1>Seu Hub de Médico</h1>
       <section class="section_container service_container">
     <div class="service_grid">
         <div class="service_card">
@@ -63,6 +63,15 @@
         </div>
         </section>
       <div class="news-container" id="newsContainer"></div>
+    </div>
+    <div class="container-search">
+        <h2><i class="fas fa-search"></i> Pesquisar Paciente por ID</h2>
+        <div class="search-box">
+            <i class="fas fa-id-card"></i>
+            <input type="number" id="searchId" placeholder="Digite o ID do paciente" min="1" />
+            <button onclick="buscarPacientePorId()">Buscar</button>
+        </div>
+        <div id="resultadoBusca" class="resultado"></div>
     </div>
   </main>
 </body>

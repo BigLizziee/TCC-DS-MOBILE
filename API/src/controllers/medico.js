@@ -5,7 +5,7 @@ async function gerarIDUnico() {
     let novoId;
 
     while (!idValido) {
-        novoId = Math.floor(1000 + Math.random() * 10000); // Número entre 1000 e 9999
+        novoId = Math.floor(10000 + Math.random() * 10000); // Número entre 1000 e 9999
 
         const existe = await prisma.paciente.findUnique({
             where: { id: novoId },
