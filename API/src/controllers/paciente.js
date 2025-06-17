@@ -79,12 +79,23 @@ const login = async (req, res) => {
 };
 
 const update = async (req, res) => {
-    const { id, nome, email, senha, cpf } = req.body;
+    const { id, nome, email, senha, cpf, telefone, data_nascimento, endereco } = req.body;
     console.log('Requisição de atualização:', req.body);
 
-    // Validação do ID
     if (!id || isNaN(Number(id))) {
         return res.status(400).json({ message: 'ID inválido ou ausente' });
+    }
+
+    let dataNascimentoFormatada = null;
+    if (data_nascimento) {
+        try {
+            dataNascimentoFormatada = new Date(data_nascimento);
+            if (isNaN(dataNascimentoFormatada.getTime())) {
+                return res.status(400).json({ message: 'data_nascimento inválida' });
+            }
+        } catch {
+            return res.status(400).json({ message: 'data_nascimento inválida' });
+        }
     }
 
     try {
@@ -97,7 +108,7 @@ const update = async (req, res) => {
 
         const pacienteAtualizado = await prisma.paciente.update({
             where: { id: Number(id) },
-            data: { nome, email, senha, cpf },
+            data: { nome, email, senha, cpf, telefone, data_nascimento: dataNascimentoFormatada, endereco},
         });
 
         console.log('Paciente atualizado com sucesso:', pacienteAtualizado);
@@ -107,8 +118,6 @@ const update = async (req, res) => {
         res.status(500).json({ message: 'Erro ao atualizar paciente' });
     }
 };
-
-
 
 module.exports = {
     create,

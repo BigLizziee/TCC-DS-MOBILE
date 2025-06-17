@@ -138,7 +138,8 @@ body {
 
 form {
   background: #ffffff00;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   flex-direction: column;
   padding: 40px;
   justify-content: center;
