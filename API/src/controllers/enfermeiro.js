@@ -5,7 +5,7 @@ async function gerarIDUnico() {
     let novoId;
 
     while (!idValido) {
-        novoId = Math.floor(1000 + Math.random() * 10000); // Número entre 1000 e 9999
+        novoId = Math.floor(10000 + Math.random() * 100000); // Número entre 1000 e 9999
 
         const existe = await prisma.paciente.findUnique({
             where: { id: novoId },
@@ -41,6 +41,26 @@ const read = async (req, res) => {
     const enfermeiros = await prisma.enfermeira.findMany();
     res.json(enfermeiros);
 }
+
+const readOne = async (req, res) => {
+    const { id } = req.params;
+    if (!id || isNaN(Number(id))) {
+        return res.status(400).json({ message: 'ID inválido ou ausente' });
+    }
+    try {
+        const enfermeira = await prisma.enfermeira.findUnique({
+            where: { id: Number(id) }
+        });
+        if (!enfermeira) {
+            return res.status(404).json({ message: 'enfermeira não encontrado' });
+        }
+        res.status(200).json(enfermeira);
+    } catch (err) {
+        console.error('Erro ao buscar enfermeira por ID:', err);
+        res.status(500).json({ message: 'Erro ao buscar enfermeira' });
+    }
+};
+
 
 const login = async (req, res) => {
     const { ecip, senha } = req.body; 
@@ -111,5 +131,6 @@ module.exports = {
     create,
     login,
     read,
+    readOne,
     update
 };

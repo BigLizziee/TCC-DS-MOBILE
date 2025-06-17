@@ -28,9 +28,12 @@ model Enfermeira{
 }
 
 model Medico{
-  id Int @id @default(autoincrement())
+  id Int @id 
   nome String
   crm String @db.VarChar(100) @unique
   email String @db.VarChar(100) @unique
   senha String @db.VarChar(100) @unique
+  cpf String? @db.VarChar(11) @unique
+  telefone String? @db.VarChar(15)
+  data_nascimento DateTime? @db.Date
 }

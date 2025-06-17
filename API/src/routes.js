@@ -3,6 +3,7 @@ const rota = express.Router();
 
 const paciente = require('./controllers/paciente.js'); 
 const enfermeiro = require('./controllers/enfermeiro.js'); 
+const medico = require('./controllers/medico.js');
 
 //Rotas de paciente
 rota.post('/cadastro', paciente.create); // Rota para cadastro de paciente
@@ -14,8 +15,16 @@ rota.delete('/deletar/:id', paciente.deletar); // Rota para deletar paciente por
 
 // Rota de enfermeiro
 rota.get('/enfermeiros', enfermeiro.read); // Rota para ler todos os enfermiros
+rota.get('/enfermeiros/:id', enfermeiro.readOne); // Rota para ler enfermeiro por ID
 rota.post('/cadastroenf', enfermeiro.create); // Rota para cadastro
 rota.post('/loginenf', enfermeiro.login); // Rota para login
 rota.put('/updateenf', enfermeiro.update); // Rota para update
+
+// Rota de medico
+rota.get('/medicos', medico.read); // Rota para ler todos os enfermiros
+rota.get('/medicos/:id', medico.readOne); // Rota para ler medico por ID
+rota.post('/cadastromed', medico.create); // Rota para cadastro
+rota.post('/loginmed', medico.login); // Rota para login
+rota.put('/updatemed', medico.update); // Rota para update
 
 module.exports = rota;
