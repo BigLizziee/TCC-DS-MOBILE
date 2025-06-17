@@ -97,7 +97,6 @@ git config --global user.email "seu-email@exemplo.com"
 ## Github dos Professores
 
 * [Wellington Fábio de Oliveira Martins](https://github.com/wellifabio)
-* [Lucas Paiva](https://github.com/lucasPaiva00)
 * [Luís Fernando](https://github.com/luisfernandospoljaric)
 * [Reenye Lima](https://github.com/ReenyeLima)
 * [Robson Souza](https://github.com/robsonbsouzaa)
