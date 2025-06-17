@@ -49,6 +49,32 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
   }
 });
 
+function deletar() {
+  const id = usuario.id;
+  if (!id || isNaN(Number(id))) {
+    alert("ID inválido ou ausente");
+    return;
+  }
+
+  fetch(`http://localhost:3000/deletar/${id}`, {
+    method: "DELETE",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.message === "Paciente excluído com sucesso") {
+        alert("Conta excluída com sucesso!");
+        sessionStorage.removeItem("usuario");
+        window.location.href = "../home/index.html";
+      } else {
+        alert("Erro ao excluir conta: " + data.message);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      alert("Erro ao conectar ao servidor.");
+    });
+}
+
 const togglePassword = document.querySelector("#togglePassword");
 const password = document.querySelector("#senha");
 togglePassword.addEventListener("click", function (e) {
