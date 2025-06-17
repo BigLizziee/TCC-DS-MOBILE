@@ -14,17 +14,19 @@ rota.get('/pacientes/:id', paciente.readOne); // Rota para ler paciente por ID
 rota.delete('/deletar/:id', paciente.deletar); // Rota para deletar paciente por ID
 
 // Rota de enfermeiro
-rota.get('/enfermeiros', enfermeiro.read); // Rota para ler todos os enfermiros
-rota.get('/enfermeiros/:id', enfermeiro.readOne); // Rota para ler enfermeiro por ID
 rota.post('/cadastroenf', enfermeiro.create); // Rota para cadastro
 rota.post('/loginenf', enfermeiro.login); // Rota para login
 rota.put('/updateenf', enfermeiro.update); // Rota para update
+rota.get('/enfermeiros', enfermeiro.read); // Rota para ler todos os enfermiros
+rota.get('/enfermeiros/:id', enfermeiro.readOne); // Rota para ler enfermeiro por ID
+rota.delete('/deletarenf/:id', enfermeiro.deletar); // Rota para deletar enfermeiro por ID
 
 // Rota de medico
-rota.get('/medicos', medico.read); // Rota para ler todos os enfermiros
-rota.get('/medicos/:id', medico.readOne); // Rota para ler medico por ID
 rota.post('/cadastromed', medico.create); // Rota para cadastro
 rota.post('/loginmed', medico.login); // Rota para login
 rota.put('/updatemed', medico.update); // Rota para update
+rota.get('/medicos', medico.read); // Rota para ler todos os enfermiros
+rota.get('/medicos/:id', medico.readOne); // Rota para ler medico por ID
+rota.delete('/deletarmed/:id', medico.deletar); // Rota para deletar medico por ID
 
 module.exports = rota;

@@ -95,6 +95,28 @@ const login = async (req, res) => {
     }
 };
 
+const deletar = async (req, res) => {
+    const { id } = req.params;
+    if (!id || isNaN(Number(id))) {
+        return res.status(400).json({ message: 'ID inválido ou ausente' });
+    }
+    try {
+        const enfermeiraExistente = await prisma.enfermeira.findUnique({ where: { id: Number(id) } });
+
+        if (!enfermeiraExistente) {
+            console.log('enfermeira não encontrado para exclusão');
+            return res.status(404).json({ message: 'enfermeira não encontrado' });
+        }
+
+        await prisma.enfermeira.delete({ where: { id: Number(id) } });
+        console.log('enfermeira excluído com sucesso');
+        res.status(200).json({ message: 'enfermeira excluído com sucesso' });
+    } catch (err) {
+        console.error('Erro ao excluir enfermeira:', err);
+        res.status(500).json({ message: 'Erro ao excluir enfermeira' });
+    }
+}
+
 const update = async (req, res) => {
     const { id, ecip, area, nome, email, senha } = req.body;
     console.log('Requisição de atualização:', req.body);
@@ -132,5 +154,6 @@ module.exports = {
     login,
     read,
     readOne,
+    deletar,
     update
 };

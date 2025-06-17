@@ -96,6 +96,28 @@ const login = async (req, res) => {
     }
 };
 
+const deletar = async (req, res) => {
+    const { id } = req.params;
+    if (!id || isNaN(Number(id))) {
+        return res.status(400).json({ message: 'ID inválido ou ausente' });
+    }
+    try {
+        const medicoExistente = await prisma.medico.findUnique({ where: { id: Number(id) } });
+
+        if (!medicoExistente) {
+            console.log('medico não encontrado para exclusão');
+            return res.status(404).json({ message: 'medico não encontrado' });
+        }
+
+        await prisma.medico.delete({ where: { id: Number(id) } });
+        console.log('medico excluído com sucesso');
+        res.status(200).json({ message: 'medico excluído com sucesso' });
+    } catch (err) {
+        console.error('Erro ao excluir medico:', err);
+        res.status(500).json({ message: 'Erro ao excluir medico' });
+    }
+}
+
 const update = async (req, res) => {
     const { id, nome, crm, email, senha , cpf, telefone, data_nascimento } = req.body;
     console.log('Requisição de atualização:', req.body);
@@ -133,5 +155,6 @@ module.exports = {
     login,
     read,
     readOne,
+    deletar,
     update
 };
