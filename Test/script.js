@@ -1,28 +1,31 @@
-const express = require('express');
-const http = require('http');
-const { Server } = require('socket.io');
+    async function buscarPacientePorId() {
+        const id = document.getElementById('searchId').value;
+        const resultadoDiv = document.getElementById('resultadoBusca');
+        resultadoDiv.innerHTML = '';
 
-const app = express();
-const server = http.createServer(app);
-const io = new Server(server, {
-  cors: {
-    origin: "*"
-  }
-});
+        if (!id) {
+            resultadoDiv.innerHTML = '<span class="erro">Informe um ID válido.</span>';
+            return;
+        }
 
-io.on('connection', (socket) => {
-  console.log('Um usuário conectado:', socket.id);
-
-  socket.on('send_message', (data) => {
-    console.log(data);
-    io.emit('receive_message', data);
-  });
-
-  socket.on('disconnect', () => {
-    console.log('Usuário desconectado:', socket.id);
-  });
-});
-
-server.listen(3000, () => {
-  console.log('Servidor rodando na porta 3000');
-});
+        try {
+            const response = await fetch(`http://localhost:3000/pacientes/${id}`);
+            if (!response.ok) {
+                resultadoDiv.innerHTML = '<span class="erro">Paciente não encontrado.</span>';
+                return;
+            }
+            const paciente = await response.json();
+            resultadoDiv.innerHTML = `
+                <div class="info-card">
+                    <p><strong>Nome:</strong> ${paciente.nome || '-'}</p>
+                    <p><strong>Email:</strong> ${paciente.email || '-'}</p>
+                    <p><strong>CPF:</strong> ${paciente.cpf || '-'}</p>
+                    <p><strong>Telefone:</strong> ${paciente.telefone || '-'}</p>
+                    <p><strong>Data de Nascimento:</strong> ${paciente.data_nascimento ? new Date(paciente.data_nascimento).toLocaleDateString() : '-'}</p>
+                    <p><strong>Endereço:</strong> ${paciente.endereco || '-'}</p>
+                </div>
+            `;
+        } catch (err) {
+            resultadoDiv.innerHTML = '<span class="erro">Erro ao buscar paciente.</span>';
+        }
+    }

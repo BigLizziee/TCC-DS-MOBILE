@@ -224,6 +224,74 @@ a {
     background-color: #e60000;
   }
 
+.container-search {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.search-box i {
+    color: #0984e3;
+    font-size: 1.2em;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #dfe6e9;
+    border-radius: 6px;
+    font-size: 1em;
+    outline: none;
+}
+
+.search-box button {
+    background: #0984e3;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.search-box button:hover {
+    background: #74b9ff;
+}
+
+.resultado {
+    margin-top: 18px;
+    min-height: 40px;
+}
+
+.info-card {
+    background: #f1f2f6;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.info-card p {
+    margin: 6px 0;
+    color: #2d3436;
+}
+
+.erro {
+    color: #d63031;
+    font-weight: bold;
+}
+  
+
 .news-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -337,6 +405,12 @@ a {
 .service_card:hover span{
     color: var(--primary-color-light);
     background-color: var(--primary-color);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @media (max-width: 768px) {

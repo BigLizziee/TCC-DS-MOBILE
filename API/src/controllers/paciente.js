@@ -43,6 +43,25 @@ const read = async (req, res) => {
     res.json(pacientes);
 }
 
+const readOne = async (req, res) => {
+    const { id } = req.params;
+    if (!id || isNaN(Number(id))) {
+        return res.status(400).json({ message: 'ID inválido ou ausente' });
+    }
+    try {
+        const paciente = await prisma.paciente.findUnique({
+            where: { id: Number(id) }
+        });
+        if (!paciente) {
+            return res.status(404).json({ message: 'Paciente não encontrado' });
+        }
+        res.status(200).json(paciente);
+    } catch (err) {
+        console.error('Erro ao buscar paciente por ID:', err);
+        res.status(500).json({ message: 'Erro ao buscar paciente' });
+    }
+};
+
 const login = async (req, res) => {
     const { email, senha } = req.body; 
     console.log('Tentativa de login:', req.body);
@@ -123,5 +142,6 @@ module.exports = {
     create,
     login,
     read,
+    readOne,
     update
 };

@@ -64,6 +64,15 @@
         </section>
       <div class="news-container" id="newsContainer"></div>
     </div>
+          <div class="container-search">
+        <h2><i class="fas fa-search"></i> Pesquisar Paciente por ID</h2>
+        <div class="search-box">
+            <i class="fas fa-id-card"></i>
+            <input type="number" id="searchId" placeholder="Digite o ID do paciente" min="1" />
+            <button onclick="buscarPacientePorId()">Buscar</button>
+        </div>
+        <div id="resultadoBusca" class="resultado"></div>
+    </div>
   </main>
   <script src="script.js"></script>
 </body>
