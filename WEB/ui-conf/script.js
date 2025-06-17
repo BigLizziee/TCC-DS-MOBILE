@@ -9,9 +9,9 @@ if (!usuario) {
   document.getElementById("email").value = usuario.email;
   document.getElementById("senha").value = usuario.senha;
   document.getElementById("cpf").value = usuario.cpf;
-  document.getElementById("datanasc").value = usuario.data_nascimento;
-  document.getElementById("telefone").value = usuario.telefone;
-  document.getElementById("endereco").value = usuario.endereco;
+  // document.getElementById("datanasc").value = usuario.data_nascimento;
+  // document.getElementById("telefone").value = usuario.telefone;
+  // document.getElementById("endereco").value = usuario.endereco;
 }
 
 document.getElementById("formConfiguracoes").addEventListener("submit", async function (e) {
@@ -20,6 +20,10 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
   const nome = document.getElementById("nome").value;
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
+  const cpf = document.getElementById("cpf").value;
+  // const data_nascimento = document.getElementById("datanasc").value;
+  // const endereco = document.getElementById("endereco").value;
+  // const telefone = document.getElementById("telefone").value;
 
   try {
     const response = await fetch("http://localhost:3000/update", {
@@ -27,7 +31,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id: usuario.id, nome, email, senha, cpf, data_nascimento, endereco, telefone }),
+      body: JSON.stringify({ id: usuario.id, nome, email, senha, cpf}),
     });
 
     const result = await response.json();
@@ -35,7 +39,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
 
     if (response.ok) {
       alert("Informações atualizadas com sucesso!");
-      sessionStorage.setItem("usuario", JSON.stringify({ id: usuario.id, nome, email, senha, cpf, data_nascimento, endereco, telefone }));
+      sessionStorage.setItem("usuario", JSON.stringify({ id: usuario.id, nome, email, senha, cpf}));
     } else {
       alert("Erro ao atualizar: " + result.message);
     }

@@ -79,7 +79,7 @@ const login = async (req, res) => {
 };
 
 const update = async (req, res) => {
-    const { id, nome, email, senha } = req.body;
+    const { id, nome, email, senha, cpf } = req.body;
     console.log('Requisição de atualização:', req.body);
 
     // Validação do ID
@@ -97,7 +97,7 @@ const update = async (req, res) => {
 
         const pacienteAtualizado = await prisma.paciente.update({
             where: { id: Number(id) },
-            data: { nome, email, senha, cpf, data_nascimento, endereco, telefone },
+            data: { nome, email, senha, cpf },
         });
 
         console.log('Paciente atualizado com sucesso:', pacienteAtualizado);
