@@ -197,5 +197,6 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 | 10/06/2025     | Desenvolvimento de UI de enfermeiro (configurações)     |
 | 11/06/2025     | Desenvolvimento de UI de enfermeiro (configurações) funcional     |
 | 17/06/2025     | Aplicando novas configurações e função deletar para UI (User Interface) e "Campo Pesquisar ID de Paciente" para UI-enf     |
+| 18/06/2025     | Desenvolvimento de UI-med (User Interface de Médico) e API     |
 
 ## ByPedroDuarte&MellyssaSilveira
