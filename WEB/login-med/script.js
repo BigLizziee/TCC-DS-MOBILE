@@ -35,6 +35,8 @@ function login() {
                     cpf: data.cpf,
                     telefone: data.telefone,
                     data_nascimento: data.data_nascimento,
+                    endereco: data.endereco,
+                    especialidade: data.especialidade // Incluindo especialidade se necessário
                 }));
 
                 window.location.href = '../ui-med/index.html'; // Redireciona para o perfil

@@ -36,6 +36,26 @@
           </div>
         </div>
       <h1>Seu Hub de Enfermeiro</h1>
+        <div class="search-row">
+      <div class="container-search">
+            <h2><i class="fas fa-search"></i> Pesquisar Paciente por ID</h2>
+            <div class="search-box">
+                  <i class="fas fa-id-card"></i>
+                  <input type="number" id="searchIdPac" placeholder="Digite o ID do Paciente" min="1" />
+                  <button onclick="buscarPacientePorId()">Buscar</button>
+            </div>
+            <div id="resultadoBuscaPac" class="resultado"></div>
+      </div>
+      <div class="container-search">
+            <h2><i class="fas fa-search"></i> Pesquisar Médico por ID</h2>
+            <div class="search-box">
+                  <i class="fas fa-id-card"></i>
+                  <input type="number" id="searchIdMed" placeholder="Digite o ID do Medico" min="1" />
+                  <button onclick="buscarMedicoPorId()">Buscar</button>
+            </div>
+            <div id="resultadoBuscaMed" class="resultado"></div>
+      </div>
+  </div>
       <section class="section_container service_container">
     <div class="service_grid">
         <div class="service_card">
@@ -63,15 +83,6 @@
         </div>
         </section>
       <div class="news-container" id="newsContainer"></div>
-    </div>
-          <div class="container-search">
-        <h2><i class="fas fa-search"></i> Pesquisar Paciente por ID</h2>
-        <div class="search-box">
-            <i class="fas fa-id-card"></i>
-            <input type="number" id="searchId" placeholder="Digite o ID do paciente" min="1" />
-            <button onclick="buscarPacientePorId()">Buscar</button>
-        </div>
-        <div id="resultadoBusca" class="resultado"></div>
     </div>
   </main>
   <script src="script.js"></script>

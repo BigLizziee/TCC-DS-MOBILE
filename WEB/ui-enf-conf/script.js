@@ -10,6 +10,10 @@ if (!enfermeiro) {
   document.getElementById("senha").value = enfermeiro.senha;
   document.getElementById("area").value = enfermeiro.area;
   document.getElementById("email").value = enfermeiro.email;
+  document.getElementById("cpf").value = enfermeiro.cpf;
+  document.getElementById("telefone").value = enfermeiro.telefone;
+  document.getElementById("datanasc").value = enfermeiro.data_nascimento;
+  document.getElementById("endereco").value = enfermeiro.endereco;
 }
 
 document.getElementById("formConfiguracoes").addEventListener("submit", async function (e) {
@@ -20,6 +24,10 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
   const ecip = document.getElementById("ecip").value;
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
+  const cpf = document.getElementById("cpf").value;
+  const telefone = document.getElementById("telefone").value;
+  const data_nascimento = document.getElementById("datanasc").value;
+  const endereco = document.getElementById("endereco").value;
 
   try {
     const response = await fetch("http://localhost:3000/updateenf", {
@@ -27,7 +35,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id: enfermeiro.id, ecip, nome, email, senha, area }),
+      body: JSON.stringify({ id: enfermeiro.id, ecip, nome, email, senha, area, cpf, endereco, telefone, data_nascimento }),
     });
 
     const result = await response.json();
@@ -35,7 +43,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
 
     if (response.ok) {
       alert("Informações atualizadas com sucesso!");
-      sessionStorage.setItem("enfermeiro", JSON.stringify({ id: enfermeiro.id, ecip, nome, email, senha, area }));
+      sessionStorage.setItem("enfermeiro", JSON.stringify({ id: enfermeiro.id, ecip, nome, email, senha, area, cpf, endereco, telefone, data_nascimento }));
     } else {
       alert("Erro ao atualizar: " + result.message);
     }

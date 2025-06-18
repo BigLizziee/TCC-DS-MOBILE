@@ -20,14 +20,14 @@ async function gerarIDUnico() {
 }
 
 const create = async (req, res) => {
-    const { nome, crm, email, senha, cpf, telefone, data_nascimento } = req.body;
+    const { nome, crm, email, senha, cpf, telefone, data_nascimento, endereco, especialidade } = req.body;
     console.log('Dados recebidos:', req.body);
 
     try {
         const id = await gerarIDUnico();
 
         const medico = await prisma.medico.create({
-            data: { id, nome, crm, email, senha , cpf, telefone, data_nascimento },
+            data: { id, nome, crm, email, senha , cpf, telefone, data_nascimento, endereco, especialidade },
         });
         console.log('medico criado:', medico);
         res.status(201).json(medico);
@@ -80,6 +80,8 @@ const login = async (req, res) => {
                     cpf: medico.cpf,
                     telefone: medico.telefone,
                     data_nascimento: medico.data_nascimento,  
+                    endereco: medico.endereco,
+                    especialidade: medico.especialidade,
                     message: 'Login bem-sucedido'
                 });
             } else {
@@ -119,7 +121,7 @@ const deletar = async (req, res) => {
 }
 
 const update = async (req, res) => {
-    const { id, nome, crm, email, senha , cpf, telefone, data_nascimento } = req.body;
+    const { id, nome, crm, email, senha , cpf, telefone, data_nascimento, endereco, especialidade } = req.body;
     console.log('Requisição de atualização:', req.body);
 
     // Validação do ID
@@ -149,7 +151,7 @@ const update = async (req, res) => {
 
         const medicoAtualizado = await prisma.medico.update({
             where: { id: Number(id) },
-            data: { nome, crm, email, senha , cpf, telefone, data_nascimento: dataNascimentoFormatada },
+            data: { nome, crm, email, senha , cpf, telefone, endereco, especialidade, data_nascimento: dataNascimentoFormatada },
         });
 
         console.log('medico atualizado com sucesso:', medicoAtualizado);

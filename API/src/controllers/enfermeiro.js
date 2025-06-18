@@ -20,14 +20,14 @@ async function gerarIDUnico() {
 }
 
 const create = async (req, res) => {
-    const { nome, ecip, area, email, senha } = req.body;
+    const { nome, ecip, area, email, senha, cpf, telefone, data_nascimento, endereco } = req.body;
     console.log('Dados recebidos:', req.body);
 
     try {
         const id = await gerarIDUnico();
 
         const enfermeiro = await prisma.enfermeira.create({
-            data: { id, nome, ecip, area, email, senha },
+            data: { id, nome, ecip, area, email, senha, cpf, telefone, data_nascimento, endereco },
         });
         console.log('Enfermeiro criado:', enfermeiro);
         res.status(201).json(enfermeiro);
@@ -79,6 +79,10 @@ const login = async (req, res) => {
                     nome: enfermeiro.nome,
                     email: enfermeiro.email,
                     senha: enfermeiro.senha, // Incluindo a senha para futuras requisições
+                    cpf: enfermeiro.cpf,
+                    telefone: enfermeiro.telefone,
+                    data_nascimento: enfermeiro.data_nascimento,
+                    endereco: enfermeiro.endereco,
                     message: 'Login bem-sucedido'
                 });
             } else {
@@ -118,12 +122,24 @@ const deletar = async (req, res) => {
 }
 
 const update = async (req, res) => {
-    const { id, ecip, area, nome, email, senha } = req.body;
+    const { id, ecip, area, nome, email, senha, cpf, telefone, data_nascimento, endereco } = req.body;
     console.log('Requisição de atualização:', req.body);
 
     // Validação do ID
     if (!id || isNaN(Number(id))) {
         return res.status(400).json({ message: 'ID inválido ou ausente' });
+    }
+
+    let dataNascimentoFormatada = null;
+    if (data_nascimento) {
+        try {
+            dataNascimentoFormatada = new Date(data_nascimento);
+            if (isNaN(dataNascimentoFormatada.getTime())) {
+                return res.status(400).json({ message: 'data_nascimento inválida' });
+            }
+        } catch {
+            return res.status(400).json({ message: 'data_nascimento inválida' });
+        }
     }
 
     try {
@@ -136,7 +152,7 @@ const update = async (req, res) => {
 
         const enfermeiroAtualizado = await prisma.enfermeira.update({
             where: { id: Number(id) },
-            data: { ecip, nome, area, email, senha },
+            data: { ecip, nome, area, email, senha, cpf, telefone, endereco, data_nascimento: dataNascimentoFormatada },
         });
 
         console.log('Enfermeiro atualizado com sucesso:', enfermeiroAtualizado);

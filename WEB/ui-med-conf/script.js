@@ -12,6 +12,8 @@ if (!medico) {
   document.getElementById("cpf").value = medico.cpf;
   document.getElementById("telefone").value = medico.telefone;
   document.getElementById("datanasc").value = medico.data_nascimento;
+  document.getElementById("endereco").value = medico.endereco;
+  document.getElementById("especialidade").value = medico.especialidade;
 }
 
 document.getElementById("formConfiguracoes").addEventListener("submit", async function (e) {
@@ -24,6 +26,8 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
   const cpf = document.getElementById("cpf").value;
   const telefone = document.getElementById("telefone").value;
   const data_nascimento = document.getElementById("datanasc").value;
+  const endereco = document.getElementById("endereco").value;
+  const especialidade = document.getElementById("especialidade").value;
 
   try {
     const response = await fetch("http://localhost:3000/updatemed", {
@@ -31,7 +35,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id: medico.id, crm, nome, email, senha, cpf, telefone, data_nascimento  }),
+      body: JSON.stringify({ id: medico.id, crm, nome, email, senha, cpf, telefone, data_nascimento, endereco, especialidade  }),
     });
 
     const result = await response.json();
@@ -39,7 +43,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
 
     if (response.ok) {
       alert("Informações atualizadas com sucesso!");
-      sessionStorage.setItem("medico", JSON.stringify({ id: medico.id, crm, nome, email, senha, cpf, telefone, data_nascimento }));
+      sessionStorage.setItem("medico", JSON.stringify({ id: medico.id, crm, nome, email, senha, cpf, telefone, data_nascimento, endereco, especialidade }));
     } else {
       alert("Erro ao atualizar: " + result.message);
     }

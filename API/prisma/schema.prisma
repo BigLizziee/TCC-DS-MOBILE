@@ -21,19 +21,25 @@ model Paciente{
 model Enfermeira{
   id Int @id
   ecip String @db.VarChar(100) @unique 
-  nome String
-  area String
-  email String @db.VarChar(100) @unique
-  senha String @db.VarChar(100) @unique
-}
-
-model Medico{
-  id Int @id 
-  nome String
-  crm String @db.VarChar(100) @unique
+  nome String @db.VarChar(100)
+  area String @db.VarChar(100)
   email String @db.VarChar(100) @unique
   senha String @db.VarChar(100) @unique
   cpf String? @db.VarChar(11) @unique
   telefone String? @db.VarChar(15)
   data_nascimento DateTime? @db.Date
+  endereco String? @db.VarChar(200)
+}
+
+model Medico{
+  id Int @id 
+  nome String @db.VarChar(100)
+  email String @db.VarChar(100) @unique
+  senha String @db.VarChar(100) @unique
+  crm String @db.VarChar(100) @unique
+  especialidade String? @db.VarChar(100) 
+  cpf String? @db.VarChar(11) @unique
+  telefone String? @db.VarChar(15)
+  data_nascimento DateTime? @db.Date
+  endereco String? @db.VarChar(200)
 }

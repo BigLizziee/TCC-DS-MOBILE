@@ -32,7 +32,11 @@ function login() {
                     area: data.area,
                     nome: data.nome,
                     email: data.email,
-                    senha: data.senha // Armazena a senha para futuras requisições
+                    senha: data.senha, // Armazena a senha para futuras requisições
+                    cpf: data.cpf,
+                    telefone: data.telefone,
+                    data_nascimento: data.data_nascimento,
+                    endereco: data.endereco,
                 }));
 
                 window.location.href = '../ui-enf/index.html'; // Redireciona para o perfil
