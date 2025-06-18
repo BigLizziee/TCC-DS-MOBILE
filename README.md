@@ -158,11 +158,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 ![Wireframe DCU](./WEB/img/DCUDD.jpg)
 
 ## Wireframes
-![Wireframe Home](/DOCS/wireframes/Wireframe01.PNG)
-![Wireframe Cadastro](./DOCS/wireframes/Wireframe02.PNG)
-![Wireframe Login](./DOCS/wireframes/Wireframe03.PNG)
-![Wireframe UI (User Interface)](./DOCS/wireframes/Wireframe04.PNG)
-![Wireframe UI configurações](./DOCS/wireframes/Wireframe05.png)
+Veja nossos wireframes por aqui [DOCS]()
 
 
 ## Progresso de Desenvolvimento
