@@ -70,6 +70,8 @@ async function buscarMedicoPorId() {
                     <p><strong>CRM:</strong> ${medico.crm || '-'}</p>
                     <p><strong>Email:</strong> ${medico.email || '-'}</p>
                     <p><strong>CPF:</strong> ${medico.cpf || '-'}</p>
+                    <p><strong>Especialidade:</strong> ${medico.especialidade || '-'}</p>
+                    <p><strong>Endereço:</strong> ${medico.endereco || '-'}</p>
                     <p><strong>Telefone:</strong> ${medico.telefone || '-'}</p>
                     <p><strong>Data de Nascimento:</strong> ${medico.data_nascimento ? new Date(medico.data_nascimento).toLocaleDateString() : '-'}</p>
                 </div>

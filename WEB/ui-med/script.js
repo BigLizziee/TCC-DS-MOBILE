@@ -59,16 +59,19 @@ async function buscarEnfermeiroPorId() {
         try {
             const response = await fetch(`http://localhost:3000/enfermeiros/${id}`);
             if (!response.ok) {
-                resultadoDiv.innerHTML = '<span class="erro">Paciente não encontrado.</span>';
+                resultadoDiv.innerHTML = '<span class="erro">Enfermeiro não encontrado.</span>';
                 return;
             }
             const enfermeira = await response.json();
             resultadoDiv.innerHTML = `
                 <div class="info-card">
+                    <p><strong>CPF:</strong> ${enfermeira.cpf || '-'}</p>
                     <p><strong>Nome:</strong> ${enfermeira.nome || '-'}</p>
                     <p><strong>Email:</strong> ${enfermeira.email || '-'}</p>
                     <p><strong>e-CIP:</strong> ${enfermeira.ecip || '-'}</p>
                     <p><strong>Area:</strong> ${enfermeira.area || '-'}</p>
+                    <p><strong>Data de Nascimento:</strong> ${enfermeira.data_nascimento ? new Date(enfermeira.data_nascimento).toLocaleDateString() : '-'}</p>
+                    <p><strong>Endereço:</strong> ${enfermeira.endereco || '-'}</p>
                 </div>
             `;
         } catch (err) {
