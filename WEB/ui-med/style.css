@@ -1,4 +1,3 @@
-@import url('/style.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
@@ -125,6 +124,12 @@ a {
   align-items: flex-start;
 }
 
+.containerRight p{
+  font-size: 1rem;
+  color: var(--primary-dark-light);
+  font-weight: 600;
+}
+
 .user-info {
   display: flex;
   align-items: center;
@@ -133,8 +138,8 @@ a {
 }
 
 .user-icon {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background-color: var(--primary-color);
   display: flex;
@@ -144,7 +149,7 @@ a {
 
 .user-icon i {
   color: var(--white);
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .user-details p {
@@ -219,19 +224,34 @@ a {
     background-color: #e60000;
   }
 
+.search-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
 .container-search {
-    max-width: 400px;
-    margin: 60px auto;
-    background: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    padding: 32px 24px;
+  flex: 1 1 45%;
+  max-width: 500px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+}
+
+.container-search h2 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 16px;
 }
 
 .search-box {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     margin-bottom: 20px;
 }
 
@@ -286,6 +306,7 @@ a {
     color: #a31717;
     font-weight: bold;
 }
+  
 
 .news-container {
             display: grid;
@@ -400,6 +421,12 @@ a {
 .service_card:hover span{
     color: var(--primary-color-light);
     background-color: var(--primary-color);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @media (max-width: 768px) {

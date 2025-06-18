@@ -21,6 +21,9 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
   const crm = document.getElementById("crm").value;
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
+  const cpf = document.getElementById("cpf").value;
+  const telefone = document.getElementById("telefone").value;
+  const data_nascimento = document.getElementById("datanasc").value;
 
   try {
     const response = await fetch("http://localhost:3000/updatemed", {

@@ -23,56 +23,65 @@
         <li><a href="../test/index.html">...</a></li>
       </ul>
     </div>
+
     <div class="containerRight">
       <div class="user-info">
-            <div class="user-icon">
-              <span><i class="ri-nurse-fill"></i></span>
-            </div>
-          <div class="user-details">
-            <h2>Bem-vindo, <span id="nome"></span>!</h2>
-            <p>Email: <span id="email"></span></p>
-            <p>Nº de Cadastro: <span id="id"></span></p>
-          </div>
+        <div class="user-icon">
+          <span><i class="ri-nurse-fill"></i></span>
         </div>
+        <div class="user-details">
+          <h2>Bem-vindo, <span id="nome"></span>!</h2>
+          <p>Email: <span id="email"></span></p>
+          <p>Nº de Cadastro: <span id="id"></span></p>
+        </div>
+      </div>
       <h1>Seu Hub de Médico</h1>
+  <div class="search-row">
+      <div class="container-search">
+            <h2><i class="fas fa-search"></i> Pesquisar Enfermeiro por ID</h2>
+            <div class="search-box">
+                  <i class="fas fa-id-card"></i>
+                  <input type="number" id="searchIdEnf" placeholder="Digite o ID do Enfermeiro" min="1" />
+                  <button onclick="buscarEnfermeiroPorId()">Buscar</button>
+            </div>
+            <div id="resultadoBuscaEnf" class="resultado"></div>
+      </div>
+      <div class="container-search">
+            <h2><i class="fas fa-search"></i> Pesquisar Paciente por ID</h2>
+            <div class="search-box">
+                  <i class="fas fa-id-card"></i>
+                  <input type="number" id="searchIdPac" placeholder="Digite o ID do Paciente" min="1" />
+                  <button onclick="buscarPacientePorId()">Buscar</button>
+            </div>
+            <div id="resultadoBuscaPac" class="resultado"></div>
+      </div>
+  </div>
       <section class="section_container service_container">
-    <div class="service_grid">
-        <div class="service_card">
+        <div class="service_grid">
+          <div class="service_card">
             <span><i class="ri-chat-1-line"></i></span>
             <h4>Comece sua conversa agora!</h4>
-            <p>Inicie sua conversa com um profissional da saúde agoara!</p>
-            <br>
-            <br>
+            <p>Inicie sua conversa com um profissional da saúde agora!</p>
+            <br><br>
             <a href="../login/index.html">Converse com um profissional!</a>
+          </div>
+          <div class="service_card">
+            <span><i class="ri-bilibili-line"></i></span>
+            <h4>Converse com nosso bot!</h4>
+            <p>Caso esteja sentindo sintomas simples, pergunte a ele o diagnóstico!</p>
+            <br><br>
+            <a href="../chatbot/index.html">Converse agora com o Bot!</a>
+          </div>
+          <div class="service_card">
+            <span><i class="ri-chat-heart-line"></i></span>
+            <h4>Mantenha suas informações atualizadas!</h4>
+            <p>Atualize suas informações sempre que possível para um melhor atendimento e diagnóstico!</p>
+            <br><br>
+            <a href="../ui-conf/index.html">Atualize agora!</a>
+          </div>
         </div>
-        <div class="service_card">
-                <span><i class="ri-bilibili-line"></i></span>
-                <h4>Converse com nosso bot!</h4>
-                <p>Caso esteja sentindo sintomas simples, pergunte a ele o diagnostico!</p>
-                <br>
-                <br>
-                <a href="../chatbot/index.html">Converse agora com o Bot!</a>
-        </div>
-        <div class="service_card">
-                <span><i class="ri-chat-heart-line"></i></span>
-                <h4>Mantenha suas informações atualizadas!</h4>
-                <p>Atualize suas informações sempre que possivel para um melhor atendimento e diagnostico!</p>
-                <br>
-                <br>
-                <a href="../ui-conf/index.html">Atualize agora!</a>
-        </div>
-        </section>
+      </section>
       <div class="news-container" id="newsContainer"></div>
-    </div>
-    <div class="container-search">
-        <h2><i class="fas fa-search"></i> Pesquisar Paciente por ID</h2>
-        <div class="search-box">
-            <i class="fas fa-id-card"></i>
-            <input type="number" id="searchId" placeholder="Digite o ID do paciente" min="1" />
-            <button onclick="buscarPacientePorId()">Buscar</button>
-        </div>
-        <div id="resultadoBusca" class="resultado"></div>
-    </div>
   </main>
 </body>
 <script src="script.js"></script>

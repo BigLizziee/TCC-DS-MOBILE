@@ -15,8 +15,8 @@ function logout() {
 }
 
 async function buscarPacientePorId() {
-        const id = document.getElementById('searchId').value;
-        const resultadoDiv = document.getElementById('resultadoBusca');
+        const id = document.getElementById('searchIdPac').value;
+        const resultadoDiv = document.getElementById('resultadoBuscaPac');
         resultadoDiv.innerHTML = '';
 
         if (!id) {
@@ -39,6 +39,36 @@ async function buscarPacientePorId() {
                     <p><strong>Telefone:</strong> ${paciente.telefone || '-'}</p>
                     <p><strong>Data de Nascimento:</strong> ${paciente.data_nascimento ? new Date(paciente.data_nascimento).toLocaleDateString() : '-'}</p>
                     <p><strong>Endereço:</strong> ${paciente.endereco || '-'}</p>
+                </div>
+            `;
+        } catch (err) {
+            resultadoDiv.innerHTML = '<span class="erro">Erro ao buscar paciente.</span>';
+        }
+}
+
+async function buscarEnfermeiroPorId() {
+        const id = document.getElementById('searchIdEnf').value;
+        const resultadoDiv = document.getElementById('resultadoBuscaEnf');
+        resultadoDiv.innerHTML = '';
+
+        if (!id) {
+            resultadoDiv.innerHTML = '<span class="erro">Informe um ID válido.</span>';
+            return;
+        }
+
+        try {
+            const response = await fetch(`http://localhost:3000/enfermeiros/${id}`);
+            if (!response.ok) {
+                resultadoDiv.innerHTML = '<span class="erro">Paciente não encontrado.</span>';
+                return;
+            }
+            const enfermeira = await response.json();
+            resultadoDiv.innerHTML = `
+                <div class="info-card">
+                    <p><strong>Nome:</strong> ${enfermeira.nome || '-'}</p>
+                    <p><strong>Email:</strong> ${enfermeira.email || '-'}</p>
+                    <p><strong>e-CIP:</strong> ${enfermeira.ecip || '-'}</p>
+                    <p><strong>Area:</strong> ${enfermeira.area || '-'}</p>
                 </div>
             `;
         } catch (err) {

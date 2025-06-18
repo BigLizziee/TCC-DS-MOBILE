@@ -20,7 +20,7 @@ async function gerarIDUnico() {
 }
 
 const create = async (req, res) => {
-    const { nome, crm, email, senha , cpf, telefone, data_nascimento } = req.body;
+    const { nome, crm, email, senha, cpf, telefone, data_nascimento } = req.body;
     console.log('Dados recebidos:', req.body);
 
     try {
@@ -127,6 +127,18 @@ const update = async (req, res) => {
         return res.status(400).json({ message: 'ID inválido ou ausente' });
     }
 
+    let dataNascimentoFormatada = null;
+    if (data_nascimento) {
+        try {
+            dataNascimentoFormatada = new Date(data_nascimento);
+            if (isNaN(dataNascimentoFormatada.getTime())) {
+                return res.status(400).json({ message: 'data_nascimento inválida' });
+            }
+        } catch {
+            return res.status(400).json({ message: 'data_nascimento inválida' });
+        }
+    }
+
     try {
         const medicoExistente = await prisma.medico.findUnique({ where: { id: Number(id) } });
 
@@ -137,7 +149,7 @@ const update = async (req, res) => {
 
         const medicoAtualizado = await prisma.medico.update({
             where: { id: Number(id) },
-            data: { nome, crm, email, senha , cpf, telefone, data_nascimento },
+            data: { nome, crm, email, senha , cpf, telefone, data_nascimento: dataNascimentoFormatada },
         });
 
         console.log('medico atualizado com sucesso:', medicoAtualizado);
