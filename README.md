@@ -129,9 +129,9 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 - [x] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
 - [x] Criar um repositório no **github** e adicionar os integrantes do grupo como colaboradores.
     - [x] Enviar o link do repositório neste **[FORMS](https://docs.google.com/forms/d/e/1FAIpQLSdQFCwZJLTHT7JLSeKzwsJa9NJqV4QQ1FKrmGqT6vaZVynukw/viewform?usp=dialog)**
-- [ ] **Protótipo** funcional inicial (Com Figma - Mobile e Web)    
+- [x] **Protótipo** funcional inicial (Com Figma - Mobile e Web)    
     - [x] Web
-    - [ ] Mobile
+    - [x] Mobile
 - [x] Elencar os **[requisitos funcionais como neste exemplo](./requisitos.md)**. 
     - [x] Ilustrar cada **requisito funciional** com [DCU (Diagrama de casos de Uso)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula02)
 - [x] Modelar o banco de dados MER x DER
