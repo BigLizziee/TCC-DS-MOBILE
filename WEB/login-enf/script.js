@@ -8,6 +8,8 @@ function login() {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        document.getElementById('loginError').textContent = '';
+
         const dados = {
             ecip: form.ecip.value,
             senha: form.senha.value,
@@ -23,7 +25,8 @@ function login() {
             const data = await response.json();
 
             if (response.ok) {
-                alert('Login bem-sucedido!');
+                document.getElementById('loginError').style.color = 'green';
+                document.getElementById('loginError').textContent = 'Login bem-sucedido!';
 
                 // Salva nome e email corretos vindos da API
                 sessionStorage.setItem("enfermeiro", JSON.stringify({
@@ -39,13 +42,16 @@ function login() {
                     endereco: data.endereco,
                 }));
 
-                window.location.href = '../ui-enf/index.html'; // Redireciona para o perfil
+                setTimeout(() => {
+                        window.location.href = '../ui-enf/index.html';
+            }, 1000); 
             } else {
-                alert(data.message || 'e-CIP ou senha inválidos.');
+                document.getElementById('loginError').style.color = 'red';
+            document.getElementById('loginError').textContent = data.message || 'e-CIP ou senha inválidos.';
             }
         } catch (err) {
             console.error('Erro ao fazer login:', err);
-            alert('Erro ao fazer login.');
+            document.getElementById('loginError').textContent = 'Erro ao fazer login.';
         }
     });
 }

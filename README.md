@@ -194,5 +194,6 @@ Veja nossos wireframes em [DOCS](./DOCS/README.md)
 | 11/06/2025     | Desenvolvimento de UI de enfermeiro (configurações) funcional     |
 | 17/06/2025     | Aplicando novas configurações e função deletar para UI (User Interface) e "Campo Pesquisar ID de Paciente" para UI-enf     |
 | 18/06/2025     | Desenvolvimento de UI-med (User Interface de Médico) e API     |
+| 21/06/2025     | Pequenas aplicações nas UIs (Front-End)     |
 
 ## ByPedroDuarte&MellyssaSilveira

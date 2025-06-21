@@ -6,48 +6,54 @@ const password = document.querySelector("#senha");
 function login() {
     const form = document.querySelector('#formLogin');
     form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+    e.preventDefault();
 
-        const dados = {
-            crm: form.crm.value,
-            senha: form.senha.value,
-        };
+    // Limpa mensagem anterior
+    document.getElementById('loginError').textContent = '';
 
-        try {
-            const response = await fetch(`${uri}/loginmed`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(dados),
-            });
+    const dados = {
+        crm: form.crm.value,
+        senha: form.senha.value,
+    };
 
-            const data = await response.json();
+    try {
+        const response = await fetch(`${uri}/loginmed`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(dados),
+        });
 
-            if (response.ok) {
-                alert('Login bem-sucedido!');
+        const data = await response.json();
 
-                // Salva nome e email corretos vindos da API
-                sessionStorage.setItem("medico", JSON.stringify({
-                    id: data.id, // Certifique-se de que o ID está sendo retornado pela API
-                    crm: data.crm,
-                    nome: data.nome,
-                    email: data.email,
-                    senha: data.senha, // Armazena a senha para futuras requisições
-                    cpf: data.cpf,
-                    telefone: data.telefone,
-                    data_nascimento: data.data_nascimento,
-                    endereco: data.endereco,
-                    especialidade: data.especialidade // Incluindo especialidade se necessário
-                }));
+        if (response.ok) {
+            document.getElementById('loginError').style.color = 'green';
+            document.getElementById('loginError').textContent = 'Login bem-sucedido!';
 
-                window.location.href = '../ui-med/index.html'; // Redireciona para o perfil
-            } else {
-                alert(data.message || 'CRM ou senha inválidos.');
-            }
-        } catch (err) {
-            console.error('Erro ao fazer login:', err);
-            alert('Erro ao fazer login.');
+            sessionStorage.setItem("medico", JSON.stringify({
+                        id: data.id,
+                        crm: data.crm,
+                        nome: data.nome,
+                        email: data.email,
+                        senha: data.senha,
+                        cpf: data.cpf,
+                        telefone: data.telefone,
+                        data_nascimento: data.data_nascimento,
+                        endereco: data.endereco,
+                        especialidade: data.especialidade
+            }));
+
+            setTimeout(() => {
+                        window.location.href = '../ui-med/index.html';
+            }, 1000); 
+        } else {
+            document.getElementById('loginError').style.color = 'red';
+            document.getElementById('loginError').textContent = data.message || 'CRM ou senha inválidos.';
         }
-    });
+    } catch (err) {
+        console.error('Erro ao fazer login:', err);
+        document.getElementById('loginError').textContent = 'Erro ao fazer login.';
+    }
+});
 }
 
 
