@@ -13,8 +13,6 @@ const form = document.querySelector('form');
 form.addEventListener('submit', function(e) {
   e.preventDefault();
 
-   document.getElementById('loginError').textContent = '';
-
   const dados = {
     nome: form.nome.value,
     crm: form.crm.value,
@@ -32,6 +30,7 @@ form.addEventListener('submit', function(e) {
       if (status == 201)
         alert('Cadastro feito com sucesso!');
       else
-        document.getElementById('loginError').textContent = 'Erro ao fazer login.';
+        alert('Erro ao cadastrar! Verifique os dados e tente novamente.');
+      window.location.reload();
     });
 });
