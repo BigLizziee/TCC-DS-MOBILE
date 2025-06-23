@@ -62,8 +62,8 @@ const create = async (req, res) => {
     try {
         const id = await gerarIDUnico();
 
-        const func_med = await prisma.func_med.create({
-            data: { id, nome_pac, nome_med, crm_med, cpf_pac, data: data_consulta , afast_o: data_o, afast_c: data_c, motivo, ass_med, pacienteId, medicoId },
+        const func_med = await prisma.func_Med.create({
+            data: { id, nome_pac, nome_med, crm_med, cpf_pac, data: data_consulta , afast_o: data_o, afast_c: data_c, motivo, ass_med, pacienteId: Number(pacienteId), medicoId: Number(medicoId) },
         });
         console.log('Atestado criado:', func_med);
         res.status(201).json(func_med);
@@ -74,7 +74,7 @@ const create = async (req, res) => {
 };
 
 const read = async (req, res) => {
-    const func_meds = await prisma.func_med.findMany();
+    const func_meds = await prisma.func_Med.findMany();
     res.json(func_meds);
 }
 
@@ -84,7 +84,7 @@ const readOne = async (req, res) => {
         return res.status(400).json({ message: 'ID inválido ou ausente' });
     }
     try {
-        const func_med = await prisma.func_med.findUnique({
+        const func_med = await prisma.func_Med.findUnique({
             where: { id: Number(id) }
         });
         if (!func_med) {
