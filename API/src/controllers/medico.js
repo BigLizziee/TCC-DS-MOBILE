@@ -49,7 +49,10 @@ const readOne = async (req, res) => {
     }
     try {
         const medico = await prisma.medico.findUnique({
-            where: { id: Number(id) }
+            where: { id: Number(id) },
+            include:{
+            atestado:true
+        }
         });
         if (!medico) {
             return res.status(404).json({ message: 'medico não encontrado' });
