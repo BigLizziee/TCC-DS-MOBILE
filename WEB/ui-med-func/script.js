@@ -4,16 +4,6 @@ console.log(medico);
 if (!medico) {
   window.location.href = "../login-med/index.html";
 } else {
-  document.getElementById("crm").value = medico.crm;
-  document.getElementById("id").value = medico.id;
-  document.getElementById("nome").value = medico.nome;
-  document.getElementById("email").value = medico.email;
-  document.getElementById("senha").value = medico.senha;
-  document.getElementById("cpf").value = medico.cpf;
-  document.getElementById("telefone").value = medico.telefone;
-  document.getElementById("datanasc").value = medico.data_nascimento;
-  document.getElementById("endereco").value = medico.endereco;
-  document.getElementById("especialidade").value = medico.especialidade;
 }  
    
    

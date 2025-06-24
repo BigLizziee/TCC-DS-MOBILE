@@ -33,6 +33,6 @@ rota.delete('/deletarmed/:id', medico.deletar); // Rota para deletar medico por 
 // Rota de atestado
 rota.post('/funcmed', func_med.create); // Rota para criar atestado
 rota.get('/funcmed', func_med.read); // Rota para ler todos os atestados
-rota.get('/funcmed/:id', func_med.readOne); // Rota para ler at
+rota.get('/funcmed/paciente/:pacienteId', func_med.readOne);
 
 module.exports = rota;

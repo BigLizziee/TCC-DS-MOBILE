@@ -32,7 +32,7 @@
       </div>
       <div class="input-field">
         <i class="far fa-calendar-alt"></i>
-        <input type="date" id="datanasc" name="datanasc" placeholder="Data de Nascimento"/>
+        <input type="date" id="datanasc" name="datanasc" placeholder="Data de Nascimento" required/>
       </div>
       <div class="input-field">
         <i class="fas fa-user"></i>
@@ -40,7 +40,7 @@
       </div>
       <div class="input-field">
         <i class="fas fa-id-card-alt"></i>
-        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "11" id="cpf" name="cpf" placeholder="CPF"/>
+        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "11" id="cpf" name="cpf" placeholder="CPF" required/>
       </div>
       <div class="input-field">
         <i class="fas fa-envelope"></i>
@@ -48,7 +48,7 @@
       </div>
       <div class="input-field">
         <i class="fas fa-phone"></i>
-        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "11" id="telefone" name="telefone" placeholder="Telefone" />
+        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "11" id="telefone" name="telefone" placeholder="Telefone" required/>
       </div>
       <div class="input-field">
         <i class="fas fa-lock"></i>
@@ -57,7 +57,7 @@
       </div>
       <div class="input-field">
         <i class="fas fa-map-marker-alt"></i>
-        <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço"/>
+        <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required/>
       </div>
         <button type="submit">Salvar Alterações</button>
     </form>

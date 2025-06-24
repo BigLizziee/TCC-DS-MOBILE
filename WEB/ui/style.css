@@ -133,8 +133,8 @@ a {
 }
 
 .user-icon {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background-color: var(--primary-color);
   display: flex;
@@ -144,7 +144,7 @@ a {
 
 .user-icon i {
   color: var(--white);
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .user-details p {

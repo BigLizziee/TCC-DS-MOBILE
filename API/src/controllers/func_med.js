@@ -79,21 +79,27 @@ const read = async (req, res) => {
 }
 
 const readOne = async (req, res) => {
-    const { id } = req.params;
-    if (!id || isNaN(Number(id))) {
-        return res.status(400).json({ message: 'ID inválido ou ausente' });
+    const { pacienteId } = req.params;
+
+    if (!pacienteId || isNaN(Number(pacienteId))) {
+        return res.status(400).json({ message: 'ID do paciente inválido' });
     }
+
     try {
-        const func_med = await prisma.func_Med.findUnique({
-            where: { id: Number(id) }
+        const atestados = await prisma.func_Med.findMany({
+            where: {
+                pacienteId: Number(pacienteId)
+            }
         });
-        if (!func_med) {
-            return res.status(404).json({ message: 'Atestado não encontrado' });
+
+        if (atestados.length === 0) {
+            return res.status(404).json({ message: 'Nenhum atestado encontrado para este paciente' });
         }
-        res.status(200).json(func_med);
+
+        res.status(200).json(atestados);
     } catch (err) {
-        console.error('Erro ao buscar atestado por ID:', err);
-        res.status(500).json({ message: 'Erro ao buscar atestado' });
+        console.error('Erro ao buscar atestados por paciente:', err);
+        res.status(500).json({ message: 'Erro ao buscar atestados por paciente' });
     }
 };
 

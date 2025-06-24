@@ -34,11 +34,11 @@
         </div>
         <div class="input-field">
           <i class="fas fa-id-badge"></i>
-          <input type="text" name="crm_med" placeholder="CRM do Médico" required/>
+          <input type="text" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "11" name="crm_med" placeholder="CRM do Médico" required/>
         </div>
         <div class="input-field">
           <i class="fas fa-id-card"></i>
-          <input type="text" name="cpf_pac" placeholder="CPF do Paciente" required/>
+          <input type="text" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "11" name="cpf_pac" placeholder="CPF do Paciente" required/>
         </div>
         <div class="input-field">
           <i class="fas fa-calendar-alt"></i>
@@ -62,11 +62,11 @@
         </div>
         <div class="input-field">
           <i class="fas fa-hashtag"></i>
-          <input type="number" name="pacienteId" placeholder="ID do Paciente" required/>
+          <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "5" name="pacienteId" placeholder="ID do Paciente" required/>
         </div>
         <div class="input-field">
           <i class="fas fa-hashtag"></i>
-          <input type="number" name="medicoId" placeholder="ID do Médico" required/>
+          <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "6" name="medicoId" placeholder="ID do Médico" required/>
         </div>
         <button type="submit" class="btn">Criar Atestado</button>
       </form>

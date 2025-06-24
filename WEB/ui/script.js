@@ -13,3 +13,12 @@ function logout() {
   sessionStorage.removeItem("usuario");
   window.location.href = "../home/index.html";
 }
+
+function atualizarQuantidade() {
+  const atestados = JSON.parse(localStorage.getItem('atestados')) || [];
+  const total = atestados.reduce((soma, item) => soma + item.quantidade, 0);
+  document.getElementById('qtd').textContent = total;
+}
+
+atualizarQuantidade();
+window.atualizarQuantidade = atualizarQuantidade;
