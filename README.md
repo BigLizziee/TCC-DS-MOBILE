@@ -196,5 +196,6 @@ Veja nossos wireframes em [DOCS](./DOCS/README.md)
 | 18/06/2025     | Desenvolvimento de UI-med (User Interface de Médico) e API     |
 | 21/06/2025     | Pequenas aplicações nas UIs (Front-End)     |
 | 22/06/2025     | Desenvolvimento de API de atestado (Func-Med) funcional e alterações em Front-End     |
+| 23/06/2025     | API de atestados atualizada e função aplicada a UI de Paciente e UI de Médico (User Interface)    |
 
 ## ByPedroDuarte&MellyssaSilveira
