@@ -6,12 +6,15 @@ if (!usuario || !usuario.id) {
 async function buscarMensagensDoPaciente(pacienteId) {
   try {
     const response = await fetch(`http://localhost:3000/mensmed/paciente/${pacienteId}`);
-    
+
     if (!response.ok) {
       throw new Error("Erro ao buscar mensagens");
     }
 
     const mensagens = await response.json();
+
+    // Salva a quantidade no sessionStorage para uso em outra página
+    sessionStorage.setItem('quantidadeMensagens', mensagens.length);
 
     if (mensagens.length === 0) {
       alert("Nenhuma mensagem encontrada.");
@@ -34,9 +37,9 @@ async function buscarMensagensDoPaciente(pacienteId) {
       card.innerHTML = `
         <h3>Mensagem #${mensagem.id}</h3>
         <p><strong>Nome do Paciente:</strong> ${mensagem.nome_pac}</p>
-        <p><strong>Id no Médico:</strong> ${mensagem.medicoId}</p>
+        <p><strong>ID no Médico:</strong> ${mensagem.medicoId}</p>
         <p><strong>Mensagem:</strong> ${mensagem.mensagem}</p>
-        <button class="delete-button" onclick="deletar(${mensagem.id})">Excluir</button>
+        <button type="button" class="delete-button" onclick="deletar(${mensagem.id})">Excluir</button>
       `;
 
       container.appendChild(card);
@@ -65,7 +68,7 @@ function deletar(id) {
     .then((data) => {
       if (data.message === "Mensagem excluída com sucesso") {
         alert("Mensagem excluída com sucesso!");
-        buscarMensagensDoPaciente(usuario.id); 
+        window.location.reload(); // Recarrega a página
       } else {
         alert("Erro ao excluir mensagem: " + data.message);
       }
@@ -75,7 +78,6 @@ function deletar(id) {
       alert("Erro ao conectar ao servidor.");
     });
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   buscarMensagensDoPaciente(usuario.id);

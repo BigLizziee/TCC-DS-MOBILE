@@ -21,12 +21,8 @@
 }
 
 body {
-  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  background: var(--white);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -94,18 +90,27 @@ a:hover {
 
 #cardsContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 24px;
-  max-width: 900px; /* mantém container largo mas fixo */
-  padding: 20px 20px 20px 40px; 
-  margin-top: 120px; 
-  align-items: flex-start; 
-  position: fixed; 
-  top: 0;
-  left: 0;
-  height: 250vh; 
-  overflow-y: auto; 
-  background: transparent; 
+  padding: 140px 40px 40px 40px; /* top padding maior para não sobrepor o header fixo */
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#cardsContainer::-webkit-scrollbar {
+  height: 10px;
+}
+
+#cardsContainer::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 20px;
+}
+
+#cardsContainer::-webkit-scrollbar-track {
+  background-color: var(--primary-color-light);
 }
 
 .mensagem-card {
@@ -114,73 +119,32 @@ a:hover {
   box-shadow:
     0 4px 8px rgba(0, 86, 179, 0.1),
     0 1px 3px rgba(0, 0, 0, 0.06);
-  padding: 32px 48px; /* aumentei padding para dar mais espaço interno */
-  width: 100%; /* faz o card ocupar a largura total do container */
-  max-width: 860px; /* limite de largura maior para o card */
+  padding: 32px 48px;
+  width: 100%;
+  max-width: 860px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   cursor: default;
-}
-
-.mensagem-card:hover {
-  box-shadow:
-    0 12px 24px rgba(0, 86, 179, 0.2),
-    0 6px 12px rgba(0, 0, 0, 0.12);
-  transform: translateY(-4px);
-}
-
-/* demais estilos permanecem iguais */
-.mensagem-card h3 {
-  margin: 0 0 16px 0;
-  font-weight: 700;
-  font-size: 2.2rem; /* aumentei o tamanho do título */
-  color: var(--primary-color);
-  letter-spacing: 0.03em;
-}
-
-.mensagem-card p {
-  margin: 10px 0;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--text-dark);
-  line-height: 1.6;
-}
-
-.mensagem-card strong {
-  color: var(--secondary-color);
-}
-
-.mensagem-card .btn-baixar-pdf {
-  margin-top: 24px;
-  padding: 14px 36px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--white);
-  background: var(--primary-color);
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3);
-  cursor: pointer;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.mensagem-card .btn-baixar-pdf:hover {
-  background: var(--primary-color-dark);
-  box-shadow: 0 8px 16px rgba(0, 86, 179, 0.5);
+  position: relative; /* necessário para posicionar o botão */
 }
 
 .delete-button {
-  width: 80px;
-  height: 30px;
-  border-radius: 20px;
-  background: red;
-  border: none;
-  color: var(--primary-dark);
-  font-size: 1.2rem;
-  cursor: pointer;
   position: absolute;
+  top: 20px;
+  right: 24px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  background-color: #e63946;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .delete-button:hover {
-  color: darkred;
-  transition: color 0.3s ease;
+  background-color: #c1121f;
+  transform: scale(1.05);
 }
+

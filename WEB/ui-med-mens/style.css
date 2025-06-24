@@ -21,7 +21,7 @@
 }
 
 body {
-  background: var(--white);
+  background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,7 +198,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .btn:hover {
-  background-color: var(--secondary-color-dark);
+  background-color: var(--secundary-color-dark);
+  transition: 0.3s ease;
 }
 
 @media (max-width: 600px) {
@@ -255,4 +256,9 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-top: 4px;
   color: var(--primary-dark-light);
   font-size: 1.5rem;
+}
+
+.erro {
+    color: #a31717;
+    font-weight: bold;
 }

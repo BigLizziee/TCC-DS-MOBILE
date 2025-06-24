@@ -14,11 +14,14 @@ function logout() {
   window.location.href = "../home/index.html";
 }
 
-function atualizarQuantidade() {
-  const atestados = JSON.parse(localStorage.getItem('atestados')) || [];
-  const total = atestados.reduce((soma, item) => soma + item.quantidade, 0);
-  document.getElementById('qtd').textContent = total;
-}
-
 atualizarQuantidade();
 window.atualizarQuantidade = atualizarQuantidade;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const contador = document.getElementById('contadorMensagens');
+  const quantidade = sessionStorage.getItem('quantidadeMensagens');
+
+  if (contador && quantidade !== null) {
+    contador.textContent = quantidade;
+  }
+});

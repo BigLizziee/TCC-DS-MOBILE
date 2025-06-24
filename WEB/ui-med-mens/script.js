@@ -22,14 +22,17 @@ const form = document.getElementById("mensagemForm");
         });
 
         if (response.ok) {
-          alert("mensagem criada com sucesso!");
+          document.getElementById('loginError').style.color = 'green';
+          document.getElementById('loginError').textContent = 'Mensagem enviada com sucesso!';
           form.reset();
         } else {
           const error = await response.json();
-          alert("Erro: " + (error.message || "Não foi possível criar a mensagem."));
+          document.getElementById('loginError').style.color = 'red';
+          document.getElementById('loginError').textContent = "Erro: " + (error.message || "Não foi possível criar a mensagem.");
         }
       } catch (error) {
         console.error("Erro ao enviar:", error);
-        alert("Erro ao conectar com o servidor.");
+        document.getElementById('loginError').style.color = 'red';
+        document.getElementById('loginError').textContent = "Erro ao conectar com o servidor.";
       }
     });
