@@ -52,7 +52,8 @@ const readOne = async (req, res) => {
         const paciente = await prisma.paciente.findUnique({
             where: { id: Number(id) },
              include:{
-            atestado:true
+            atestado:true,
+            mensagens:true,
         }
         });
         if (!paciente) {
