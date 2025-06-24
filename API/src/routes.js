@@ -5,6 +5,7 @@ const paciente = require('./controllers/paciente.js');
 const enfermeiro = require('./controllers/enfermeiro.js'); 
 const medico = require('./controllers/medico.js');
 const func_med = require('./controllers/func_med.js');
+const mens_med = require('./controllers/mens_med.js');
 
 //Rotas de paciente
 rota.post('/cadastro', paciente.create); // Rota para cadastro de paciente
@@ -34,5 +35,11 @@ rota.delete('/deletarmed/:id', medico.deletar); // Rota para deletar medico por 
 rota.post('/funcmed', func_med.create); // Rota para criar atestado
 rota.get('/funcmed', func_med.read); // Rota para ler todos os atestados
 rota.get('/funcmed/paciente/:pacienteId', func_med.readOne);
+
+// Rota de Mensagem de Médico
+rota.post('/mensmed', mens_med.create); // Rota para criar mensagem
+rota.get('/mensmed', mens_med.read); // Rota para ler todos os mensagens
+rota.get('/mensmed/paciente/:pacienteId', mens_med.readOne);
+rota.delete('/mensmed/:id', mens_med.deletar); // Rota para deletar mensagem por ID
 
 module.exports = rota;

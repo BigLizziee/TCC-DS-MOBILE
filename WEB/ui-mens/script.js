@@ -1,0 +1,82 @@
+const usuario = JSON.parse(sessionStorage.getItem("usuario"));
+if (!usuario || !usuario.id) {
+  window.location.href = "../login/index.html";
+}
+
+async function buscarMensagensDoPaciente(pacienteId) {
+  try {
+    const response = await fetch(`http://localhost:3000/mensmed/paciente/${pacienteId}`);
+    
+    if (!response.ok) {
+      throw new Error("Erro ao buscar mensagens");
+    }
+
+    const mensagens = await response.json();
+
+    if (mensagens.length === 0) {
+      alert("Nenhuma mensagem encontrada.");
+      return;
+    }
+
+    let container = document.getElementById('cardsContainer');
+    if (!container) {
+      container = document.createElement('div');
+      container.id = 'cardsContainer';
+      document.body.appendChild(container);
+    }
+
+    container.innerHTML = '';
+
+    mensagens.forEach(mensagem => {
+      const card = document.createElement('div');
+      card.className = 'mensagem-card';
+
+      card.innerHTML = `
+        <h3>Mensagem #${mensagem.id}</h3>
+        <p><strong>Nome do Paciente:</strong> ${mensagem.nome_pac}</p>
+        <p><strong>Id no Médico:</strong> ${mensagem.medicoId}</p>
+        <p><strong>Mensagem:</strong> ${mensagem.mensagem}</p>
+        <button class="delete-button" onclick="deletar(${mensagem.id})">Excluir</button>
+      `;
+
+      container.appendChild(card);
+    });
+
+  } catch (error) {
+    console.error(error.message);
+    alert(error.message);
+  }
+}
+
+function deletar(id) {
+  if (!id || isNaN(Number(id))) {
+    alert("ID inválido ou ausente");
+    return;
+  }
+
+  if (!confirm("Tem certeza que deseja excluir esta mensagem?")) {
+    return;
+  }
+
+  fetch(`http://localhost:3000/mensmed/${id}`, {
+    method: "DELETE",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.message === "Mensagem excluída com sucesso") {
+        alert("Mensagem excluída com sucesso!");
+        buscarMensagensDoPaciente(usuario.id); 
+      } else {
+        alert("Erro ao excluir mensagem: " + data.message);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      alert("Erro ao conectar ao servidor.");
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  buscarMensagensDoPaciente(usuario.id);
+});
