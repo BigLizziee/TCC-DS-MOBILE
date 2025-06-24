@@ -8,15 +8,12 @@ Em processo de desenvolvimento
 * Mellyssa S.
 
 ## Instituição e Curso
-
 Projeto desenvolvido com o intuito educacional dos alunos de Desevolvimento de Sistemas - SENAI Jaguariúna 
 
 ## Ideia do Projeto
-
 O projeto tem com objetivo o desenvolvimento de um diagnostico digital, onde o usuário irá colocar seus sintomas e ira receber uma diagnostico baseado em uma serie de dados com um ChatBot.
 
 ## Como testar 
-
 1. Configure o ambiente de desenvolvimento com as seguintes ferramentas.
 
 - [VsCode](https://code.visualstudio.com/)
@@ -73,7 +70,6 @@ git config --global user.email "seu-email@exemplo.com"
 ```
 
 ## Tecnologias Utilizadas para o Desenvolvimento
-
 | Linguagens e Ferramentas  | Funcionalidade |
 | ------------- |:-------------:|
 | [HTML](https://html.spec.whatwg.org/multipage/) | Modelo     |
@@ -88,28 +84,24 @@ git config --global user.email "seu-email@exemplo.com"
 | [Git](https://git-scm.com/downloads)    | Ferramenta colaborativa de versionamento |
 
 ## Github dos Desenvolvedores
-
 * [Pedro Duarte](https://github.com/PedroDNRusso)
 * [Mellyssa Silveira](https://github.com/mellyssaS)
 * [Rodrigo Passberg](https://github.com/RodrigoPassberg)
 * [Lizzie de Sousa](https://github.com/BigLizziee)
 
 ## Github dos Professores
-
 * [Wellington Fábio de Oliveira Martins](https://github.com/wellifabio)
 * [Luís Fernando](https://github.com/luisfernandospoljaric)
 * [Reenye Lima](https://github.com/ReenyeLima)
 * [Robson Souza](https://github.com/robsonbsouzaa)
 
 ## Canvas e Cronograma
-
 * [Canvas](https://wellifabio.github.io/canvas/)
 * [Cronograma](https://wellifabio.github.io/gantt/)
 
 Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](https://github.com/PedroDNRusso/TCC-DS/tree/main/DOCS).
 
 ## Diagramas e MERxDER
-
 ![DC1.0](./WEB/img/DCDD.jpg)
 ![MERxDER1.0](./WEB/img/MERxDER.jpg)
 Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](https://github.com/PedroDNRusso/TCC-DS/tree/main/DOCS).
@@ -162,7 +154,6 @@ Veja nossos wireframes em [DOCS](./DOCS/README.md)
 
 
 ## Progresso de Desenvolvimento
-
 | Data  | Alterações |
 | ------------- |:-------------:|
 | 16/03/2025     | Começo do Projeto     |
