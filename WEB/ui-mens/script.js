@@ -7,8 +7,11 @@ async function buscarMensagensDoPaciente(pacienteId) {
   try {
     const response = await fetch(`http://localhost:3000/mensmed/paciente/${pacienteId}`);
 
+    document.getElementById('loginError').textContent = '';
+
     if (!response.ok) {
-      throw new Error("Erro ao buscar mensagens");
+      document.getElementById('loginError').style.color = 'black';
+      document.getElementById('loginError').textContent = 'Você não possui mensagens ainda.';
     }
 
     const mensagens = await response.json();
@@ -46,8 +49,9 @@ async function buscarMensagensDoPaciente(pacienteId) {
     });
 
   } catch (error) {
-    console.error(error.message);
-    alert(error.message);
+    console.error("Erro ao buscar mensagens:", error);
+    document.getElementById('loginError').style.color = 'red';
+    document.getElementById('loginError').textContent = 'Erro ao buscar mensagens. Por favor, tente novamente mais tarde.';
   }
 }
 

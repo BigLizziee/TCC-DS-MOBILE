@@ -88,6 +88,11 @@ a:hover {
   background: var(--secundary-color-dark);
 }
 
+.erro {
+    color: #a31717;
+    font-weight: bold;
+}
+
 #cardsContainer {
   display: flex;
   flex-direction: row;
