@@ -102,7 +102,7 @@ git config --global user.email "seu-email@exemplo.com"
 Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](https://github.com/PedroDNRusso/TCC-DS/tree/main/DOCS).
 
 ## Diagramas e MERxDER
-![DC1.0](./WEB/img/DCDD.jpg)
+![DC1.0](./WEB/img/DDUML%20(1).jpg)
 ![MERxDER1.0](./WEB/img/MERxDER.jpg)
 Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](https://github.com/PedroDNRusso/TCC-DS/tree/main/DOCS).
 
@@ -135,7 +135,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 - [x] Iniciar a codificação/desenvolvimento **Back-end**
 - [x] UML [DC (Diagrama de Classes)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula03) **Back-End**
 - [x] Iniciar a codificação/desenvolvimento **Front-end**
-- [ ] UML [DA (Diagrama de Atividades)](../../02-pbe2/aula10/README.md) **Front-End**
+- [x] UML [DA (Diagrama de Atividades)](../../02-pbe2/aula10/README.md) **Front-End**
 - [ ] Iniciar a codificação/desenvolvimento **Mobile**
 - [x] Análise de Viabilidade com Matriz SWOT
 - [x] Triângulo da qualidade do Projeto (Escopo, Prazo e Custo)
