@@ -151,6 +151,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 
 ## Wireframes
 Veja nossos wireframes em [DOCS](./DOCS/README.md)
+Veja nosso prototipo no Figma [aqui](https://www.figma.com/design/3eLOSaQYqpNQFmxbPKfo45/Sem-t%C3%ADtulo?node-id=0-1&m=dev&t=yT380gsFMAMoRWgp-1)
 
 
 ## Progresso de Desenvolvimento
