@@ -2,21 +2,30 @@
 
 ## Wireframes de Hub de Paciente
 
-![Wireframe Home](./wireframes/Wireframe01Pac.png)
-![Wireframe Login](./wireframes/Wireframe02Pac.png)
-![Wireframe Hub](./wireframes/Wireframe03Pac.png)
-![Wireframe Configurações](./wireframes/Wireframe04Pac.png)
+![Wireframe Home](./wireframes/WireframeHome.png)
+![Wireframe Cadastro](./wireframes/WireframeCadastroPac.png)
+![Wireframe Login](./wireframes/WireframeLoginPac.png)
+![Wireframe UI](./wireframes/WireframeUIPac.png)
+![Wireframe Configurações](./wireframes/WireframeConfPac.png)
+![Wireframe Func_Med](./wireframes/WireframeFun_MedPac.png)
+![Wireframe Mens_Med](./wireframes/WireframeMens_MedPac.png)
 
 ## Wireframes de Hub de Enfermeiro
 
-![Wireframe Login de Enfermeiro](./wireframes/Wireframe01Enf.png)
-![Wireframe Hub de Enfermeiro](./wireframes/Wireframe02Enf.png)
-![Wireframe Configurações de Enfermeiro](./wireframes/Wireframe03Enf.png)
+![Wireframe Home](./wireframes/WireframeHome.png)
+![Wireframe Cadastro de Enfermeiro](./wireframes/WireframeCadastroEnf.png)
+![Wireframe Login de Enfermeiro](./wireframes/WireframeLoginEnf.png)
+![Wireframe UI de Enfermeiro](./wireframes/WireframeUIEnf.png)
+![Wireframe Configurações de Enfermeiro](./wireframes/WireframeConfEnf.png)
 
 ## Wireframes de Hub de Médico
 
-![Wireframe Login de Médico](./wireframes/Wireframe01Med.png)
-![Wireframe Hub de Médico](./wireframes/Wireframe02Med.png)
-![Wireframe Configurações de Médico](./wireframes/Wireframe03Med.png)
+![Wireframe Home](./wireframes/WireframeHome.png)
+![Wireframe Cadastro de Médico](./wireframes/WireframeCadastroMed.png)
+![Wireframe Login de Médico](./wireframes/WireframeLoginMed.png)
+![Wireframe UI de Médico](./wireframes/WireframeUIMed.png)
+![Wireframe Configurações de Médico](./wireframes/WireframeConfMed.png)
+![Wireframe Func_Med de Médico](./wireframes/WireframeFun_Med.png)
+![Wireframe Mens_Med de Médico](./wireframes/WireframeMens_Med.png)
 
 
