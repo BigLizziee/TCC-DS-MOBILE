@@ -6,6 +6,7 @@ if (!medico) {
   document.getElementById("id").textContent = medico.id;
   document.getElementById("nome").textContent = medico.nome;
   document.getElementById("email").textContent = medico.email;
+  document.getElementById("crm").textContent = medico.crm;
 }
 
 function logout() {

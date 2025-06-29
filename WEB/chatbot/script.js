@@ -94,3 +94,4 @@ const usuario = JSON.parse(sessionStorage.getItem("usuario"));
       sessionStorage.removeItem("usuario");
       window.location.href = "../login/index.html";
     }
+
