@@ -4,8 +4,11 @@ console.log(medico);
 if (!medico) {
   window.location.href = "../login-med/index.html";
 } else {
+  document.getElementById("nome").value = medico.nome;
+  document.getElementById("crm").value = medico.crm;
+  document.getElementById("id").value = medico.id;
+
 }  
-   
    
 const form = document.getElementById("atestadoForm");
 
