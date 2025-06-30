@@ -191,5 +191,6 @@ Veja nosso prototipo no Figma [aqui](https://www.figma.com/design/3eLOSaQYqpNQFm
 | 23/06/2025     | API de atestados atualizada e função aplicada a UI de Paciente e UI de Médico (User Interface)    |
 | 24/06/2025     | API de mensagens funcional e Front-End funcional na UI (User Interface)    |
 | 25/06/2025     | Apresentação do Projeto e Wireframes atualizados    |
+| 29/06/2025     | Manutenção em UI-Med-Func (User Interface)    |
 
 ## ByPedroDuarte&MellyssaSilveira
