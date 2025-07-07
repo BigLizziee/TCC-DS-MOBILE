@@ -136,7 +136,7 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 - [x] UML [DC (Diagrama de Classes)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula03) **Back-End**
 - [x] Iniciar a codificação/desenvolvimento **Front-end**
 - [x] UML [DA (Diagrama de Atividades)](../../02-pbe2/aula10/README.md) **Front-End**
-- [ ] Iniciar a codificação/desenvolvimento **Mobile**
+- [x] Iniciar a codificação/desenvolvimento **Mobile**
 - [x] Análise de Viabilidade com Matriz SWOT
 - [x] Triângulo da qualidade do Projeto (Escopo, Prazo e Custo)
 
