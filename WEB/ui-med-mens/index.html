@@ -20,8 +20,8 @@
 <body>
 <div class="container">
     <main class="form-wrapper">
-      <div class="container-title">Atestado</div>
-      <h1>Novo Atestado</h1>
+      <div class="container-title">Enviar Mensagem</div>
+      <h1>Nova Mensagem</h1>
       <form id="mensagemForm">
         <div class="input-field">
           <i class="fas fa-user"></i>
@@ -33,7 +33,7 @@
         </div>
         <div class="input-field">
           <i class="fas fa-hashtag"></i>
-          <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "6" name="medicoId" placeholder="ID do Médico" required/>
+          <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "6" id="id" name="medicoId" placeholder="ID do Médico" readonly/>
         </div>
         <div class="message-field">
           <i class="far fa-comment-alt"></i>

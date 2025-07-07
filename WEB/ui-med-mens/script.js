@@ -3,6 +3,7 @@ const medico = JSON.parse(sessionStorage.getItem("medico"));
 if (!medico) {
   window.location.href = "../login-med/index.html";
 } else {
+  document.getElementById("id").value = medico.id;
 }  
    
    
