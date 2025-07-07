@@ -192,5 +192,6 @@ Veja nosso prototipo no Figma [aqui](https://www.figma.com/design/3eLOSaQYqpNQFm
 | 24/06/2025     | API de mensagens funcional e Front-End funcional na UI (User Interface)    |
 | 25/06/2025     | Apresentação do Projeto e Wireframes atualizados    |
 | 29/06/2025     | Manutenção em UI-Med-Func (User Interface)    |
+| 06/07/2025     | Manutenção em UI-Med-Func (User Interface)    |
 
 ## ByPedroDuarte&MellyssaSilveira
