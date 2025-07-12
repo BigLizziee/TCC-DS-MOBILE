@@ -206,14 +206,14 @@ header{
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .service_card{
-    padding: 2rem;
+    padding: 2rem;  
     text-align: center;
     border-radius: 10px;
-    box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.37);
     cursor: pointer;
 }
 

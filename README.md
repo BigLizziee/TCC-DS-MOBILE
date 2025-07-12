@@ -83,7 +83,7 @@ git config --global user.email "seu-email@exemplo.com"
 | [XAMPP](https://www.apachefriends.org/pt_br/index.html)    | Software que gera um servidor web local (Banco de Dados) |
 | [Git](https://git-scm.com/downloads)    | Ferramenta colaborativa de versionamento |
 | [GeminiAI](https://gemini.google.com/app?hl=pt-BR)    | Ferramenta de AI desenvolvida pelo Google |
-
+KL
 
 ## Github dos Desenvolvedores
 * [Pedro Duarte](https://github.com/PedroDNRusso)
