@@ -196,5 +196,6 @@ Veja nosso prototipo no Figma [aqui](https://www.figma.com/design/3eLOSaQYqpNQFm
 | 29/06/2025     | Manutenção em UI-Med-Func (User Interface)    |
 | 06/07/2025     | Manutenção em UI-Med-Func (User Interface)    |
 | 10/07/2025     | Agente de AI novo desenvolvido com Gemini 2.5 Flash (sem deploy)    |
+| 11/07/2025     | Agente de AI novo desenvolvido com Gemini 2.5 Flash aplicado em produção para o UI Paciente (User Interface)   |
 
 ## ByPedroDuarte&MellyssaSilveira
