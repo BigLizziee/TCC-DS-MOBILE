@@ -142,6 +142,15 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 - [x] Análise de Viabilidade com Matriz SWOT
 - [x] Triângulo da qualidade do Projeto (Escopo, Prazo e Custo)
 
+## Proxima Sprint - Sprint 04
+- [x] Back-End - CRUDs (Cadastro, Listagem, alteração e exclusão) das principais **tabelas**.
+- [x] Back-Front - CRUDs das principais **Telas** com Responsividade.
+- [ ] Login com autenticação real (segurança JWT).
+- [x] Integração do front com o back-end e banco de dados. 
+- [ ] Fluxo de navegação funcionando (Web e/ou Mobile).
+- [ ] Relatório de testes manuais **unitários**, **integração** e **ponto a ponto**.
+- [x] Entregas através do repositório do projeto no GitHub, com evidências dos testes em relatório no formato PDF.
+
 ## Requisitos funcionais
 - [RF001] O sistema deve permitir o CRUD de pacientes.
 - [RF002] O sistema deve permitir o CRUD de enfermeiro(a).
