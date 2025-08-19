@@ -24,7 +24,7 @@ const create = async (req, res) => {
     console.log('Dados recebidos:', req.body);
 
     try {
-        const id = await gerarIDUnico(); // Gera o ID único
+        const id = await gerarIDUnico(); 
 
         const paciente = await prisma.paciente.create({
             data: { id, nome, email, senha, cpf, data_nascimento, endereco, telefone },

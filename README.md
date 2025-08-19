@@ -63,6 +63,13 @@ DATABASE_URL="mysql://root@localhost:3306/ddigital?schema=public&timezone=UTC"
 npx prisma migrate dev --name init
 ```
 
+- Implemente o comando para instalar o Swagger 
+
+```bash
+npm install swagger-jsdoc
+npm install swagger-ui-express
+```
+
 - Caso seja de interesse, coloque seu email para conectar o Git ao GitHub
 
 ```bash

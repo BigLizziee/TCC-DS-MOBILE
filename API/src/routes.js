@@ -7,6 +7,10 @@ const medico = require('./controllers/medico.js');
 const func_med = require('./controllers/func_med.js');
 const mens_med = require('./controllers/mens_med.js');
 
+rota.get('/', (req, res) => {
+    res.json({ titulo: 'API DD respondendo' });
+});
+
 //Rotas de paciente
 rota.post('/cadastro', paciente.create); // Rota para cadastro de paciente
 rota.post('/login', paciente.login); // Rota para login
