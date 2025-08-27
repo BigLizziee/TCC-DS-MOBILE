@@ -30,7 +30,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
   const especialidade = document.getElementById("especialidade").value;
 
   try {
-    const response = await fetch("http://localhost:3000/updatemed", {
+    const response = await fetch(`http://localhost:3000/medicos/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

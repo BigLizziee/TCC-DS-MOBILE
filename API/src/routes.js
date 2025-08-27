@@ -11,20 +11,20 @@ rota.get('/', (req, res) => {
 });
 
 //Rotas de paciente
-rota.post('/cadastro', paciente.create); // Rota para cadastro de paciente
-rota.post('/login', paciente.login); // Rota para login
-rota.put('/update', paciente.update); // Rota para atualizar paciente
+rota.post('/pacientes', paciente.create); // Rota para cadastro de paciente
+rota.post('/pacienteslgn', paciente.login); // Rota para login
 rota.get('/pacientes', paciente.read); // Rota para ler todos os pacientes
+rota.put('/pacientes/:id', paciente.update); // Rota para atualizar paciente
 rota.get('/pacientes/:id', paciente.readOne); // Rota para ler paciente por ID
-rota.delete('/deletar/:id', paciente.deletar); // Rota para deletar paciente por ID
+rota.delete('/pacientes/:id', paciente.deletar); // Rota para deletar paciente por ID
 
 // Rota de medico
-rota.post('/cadastromed', medico.create); // Rota para cadastro
-rota.post('/loginmed', medico.login); // Rota para login
-rota.put('/updatemed', medico.update); // Rota para update
+rota.post('/medicos', medico.create); // Rota para cadastro
+rota.post('/medicoslgn', medico.login); // Rota para login
 rota.get('/medicos', medico.read); // Rota para ler todos os enfermiros
+rota.put('/medicos/:id', medico.update); // Rota para update
 rota.get('/medicos/:id', medico.readOne); // Rota para ler medico por ID
-rota.delete('/deletarmed/:id', medico.deletar); // Rota para deletar medico por ID
+rota.delete('/medicos/:id', medico.deletar); // Rota para deletar medico por ID
 
 // Rota de atestado
 rota.post('/funcmed', func_med.create); // Rota para criar atestado

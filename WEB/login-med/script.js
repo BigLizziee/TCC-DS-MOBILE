@@ -17,7 +17,7 @@ function login() {
     };
 
     try {
-        const response = await fetch(`${uri}/loginmed`, {
+        const response = await fetch(`${uri}/medicoslgn`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(dados),

@@ -20,7 +20,7 @@ form.addEventListener('submit', function(e) {
     senha: form.senha.value,
     cpf: form.cpf.value,
   };
-  fetch(`${uri}/cadastromed`, {
+  fetch(`${uri}/medicos`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(dados)

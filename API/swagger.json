@@ -47,7 +47,7 @@
                 }
             }
         },
-        "/cadastro": {
+        "/pacientes": {
             "get": {
                 "tags": [
                     "CRUD de Pacientes"
@@ -117,7 +117,7 @@
                 }
             }
         },
-        "/update": {
+        "/pacientes/{id}": {
             "put": {
                 "tags": [
                     "CRUD de Pacientes"

@@ -45,36 +45,3 @@ async function buscarPacientePorId() {
             resultadoDiv.innerHTML = '<span class="erro">Erro ao buscar paciente.</span>';
         }
 }
-
-async function buscarEnfermeiroPorId() {
-        const id = document.getElementById('searchIdEnf').value;
-        const resultadoDiv = document.getElementById('resultadoBuscaEnf');
-        resultadoDiv.innerHTML = '';
-
-        if (!id) {
-            resultadoDiv.innerHTML = '<span class="erro">Informe um ID válido.</span>';
-            return;
-        }
-
-        try {
-            const response = await fetch(`http://localhost:3000/enfermeiros/${id}`);
-            if (!response.ok) {
-                resultadoDiv.innerHTML = '<span class="erro">Enfermeiro não encontrado.</span>';
-                return;
-            }
-            const enfermeira = await response.json();
-            resultadoDiv.innerHTML = `
-                <div class="info-card">
-                    <p><strong>CPF:</strong> ${enfermeira.cpf || '-'}</p>
-                    <p><strong>Nome:</strong> ${enfermeira.nome || '-'}</p>
-                    <p><strong>Email:</strong> ${enfermeira.email || '-'}</p>
-                    <p><strong>e-CIP:</strong> ${enfermeira.ecip || '-'}</p>
-                    <p><strong>Area:</strong> ${enfermeira.area || '-'}</p>
-                    <p><strong>Data de Nascimento:</strong> ${enfermeira.data_nascimento ? new Date(enfermeira.data_nascimento).toLocaleDateString() : '-'}</p>
-                    <p><strong>Endereço:</strong> ${enfermeira.endereco || '-'}</p>
-                </div>
-            `;
-        } catch (err) {
-            resultadoDiv.innerHTML = '<span class="erro">Erro ao buscar paciente.</span>';
-        }
-}

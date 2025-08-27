@@ -26,7 +26,7 @@ document.getElementById("formConfiguracoes").addEventListener("submit", async fu
   const telefone = document.getElementById("telefone").value;
 
   try {
-    const response = await fetch("http://localhost:3000/update", {
+    const response = await fetch(`http://localhost:3000/pacientes/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +56,7 @@ function deletar() {
     return;
   }
 
-  fetch(`http://localhost:3000/deletar/${id}`, {
+  fetch(`http://localhost:3000/pacientes/${id}`, {
     method: "DELETE",
   })
     .then((response) => response.json())
