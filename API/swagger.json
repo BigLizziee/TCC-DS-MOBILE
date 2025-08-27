@@ -28,10 +28,6 @@
         {
             "name": "CRUD de Medicos",
             "description": "Endpoints de medicos"
-        },
-        {
-            "name": "CRUD de Enferemeiros",
-            "description": "Endpoints de enfermeiros"
         }
     ],
     "paths": {

@@ -2,7 +2,6 @@ const express = require('express');
 const rota = express.Router();
 
 const paciente = require('./controllers/paciente.js'); 
-const enfermeiro = require('./controllers/enfermeiro.js'); 
 const medico = require('./controllers/medico.js');
 const func_med = require('./controllers/func_med.js');
 const mens_med = require('./controllers/mens_med.js');
@@ -18,14 +17,6 @@ rota.put('/update', paciente.update); // Rota para atualizar paciente
 rota.get('/pacientes', paciente.read); // Rota para ler todos os pacientes
 rota.get('/pacientes/:id', paciente.readOne); // Rota para ler paciente por ID
 rota.delete('/deletar/:id', paciente.deletar); // Rota para deletar paciente por ID
-
-// Rota de enfermeiro
-rota.post('/cadastroenf', enfermeiro.create); // Rota para cadastro
-rota.post('/loginenf', enfermeiro.login); // Rota para login
-rota.put('/updateenf', enfermeiro.update); // Rota para update
-rota.get('/enfermeiros', enfermeiro.read); // Rota para ler todos os enfermiros
-rota.get('/enfermeiros/:id', enfermeiro.readOne); // Rota para ler enfermeiro por ID
-rota.delete('/deletarenf/:id', enfermeiro.deletar); // Rota para deletar enfermeiro por ID
 
 // Rota de medico
 rota.post('/cadastromed', medico.create); // Rota para cadastro
