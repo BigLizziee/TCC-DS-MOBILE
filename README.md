@@ -84,13 +84,13 @@ git config --global user.email "seu-email@exemplo.com"
 | [JavaScript (Vanilla)](https://262.ecma-international.org/)  | Controle |
 | [Figma](https://www.figma.com/pt-br/)    | Ferramenta de design de UI e UX |
 | [ORM Prisma](https://262.ecma-international.org/)  | Ferramenta de source que auxilia banco de dados |
+| [Swagger](https://swagger.io/)  | Conjunto de ferrementas para contruir, projetar, documentar e consumir APIs |
 | [Vscode](https://code.visualstudio.com/)    | IDE (Ambiente integrado de desenvolvimento) |
 | [Insomnia](https://insomnia.rest/download)   | Testar, criar e simular APIs |
 | [NodeJS](https://nodejs.org/pt)    | Interpretar codigos em JavaScript (Vanilla) |
 | [XAMPP](https://www.apachefriends.org/pt_br/index.html)    | Software que gera um servidor web local (Banco de Dados) |
 | [Git](https://git-scm.com/downloads)    | Ferramenta colaborativa de versionamento |
 | [GeminiAI](https://gemini.google.com/app?hl=pt-BR)    | Ferramenta de AI desenvolvida pelo Google |
-
 
 ## Github dos Desenvolvedores
 * [Pedro Duarte](https://github.com/PedroDNRusso)
@@ -171,7 +171,6 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 Veja nossos wireframes em [DOCS](./DOCS/README.md)
 Veja nosso prototipo no Figma [aqui](https://www.figma.com/design/3eLOSaQYqpNQFmxbPKfo45/Sem-t%C3%ADtulo?node-id=0-1&m=dev&t=yT380gsFMAMoRWgp-1)
 
-
 ## Progresso de Desenvolvimento
 | Data  | Alterações |
 | ------------- |:-------------:|
@@ -213,5 +212,6 @@ Veja nosso prototipo no Figma [aqui](https://www.figma.com/design/3eLOSaQYqpNQFm
 | 06/07/2025     | Manutenção em UI-Med-Func (User Interface)    |
 | 10/07/2025     | Agente de AI novo desenvolvido com Gemini 2.5 Flash (sem deploy)    |
 | 11/07/2025     | Agente de AI novo desenvolvido com Gemini 2.5 Flash aplicado em produção para o UI Paciente (User Interface)   |
+| 26/08/2025     | Implementação do Swagger (Conjunto de ferrementas para contruir, projetar, documentar e consumir APIs) |
 
 #### Readme escrito e estruturado por [Pedro Duarte Naddeu Russo](https://github.com/PedroDNRusso)
