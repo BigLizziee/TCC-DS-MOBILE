@@ -10,14 +10,6 @@
 ![Wireframe Func_Med](./wireframes/WireframeFun_MedPac.png)
 ![Wireframe Mens_Med](./wireframes/WireframeMens_MedPac.png)
 
-## Wireframes de Hub de Enfermeiro
-
-![Wireframe Home](./wireframes/WireframeHome.png)
-![Wireframe Cadastro de Enfermeiro](./wireframes/WireframeCadastroEnf.png)
-![Wireframe Login de Enfermeiro](./wireframes/WireframeLoginEnf.png)
-![Wireframe UI de Enfermeiro](./wireframes/WireframeUIEnf.png)
-![Wireframe Configurações de Enfermeiro](./wireframes/WireframeConfEnf.png)
-
 ## Wireframes de Hub de Médico
 
 ![Wireframe Home](./wireframes/WireframeHome.png)
