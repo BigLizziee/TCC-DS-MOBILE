@@ -112,7 +112,6 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 
 ## Diagramas e MERxDER
 ![DC1.0](./WEB/img/DDUML%20(1).jpg)
-![MERxDER1.0](./WEB/img/MERxDER.jpg)
 Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](https://github.com/PedroDNRusso/TCC-DS/tree/main/DOCS).
 
 ## Requisitos Sprint 1
@@ -165,7 +164,6 @@ Para visualizar nosso canvas e calendario de desenvolvimento vá até [DOCS](htt
 - [RF004] O sistema deve associar o paciente a um enfermeiro(a) ou médico(a).
 - [RF004.1] O sistema deve permitir apenas a inclusão de um paciente por enfermeiro e médico.
 - [RF004.2] O sistema deve permitir o compartilhamento de dados da triagem com o médico.
-![Wireframe DCU](./WEB/img/DCUDD.jpg)
 
 ## Wireframes
 Veja nossos wireframes em [DOCS](./DOCS/README.md)
