@@ -211,5 +211,6 @@ Veja nosso prototipo no Figma [aqui](https://www.figma.com/design/3eLOSaQYqpNQFm
 | 10/07/2025     | Agente de AI novo desenvolvido com Gemini 2.5 Flash (sem deploy)    |
 | 11/07/2025     | Agente de AI novo desenvolvido com Gemini 2.5 Flash aplicado em produção para o UI Paciente (User Interface)   |
 | 26/08/2025     | Implementação do Swagger (Conjunto de ferrementas para contruir, projetar, documentar e consumir APIs) |
+| 27/08/2025     | Aplicando responsividade nas telas (Web/Mobile) e retirando funções e usuario Enfermeiro |
 
 #### Readme escrito e estruturado por [Pedro Duarte Naddeu Russo](https://github.com/PedroDNRusso)
