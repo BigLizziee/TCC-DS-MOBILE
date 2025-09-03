@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +9,42 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-<section id="cadastro">
-<main>
-  <div class="container">
-    <div class="forms-container">
-      <div class="signin-signup">
-        <form action="" class="sign-in-form">
-          <a href="../home/index.html"><i class="far fa-hospital"></i></a>
-          <h2 class="title">Cadastre-se</h2>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" name="nome" autocomplete="Nome" placeholder="Nome" required="yes">
+  <header class="main-header">
+    <h1>Diagnóstico Digital</h1>
+  </header>
+
+  <section id="cadastro">
+    <main>
+      <div class="container">
+        <div class="forms-container">
+          <div class="signin-signup">
+            <form action="" class="sign-in-form">
+              <a href="../home/index.html" class="nav-logo"><i class="far fa-hospital"></i> Diagnóstico<span>Digital</span></a>
+              <h2 class="title">Cadastre-se</h2>
+              <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" name="nome" autocomplete="Nome" placeholder="Nome" required="yes">
+              </div>
+              <div class="input-field">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" autocomplete="Email" placeholder="Email" id="email" required="yes">
+              </div>
+              <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="senha" autocomplete="Senha" placeholder="Senha" id="senha" required="yes">
+                <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+              </div>
+              <input onclick="cadastrar()" type="submit" value="Cadastrar" class="btn solid">
+            </form>
+            <div class="signup-footer">
+              <p>Já tem uma conta? <a href="../login/index.html" class="footer-link">Entrar</a></p>
+            </div>
           </div>
-          <div class="input-field">
-            <i class="fas fa-envelope"></i>
-            <input type="email" name="email" autocomplete="Email" placeholder="Email" id="email" required="yes">
-          </div>
-          <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" name="senha" autocomplete="Senha" placeholder="Senha" id="senha" required="yes">
-            <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
-          </div>
-          <input onclick="cadastrar()" type="submit" value="Cadastrar" class="btn solid">
-        </form>
-      </div>
-    </div>
-  </div>
-</main>
-</section>
-    <div class="panels-container">
-      <div class="panel left-panel">
-        <div class="content">
-            <div class="nav_logo">Diagnóstico<span>Digital</span></div>
-          <h3>Você já tem um conta?</h3>
-          <p>Caso já tenha uma conta entre agora e comece sua consulta!</p>
-          <a href="../login/index.html"><button class="btn transparent">Entrar</button></a>
         </div>
       </div>
-</div>
-</div>
+    </main>
+  </section>
+
   <script src="script.js"></script>
 </body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +9,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-<section id="cadastro">
-<main>
+ 
+  <header class="main-header">
+    <h1>Cadastro de Médicos</h1>
+  </header>
+
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
+   
         <form action="" class="sign-in-form">
-          <a href="../home/index.html"><i class="far fa-hospital"></i></a>
+          <a href="../home/index.html">
+            <i class="far fa-hospital"></i>
+          </a>
           <h2 class="title">Cadastre-se</h2>
+          
           <div class="input-field">
             <i class="fas fa-user"></i>
             <input type="text" name="nome" autocomplete="Nome" placeholder="Nome" required="yes">
           </div>
           <div class="input-field">
             <i class="fas fa-id-card-alt"></i>
-            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "11" name="crm" autocomplete="crm" placeholder="CRM" required="yes">
+            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="11" name="crm" autocomplete="crm" placeholder="CRM" required="yes">
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
@@ -36,26 +43,19 @@
           </div>
           <div class="input-field">
             <i class="fas fa-id-card-alt"></i>
-            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "11" name="cpf" autocomplete="cpf" placeholder="CPF" required="yes">
+            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="11" name="cpf" autocomplete="cpf" placeholder="CPF" required="yes">
           </div>
           <input type="submit" value="Cadastrar" class="btn solid">
         </form>
+
+        
+        <div class="signup-footer">
+          <p>Já tem uma conta? <a href="../login-med/index.html" class="footer-link">Entrar</a></p>
+        </div>
       </div>
     </div>
   </div>
-</main>
-</section>
-    <div class="panels-container">
-      <div class="panel left-panel">
-        <div class="content">
-            <div class="nav_logo">Diagnóstico<span>Digital</span></div>
-            <h4>Para Medicos</h4>
-          <h3>Olá medico, faça seu cadastro!</h3>
-          <p>Caso já tenha uma conta entre agora e comece a fazer suas atividades!</p>
-          <a href="../login-med/index.html"><button class="btn transparent">Entrar</button></a>
-        </div>
-      </div>
-</div>
-</div>
+
   <script src="script.js"></script>
 </body>
+</html>
