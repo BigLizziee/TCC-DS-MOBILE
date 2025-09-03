@@ -455,4 +455,162 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 90%;
   }
 }
-  
+  @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .containerLeft {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 10px;
+  }
+
+  .containerRight {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .cards-container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+    min-width: 250px;
+  }
+
+  .service_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service_card {
+    padding: 1.5rem;
+  }
+
+  .service_card span {
+    font-size: 2rem;
+  }
+
+  .service_card h4 {
+    font-size: 1rem;
+  }
+
+  .service_card p {
+    font-size: 0.9rem;
+  }
+
+  .service_header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .service_header_content p {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .containerLeft h1 {
+    font-size: 1.2rem;
+  }
+
+  .containerLeft a {
+    font-size: 1.8rem;
+  }
+
+  .icon-bar a {
+    font-size: 1.6rem;
+  }
+
+  .containerLeft ul li {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .news-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .news-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .news-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .news-card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerLeft {
+    padding: 1rem;
+  }
+
+  .containerLeft a {
+    font-size: 1.5rem;
+  }
+
+  .containerLeft h1 {
+    font-size: 1rem;
+  }
+
+  .icon-bar a {
+    font-size: 1.4rem;
+  }
+
+  .containerRight {
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    margin: 5px;
+  }
+
+  .service_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service_card {
+    padding: 1rem;
+  }
+
+  .service_card span {
+    font-size: 2rem;
+  }
+
+  .service_card h4 {
+    font-size: 1rem;
+  }
+
+  .service_card p {
+    font-size: 0.8rem;
+  }
+
+  .service_header_content p {
+    font-size: 0.8rem;
+  }
+
+  .news-container {
+    grid-template-columns: 1fr;
+  }
+
+  .news-card img {
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .news-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .news-card p {
+    font-size: 11px;
+  }
+}
