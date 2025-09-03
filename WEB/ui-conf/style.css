@@ -195,6 +195,7 @@ button {
 button:hover {
   background: var(--secundary-color-dark);
 }
+
 @media (max-width: 768px) {
     .container {
         padding: 1rem;

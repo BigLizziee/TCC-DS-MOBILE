@@ -221,3 +221,101 @@ input[type="number"]::-webkit-inner-spin-button {
     padding: 2rem 1rem;
   }
 }
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto; 
+    }
+
+    .container-title {
+        font-size: 2.2rem;
+    }
+
+    .main-header {
+        padding: 10px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav_logo {
+        font-size: 28px;
+    }
+
+    .nav-buttons {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-buttons button {
+        padding: 10px 15px;
+        margin: 5px 0;
+    }
+
+    .container-delete a {
+        font-size: 2rem;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+
+    .input-field input {
+        font-size: 1rem;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 30px;
+    }
+}
+.container {
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 500px;
+        padding: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    form {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 90%;
+        padding: 0.8rem;
+        margin-top: 2rem;
+    }
+
+    form {
+        max-width: 100%;
+    }
+}
